@@ -1,24 +1,23 @@
-* {
-    text-align: center;
-    max-width: 1500px;
-}
-
-
 h1 {
     padding: 20px;
-    /* text-align: center; */
+    text-align: center;
     display: block;
 }
 
 
 h3 {
-    max-width: 500px;         
-    margin: 0 auto; /* this code makes the text go horizontal*/
-    text-align: center;      
+    /* max-width: 500px;          */
+    /* margin: 0 auto; */
+    /* text-align: center;       */
 }
 
 nav {
     font-size: 25px;
     float: right;
     margin-top: -75px;
+}
+
+#ml-projects {
+    text-align: left;
+    font-size: 25px;
 }
