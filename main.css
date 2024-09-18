@@ -1,9 +1,8 @@
-h1 {
+/* h1 {
     padding: 20px;
     text-align: center;
     display: block;
-}
-
+}  */
 
 h3 {
     /* max-width: 500px;          */
@@ -11,13 +10,13 @@ h3 {
     /* text-align: center;       */
 }
 
-nav {
+/* nav {
     font-size: 25px;
     float: right;
     margin-top: -75px;
-}
+}  */
 
-#ml-projects {
+/* #ml-projects {
     text-align: left;
     font-size: 25px;
-}
+}   */
