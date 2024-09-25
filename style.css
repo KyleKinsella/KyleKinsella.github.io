@@ -1,0 +1,42 @@
+.cotainer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+
+.item {
+    flex: 1 1 200px;
+    font-size: 25px;
+}
+
+
+@media (max-width: 600px) {
+    .cotainer {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+    .cotainer {
+        flex-direction: row;
+    }
+}
+
+
+@media (min-width: 901px) {
+    .cotainer {
+        justify-content: space-around;
+    }
+}
+
+
+body {
+    font-size: 1rem;
+}
+/* 
+img, video {
+    max-width: 100%;
+    height: auto;
+} */
+
