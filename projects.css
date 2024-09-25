@@ -1,0 +1,23 @@
+h1 {
+    text-align: center;
+    background-color: #3A7CA5;
+    padding: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+
+#rtdg, #ass, #dbpro, #disclone {
+    /* text-align: center;
+    padding: 20px; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;*/
+    font-size: 20px;
+}
+
+#ml-projects, ul, li {
+    font-size: 20px;
+}
+
+p {
+    font-size: 20px;
+}
