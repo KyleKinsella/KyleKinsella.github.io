@@ -1,4 +1,4 @@
-* {
+.cotainer {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
@@ -12,6 +12,27 @@
     background-color: red;
     text-align: center;
 }
+
+
+#welcome {
+    text-align: center;
+    background-color: aqua;
+    padding: 10px;
+    /* margin: 10px; */
+}
+
+#intro {
+    text-align: center;
+}
+
+
+
+/* div styling is below */
+
+#about {
+    text-align: center;
+}
+
 
 
 @media (max-width: 600px) {
@@ -37,6 +58,27 @@
 body {
     font-size: 1rem;
 }
+
+
+img {
+    height: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: orange;
+    font-size: 30px;
+    text-align: center;
+}
+
 /* 
 img, video {
     max-width: 100%;
