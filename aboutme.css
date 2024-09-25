@@ -1,0 +1,63 @@
+h1 {
+    text-align: center;
+    background-color: #3A7CA5;
+    padding: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+img {
+    height: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#reminder {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+ol, li {
+    text-align: center;
+    display: block;
+}
+
+
+#hobbies, #college {
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+
+h3 {
+    text-align: center;
+}
+
+
+nav {
+    display: flex;
+    justify-content: center; /* Centers the items horizontally */
+    align-items: center; /* Centers the items vertically if needed */
+    gap: 20px; /* Adds space between the items */
+    background-color:   #c3d7ff;
+}
+
+
+nav, h2 {
+    margin: 0;
+}
+
+nav a {
+    /* text-decoration: none; */
+    padding: 5px;
+    color: blue;
+}
+
+/* nav, h2 {
+    display: inline-block;
+    margin: 10px;
+    
+} */
