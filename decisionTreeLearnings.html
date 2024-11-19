@@ -18,40 +18,36 @@
                 <li>2. The next step for me was to pick out what pieces I needed from my dataset to make my decision tree. So I 
                 picked 4 of the columns in my dataset to use for the constructing of my decision tree.</li>
 
-                <li>3. I learned that with a decision tree you need a X and y for your decision tree. For example,
+                <li>3. I learned that, with a decision tree you need a X and y for your decision tree. <br> For example,
                 import pandas as pd<br>
                 dataset = "PremierLeagueSeason2024.csv"<br>
                 read = pd.read_csv(dataset) <br>
-                data = ['goals_scored', 'goals_conceded', 'wins'] this is what I am trying to predict from <br>
-                XVAL = read[data] this is my target colunm I am trying to predict <br>
+                data = ['goals_scored', 'goals_conceded', 'wins'] # this is what I am trying to predict from <br>
+                XVAL = read[data] # this is my target colunm I am trying to predict <br>
                 y = read['rank']<br></li>
 
-                <li>..............................................</li>
-
-                <li>2. After I had constructed my decision tree I got my data from my linear regression project and I performed some 
-                analysis to see what the decision tree looked like.</li>
-
-                <li>3. Once I understood my decision tree, I decided to try and visualize my decision tree. initial this was not to bad
+                <li>4. Once I understood my decision tree, I decided to try and visualize my decision tree. Initial this was not to bad
                 but once I started to scale up my decision tree it was becoming un-readable and very big, this lead me to a few 
                 websites to try and debug the problem but I was unable to find the problem. So I went to chatgpt and I asked him a question
-                along the line of: "how do I visualize my decision tree without it being to blurry and not to big". And then he gave me some
-                code that worked but I didn't just take it because it worked, I read the code and I made sure that I understood it before 
+                along the lines of: "how do I visualize my decision tree without it being to blurry and not to big", it did not give me
+                the answer straight away, it took a few prompts but eventually he gave me some code that worked but I didn't just 
+                take it because it worked, I read the code and I made sure that I understood it before 
                 taking it and putting it into my decision tree project.</li>
 
-                <li>4. The next step I did was I </li>
+                <li>5. After I had constructed my decision tree I got my data from my linear regression project and I performed some 
+                analysis to see what the decision tree looked like, with the above code that I got from chatgpt.</li>
+
+                <li>6. The next thing I learned was that if you don't provide a max-depth to your decision tree and your data is quite big 
+                your decision tree can get very big very quickly and you won't be able to read or understand your decision tree 
+                due to it beingun-readable.</li>
                 
-                <li>3. In order to see if my data is good for using the linear regression model I fitted a line to my data. </li>
-                <li>4. While I was trying to fit a line to my data, I found the code to be a bit confusing but after numerous hours of analysing the code I started to understand what it was doing.</li>
-                <li>5. Until this point I had only whole numbers plotted onto a graph with a line fitted to the data. So I decided to get some data online to input into my model. </li>
-                <li>6. I got some football data online, this data contained some data that I wanted to use for my model. So I wrote some python code to extract the data that I wanted to put into my model.</li>
-                <li>7. After I extracted the data that I wanted I inserted that into my linear regression model and from there I made the data bigger and smaller to see how my python graph could change. </li>
-            
-                <li>8. I learned how to some new technologies such as Matplotlib, Sklearn.linear_model and Pandas.</li>
-                <li>9. I learned how to understand data. For example, if I have a very big data set I had to analyse the data set and figure out what data I needed to used
-                    for my linear regression model. 
-                </li>
+                <li>7. To fix this issue all you need to do is give your decision tree a max-depth of a certain value then you won't 
+                encounter this problem. For example, biggerTree = DecisionTreeClassifier(max_depth=3).</li>
+                            
+                <li>8. I learned how to some new technologies such as load_iris and DecisionTreeClassifier.</li>
+                <li>9. I learned how to know what data I needed to use for my decision tree and what data I did not need for my decision
+                tree.</li>
             </ol>
-            -->
         </div>
     </section>
 </body>
