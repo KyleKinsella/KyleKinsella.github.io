@@ -12,9 +12,32 @@
     <section id="skills">
         <div class="container">
             <h2>Below is what I learned throughout the development of this Decision Tree Project</h2>
-            <!--<ol class="skills-list">
-                <li>1. How to write a piece of code to plot some points onto a graph using Python.</li>
-                <li>2. At the start of this project I was trying to set up my coding working environment and I was running into a few syntax errors but eventually I solved these issues.</li>
+            <ol class="skills-list">
+                <li>1. How to write some code to be able to construct a decision tree.</li>
+                
+                <li>2. The next step for me was to pick out what pieces I needed from my dataset to make my decision tree. So I 
+                picked 4 of the columns in my dataset to use for the constructing of my decision tree.</li>
+
+                <li>3. I learned that with a decision tree you need a X and y for your decision tree. For example,
+                ```import pandas as pd
+                dataset = "PremierLeagueSeason2024.csv"
+                read = pd.read_csv(dataset)
+                data = ['goals_scored', 'goals_conceded', 'wins'] this is what I am trying to predict from
+                XVAL = read[data] this is my target colunm I am trying to predict
+                y = read['rank']```</li>
+
+                <li>2. After I had constructed my decision tree I got my data from my linear regression project and I performed some 
+                analysis to see what the decision tree looked like.</li>
+
+                <li>3. Once I understood my decision tree, I decided to try and visualize my decision tree. initial this was not to bad
+                but once I started to scale up my decision tree it was becoming un-readable and very big, this lead me to a few 
+                websites to try and debug the problem but I was unable to find the problem. So I went to chatgpt and I asked him a question
+                along the line of: "how do I visualize my decision tree without it being to blurry and not to big". And then he gave me some
+                code that worked but I didn't just take it because it worked, I read the code and I made sure that I understood it before 
+                taking it and putting it into my decision tree project.</li>
+
+                <li>4. The next step I did was I </li>
+                
                 <li>3. In order to see if my data is good for using the linear regression model I fitted a line to my data. </li>
                 <li>4. While I was trying to fit a line to my data, I found the code to be a bit confusing but after numerous hours of analysing the code I started to understand what it was doing.</li>
                 <li>5. Until this point I had only whole numbers plotted onto a graph with a line fitted to the data. So I decided to get some data online to input into my model. </li>
