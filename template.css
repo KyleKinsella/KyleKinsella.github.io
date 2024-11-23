@@ -140,7 +140,6 @@ nav a {
     background-color: transparent;
 }
 
- 
-
-
-
+.lr, .dt, .rf {
+    background-color: orange;
+}
