@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>K Nearest Neighbour Project Overview</title>
+    <link rel="stylesheet" href="template.css">
+    <link rel="stylesheet" href="all.css">
+</head>
+<body>
+
+    <style>
+        .dvv {
+            display: inline-block;
+            align-items: center; 
+            margin-bottom: 10px; 
+        }
+        .dvv, .features {
+            display: flex;
+            margin-left: 10px; 
+            margin: -60px;
+        }
+    </style>
+
+
+    <header>
+        <div class="container">
+            <h1>K Nearest Neighbour Project Overview</h1>
+        </div>
+    </header>
+
+    <section id="summary">
+        <div class="container">
+            <h2>Summary</h2>
+            <ol>
+                <li>To summarize my k nearest neighbor project, I used a dataset from kaggle: <a href="https://www.kaggle.com/datasets/prathamtripathi/drug-classification">Dataset</a>.</li><br> 
+            
+                <li>I did do pre processing in this project, I pre-processed the BP and Cholesterol columns in my dataset 
+                    from strings to integers. This had to be done in order to train my k nearest neighbor model.</li><br>
+            
+                <li>I do understand the data that I have, I am able to identify what columns I need to train my knn model. 
+                    I don't have any images of my model, due to many issues when trying to do so.</li><br>
+
+                <li>I used <a href="https://chatgpt.com/">ChatGPT</a>, <a href="https://www.geeksforgeeks.org/k-nearest-neighbours/">GeeksForGeeks</a>,
+                    <a href="  https://www.datacamp.com/tutorial/k-nearest-neighbor-classification-scikit-learn">DataCamp</a> and 
+                    <a href="https://www.geeksforgeeks.org/how-to-visualize-knn-in-python/">GeeksForGeeks</a>.
+                for help to try and get my model to visualize.</li><br>
+            
+                <li>During this project I used Python, Jupyter Notebooks, Matplotlib, Pandas, Sklearn.model_selection, 
+                    Sklearn.neighbors, Sklearn.metrics, Seaborn, Mlxtend.plotting and Numpy.</li>
+            </ol>
+        </div>
+    </section>
+
+
+    <section id="about">
+        <div class="container">
+            <h2>Data Sources</h2>
+           <p>Before I started to work on my k nearest neighbour project. For my k nearest neighbour project I wanted to create a machine learning model 
+            to classify what type of drug someone would need to use. For this project I used this dataset on kaggle
+            <a href="https://www.kaggle.com/datasets/prathamtripathi/drug-classification">Drug Classification Dataset</a>.</p>
+        </div>
+    </section>
+
+
+
+    <section id="about">
+        <div class="container">
+            <h2>Pre Processing</h2>
+            <p>During this project on k nearest neighbour I did do pre-processing. In this phase of my project I had the following
+                heading's in my dataset (see below). I pre-processed the BP column to be the following: <strong>LOW = 0, NORMAL = 1 and HIGH = 2</strong>. 
+                I did the same for Cholesterol, but there was only two headings for Cholesterol: <strong>NORMAL = 0 and HIGH = 1</strong>. 
+                I used BP, Cholesterol and Na_to_K for my features for my k nearest neighbour model to predict what drug someone should get.<br> 
+            <ul>
+                <li>Age</li>
+                <li>Sex</li>
+                <li>BP</li>
+                <li>Cholesterol</li>
+                <li>Na_to_K (Na to Potassium Ration)</li>
+                <li>Drug</li>
+            </ul>
+        </div>
+    </section>
+
+
+    <section id="about">
+        <div class="container">
+            <h2>Data Understanding & Visualization</h2>
+            <p>During my k nearest neighbour project I had one <strong>major problem</strong>. The problem was I was not able to 
+            visualize my k nearest neighbour model on a graph. <strong>I spent hours and hours trying my best</strong> to try and get it to 
+            work but I was not able to get my model on a graph. I did ask chatgpt for some help but he was not to helpful for this 
+            task. Below are two python libraries that I tried to use (I also tried many others but I got roughly the 
+            same result) and the code that I wrote but could not get it to work.
+                
+            <ul>
+                <li>from mlxtend.plotting import plot_decision_regions</li>
+                <li>from sklearn.decomposition import PCA</li>
+            </ul>
+
+            My code that I wrote <br>
+            <strong>from mlxtend.plotting import plot_decision_regions <br>
+            import numpy as np <br>
+
+            X = np.array(X) <br>
+            y = np.array(y) <br>
+
+            # y = y.astype(np.int_) <br>
+
+            dataset['Drug'] = dataset['Drug'].map({'drugC':0, 'drugB':1, 'drugX':2, 'drugY':3, 'drugA':4}) <br>
+
+            newY = np.array(dataset['Drug'], dtype=int) <br>
+
+            plot_decision_regions(X, newY, clf=knn, legend=2) <br>
+
+            # plt.xlabel('X')  <br>
+            # plt.ylabel('Y') <br>
+            # plt.title('KNN with K=5')</strong> <br><br>
+         
+            Due to me not being able to visualize my k nearest neighbour model on a graph I do not have 
+            any figures to show unfortunately.
+            <br>
+        </div>
+    </section>
+
+
+    <section id="about">
+        <div class="container">
+            <h2>Algorithms Online & Sources</h2>
+            <p>During the development of my k nearest neighbour project I found a few online sources that were some help to me.</p>
+
+            <strong>ChatGpt:</strong> <a href="https://chatgpt.com/">ChatGPT</a><br>
+            <strong>GeeksForGeeks:</strong> <a href="https://www.geeksforgeeks.org/k-nearest-neighbours/">GeeksForGeeks</a><br>
+            <strong>DataCamp:</strong> <a href="  https://www.datacamp.com/tutorial/k-nearest-neighbor-classification-scikit-learn">DataCamp</a><br>
+            <strong>GeeksForGeeks:</strong> <a href="https://www.geeksforgeeks.org/how-to-visualize-knn-in-python/">GeeksForGeeks</a><br>
+
+            <p>The above websites were a <strong>little</strong> helpful for this project. I used chatgpt, to try and figure out 
+            a way to visualize my k nearest neighbour model but I was not able to get it to work. I used geeksforgeeks for 
+            some additional research on k nearest neighbour. I used datacamp to try and visualize my k nearest neighbour model. 
+            And I found another geeksforgeeks link, this link showed my how to visualize a k nearest model in python but it was with random
+            data points. I tried to do it with my dataset but it did not work.</p><br>
+        </div>
+    </section>
+
+
+    <section id="about">
+        <div class="container">
+            <h2>Tool's & Technology Used</h2>
+            <p>When I was developing my k nearest neighbour model I used the following technologies:</p>
+          
+            <strong>Python</strong> <br>
+            <strong>Jupyter Notebook's</strong>  <br>
+            <strong>Matplotlib</strong> <br>
+            <strong>Pandas</strong> <br>
+            <strong>sklearn.model_selection train_test_split</strong> <br>
+            <strong>sklearn.neighbors KNeighborsClassifier</strong> <br>
+            <strong>sklearn.metrics confusion_matrix</strong> <br>
+            <strong>seaborn sns</strong> <br>
+            <strong>mlxtend.plotting plot_decision_regions</strong> <br>
+            <strong>numpy np</strong> <br><br>
+
+            <p>During this project I got familiar with some of the python libraries such as KNeighborsClassifier, Pandas,
+            seaborn and much more.<br><br>
+
+            Another technology that I had never used before in python is called KNeighborsClassifier. This is a library 
+            for making a k nearest neighbor model and training your k nearest neighbor model.<br><br>
+
+        	Before I had started to code anything for this project, I already had a good understanding on how the python programming language and how it operates and
+        	I also had a good idea on how to use Jupyter Notebooks. These technologies are a must when working with data science and machine learning.
+            </p>
+        </div>
+    </section>  
+</body>
+</html>
