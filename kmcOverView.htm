@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>K Means Clustering Project Overview</title>
+    <link rel="stylesheet" href="template.css">
+    <link rel="stylesheet" href="all.css">
+</head>
+<body>
+
+    <style>
+        .dvv {
+            display: inline-block;
+            align-items: center; 
+            margin-bottom: 10px; 
+        }
+        .dvv, .features {
+            display: flex;  /*inline-block*/
+            margin-left: 10px; 
+            margin: -60px;
+        }
+    </style>
+
+
+    <header>
+        <div class="container">
+            <h1>K Means Clustering Project Overview</h1>
+        </div>
+    </header>
+
+    <section id="summary">
+        <div class="container">
+            <h2>Summary</h2>
+            <ol>
+                <li>To summarize my k means clustering project, I used a dataset from kaggle: <a href="https://www.kaggle.com/datasets/solomonameh/spotify-music-dataset">Dataset</a>.</li><br> 
+            
+                <li>I did do pre processing in this project, I pre-processed Energy, Tempo, Danceability and Valence columns in my dataset 
+                    to be either a value of 0 or 1 for when this data is shown on my graph.</li><br>
+            
+                <li>I do understand the data that I have, I am able to identify what columns I need to train my k means clustering model. 
+                    I also have seven images of my k means clustering model throughout the development of this project.</li><br>
+
+                <li>I used <a href="https://www.ibm.com/think/topics/k-means-clustering">IBM</a> and 
+                    <a href="https://www.youtube.com/watch?v=EItlUEPCIzM&t=23s">YouTube</a>
+                for some additional research on k means clustering.</li><br>
+
+                <li>During this project I used Python, Jupyter Notebooks, Matplotlib, Pandas, KMeans and MinMaxScaler.</li>
+            </ol>
+        </div>
+    </section>
+
+
+    <section id="about">
+        <div class="container">
+            <h2>Data Sources</h2>
+           <p>Before I commenced to work on my k means clustering project, I did some thinking on what project I would like to 
+            for k means clustering. After some thought I concluded that I wanted to create a machine learning model 
+            to cluster different types of music data into distinct groups. For this project I used this dataset on kaggle
+            <a href="https://www.kaggle.com/datasets/solomonameh/spotify-music-dataset">Spotify Music Dataset</a>.</p>
+        </div>
+    </section>
+
+
+
+    <section id="about">
+        <div class="container">
+            <h2>Pre Processing</h2>
+            <p>During this project on k means clustering I did some pre-processing. During this phase of my k means 
+                clustering project, I was plotting my data to a graph for visualization, but when I was doing this I did realize that my data was 
+                very spread out. So I used something called a MinMaxScaler. When I used the MinMaxScaler I was able to transformed my data 
+                that was too big to be either a 0 or 1, this was done with the use of the MinMaxScaler.  
+        </div>
+    </section>
+
+
+    <section id="about">
+        <div class="container">
+            <h2>Data Understanding & Visualization</h2>
+            <p>During my k means clustering project I did not have too much issues with visualization (for once). During this project
+                I was able to visualize pretty much everthing that I needed to visualize for my k means clustering project.
+            <br><br>
+
+            <strong>Figure 1:</strong> in this image I have just plotted some of the data onto a graph (but you cannot tell the difference between the different data points). <br>
+            <strong>Figure 2:</strong> in this image I have the exact same data plotted but this time I have added a color to the different data 
+            that is being plotted, I did this because it is easier to read. <br>
+            <strong>Figure 3:</strong> in this image I am just plotting other data that is in my dataset, this time it is not 
+            "Energy" and "Tempo", it is "Danceability" and "Valence". <br>
+            <strong>Figure 4:</strong> in this image I am using the same data from Figure 3 (see above) but I have pre-processed my data with 
+            MinMaxScaler to make my data be on a scale of either 0 or 1. <br>
+            <strong>Figure 5:</strong> in this image I have plotted an elbow method onto a graph. This is used to see what is the best value of k. 
+            In my case 10 is the best value for k, or it could be any number between 5 and 10. <br>
+            <strong>Figure 6:</strong> in this image I have plotted "track_popularity" from my dataset onto a graph. 
+            This data is based of what my k means clustering model has being trained on.<br>
+            <strong>Figure 7:</strong> in this image I am plotting my "energy" data from my dataset onto a graph. 
+            This data is based of what my model has being trained on. And the "Deployment", this is what my model has predicted.<br>
+            <br><br>
+
+            <div class="dvv">
+                <p>Figure 1</p><img id="figures" src="kmc images/kmc image 1.png">
+                <p>Figure 2</p><img id="figures" src="kmc images/kmc image 2.png">
+                <p>Figure 3</p><img id="figures" src="kmc images/kmc image 3.png">
+                <p>Figure 4</p><img id="figures" src="kmc images/kmc image 4.png">
+                <p>Figure 5</p><img id="figures" src="kmc images/kmc image 5.png">
+                <p>Figure 6</p><img id="figures" src="kmc images/kmc image 6.png">
+                <p>Figure 7</p><img id="figures" src="kmc images/kmc image 7.png">
+            </div>
+            <br><br>
+        </div>
+    </section>
+
+
+    <section id="about">
+        <div class="container">
+            <h2>Algorithms Online & Sources</h2>
+            <p>During the development of my k means clustering project I found a few online sources that were some help to me.</p>
+
+            <strong>IBM:</strong> <a href="https://www.ibm.com/think/topics/k-means-clustering">IBM</a><br>
+            <strong>YouTube:</strong> <a href="https://www.youtube.com/watch?v=EItlUEPCIzM&t=23s">YouTube</a><br>
+
+            <p>The above websites were quite helpful for this project. I used ibm for 
+            some additional research on k means clustering. I watched a youtube video to get a deeper understanding on k means
+            clustering and how to program out a k means clustering model in python.</p><br>
+        </div>
+    </section>
+
+
+    <section id="about">
+        <div class="container">
+            <h2>Tool's & Technology Used</h2>
+            <p>When I was developing my k means clustering model I used the following technologies:</p>
+          
+            <strong>Python</strong> <br>
+            <strong>Jupyter Notebook's</strong>  <br>
+            <strong>Matplotlib</strong> <br>
+            <strong>Pandas</strong> <br>
+            <strong>sklearn.cluster KMeans</strong> <br>
+            <strong>sklearn.preprocessing MinMaxScaler</strong> <br>
+
+            <br>
+
+            <p>During this project I got familiar with some of the python libraries such as KMeans, Pandas and MinMaxScaler.<br><br>
+
+            Another technology that I had never used before in python is called MinMaxScaler. This is a library 
+            for scaling down a graph from a very big value to a value to be either a <strong>zero</strong> or <strong>one</strong>.<br><br>
+
+        	Before I had started to code anything for this project, I already had a good understanding on how the python programming language and how it operates and
+        	I also had a good idea on how to use Jupyter Notebooks. These technologies are a must when working with data science and machine learning.
+            </p>
+        </div>
+    </section>  
+</body>
+</html>
