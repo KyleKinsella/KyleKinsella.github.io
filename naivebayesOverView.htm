@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Naïve Bayes Project Overview</title>
+    <link rel="stylesheet" href="template.css">
+    <link rel="stylesheet" href="all.css">
+</head>
+<body>
+
+    <style>
+        .dvv {
+            display: inline-block;
+            align-items: center; 
+            margin-bottom: 10px; 
+        }
+        .dvv, .features {
+            display: flex;
+            margin-left: 10px; 
+            margin: -60px;
+        }
+    </style>
+
+
+    <header>
+        <div class="container">
+            <h1>Naïve Bayes Project Overview</h1>
+        </div>
+    </header>
+
+    <section id="summary">
+        <div class="container">
+            <h2>Summary</h2>
+            <ol>
+                <li>To summarize my Naïve Baye project, I used a dataset from kaggle <a href="https://www.kaggle.com/datasets/uciml/sms-spam-collection-dataset">Spam dataset</a>.</li><br> 
+            
+                <li>I did pre processing in this project, I converted spam and ham into an integer, I did this because it made it easier to 
+                    fit the numbers to the Naïve Baye model, instead of using a string. </li><br>
+            
+                <li>I do understand the data that I have, I am able to identify what columns I need to train my Naïve Baye model. 
+                    I also have an image of my Naïve Baye accuracy illustrated in a confusion matrix.</li><br>
+
+                <li>I used <a href="https://www.youtube.com/watch?v=HZGCoVF3YvM">YouTube</a>, 
+                <a href="https://cse.engineering.nyu.edu/~mleung/FRE7851/f07/naiveBayesianClassifier.pdf">Google Scholar</a>
+                <a href="https://chatgpt.com/">ChatGPT</a>, <a href="https://www.youtube.com/watch?v=O2L2Uv9pdDA&t=454s">YouTube</a> again 
+                and <a href="https://keylabs.ai/blog/naive-bayes-classifiers-types-and-use-cases/">KeyLabs</a>.
+                These resources where very handy during this machine learning project.</li><br>
+            
+
+                <li>During this project I used Python, Jupyter Notebooks, Pandas, Sklearn.naive_bayes, Numpy,
+                    Sklearn.feature_extraction.text, Sklearn, Sklearn.metrics and Matplotlib.</li>
+            </ol>
+        </div>
+    </section>
+
+
+    <section id="about">
+        <div class="container">
+            <h2>Data Sources</h2>
+           <p>Before I started to work on my naïve bayes project, I watched some YouTube videos for some additional research and study on naïve bayes
+            to get a better understand on what a Naïve Bayes machine learning model does behind the scenes.
+            
+            For my Naïve Bayes project I wanted to create a machine learning model to classify if a piece of text is either spam 
+            or ham(real / legitimate). This is the dataset that I used for this project
+            <a href="https://www.kaggle.com/datasets/uciml/sms-spam-collection-dataset">Spam dataset</a>.</p>
+        </div>
+    </section>
+
+
+
+    <section id="about">
+        <div class="container">
+            <h2>Pre Processing</h2>
+            <p>During this project on naïve bayes I did pre-processing my dataset. I converted <strong>spam</strong> to be: <strong>1</strong>
+                and I converted <strong>ham</strong> to: <strong>0</strong>. I also wrote a function to clean some of the text in my
+                dataset. See below for the code and what was in my dataset:<br> 
+            <ul>
+                <h3>Dataset features</h3>
+                <li>v1 - spam or ham</li>
+                <li>v2 - a piece of text</li>
+            </ul>
+            
+            <ul>
+                <h3>Code for cleaning my dataset</h3>
+                <li>def cleanText(text): <br>
+                    text = ''.join(char for char in text if char.isalnum() or char.isspace()) <br>
+                    text = ' '.join(text.split()) # break the text into many other smaller parts <br>
+                    return text</li>
+            </ul>
+        </div>
+    </section>
+
+
+    <section id="about">
+        <div class="container">
+            <h2>Data Understanding & Visualization</h2>
+            <p>During this project on Naïve Bayes I did not have to much issues with visualization, the main reason for this 
+                is due to naïve bayes being a <strong>conditional probability</strong> machine learning model. This means that we 
+                don't need to do to much graphs for this model. But I do have a confusion matrix to see how accurate my model is.
+                
+                Below is a confusion matrix figure for my naïve baye model. <br><br>
+            
+            <strong>Figure 1:</strong> Confusion matrix for my model<br>
+            
+            <br><br>
+
+            <div class="dvv">
+                <p>Figure 1:</p><img id="figures" src="nbImage.png">
+            </div>
+            <br><br>
+        </div>
+    </section>
+
+
+    <section id="about">
+        <div class="container">
+            <h2>Algorithms Online & Sources</h2>
+            <p>During the development of my naïve baye project I found a few online source that were very helpful for this project.</p>
+
+            <strong>YouTube:</strong> <a href="https://www.youtube.com/watch?v=HZGCoVF3YvM">YouTube</a><br>
+            <strong>Google Scholar:</strong> <a href="https://cse.engineering.nyu.edu/~mleung/FRE7851/f07/naiveBayesianClassifier.pdf">Google Scholar</a><br>
+            <strong>ChatGpt:</strong> <a href="https://chatgpt.com/">ChatGPT</a><br>
+            <strong>YouTube:</strong> <a href="https://www.youtube.com/watch?v=O2L2Uv9pdDA&t=454s">YouTube</a><br>
+            <strong>KeyLabs:</strong> <a href="https://keylabs.ai/blog/naive-bayes-classifiers-types-and-use-cases/">KeyLabs</a><br>
+
+            <p>The above websites were <strong>very helpful</strong> for this project. I used YouTube to watch some videos 
+                to get a deeper understanding on how naïve bayes actual work. I used google scholar to do some additional reading on
+                naïve bayes and I used chatgpt for some help when I was coding out my naïve baye model.</p><br>
+        </div>
+    </section>
+
+
+    <section id="about">
+        <div class="container">
+            <h2>Tool's & Technology Used</h2>
+            <p>When I was developing my Naïve Baye model I used the following technologies:</p>
+          
+            <strong>Python</strong> <br>
+            <strong>Jupyter Notebook's</strong>  <br>
+            <strong>Pandas</strong> <br>
+            <strong>Sklearn.naive_bayes GaussianNB</strong> <br>
+            <strong>Numpy np</strong> <br>
+            <strong>Sklearn.feature_extraction.text TfidfVectorizer</strong> <br>      
+            <strong>Sklearn metrics</strong> <br>
+            <strong>Sklearn.metrics confusion_matrix, ConfusionMatrixDisplay</strong> <br>                    
+            <strong>Matplotlib</strong> <br><br>
+
+            <p>During this project I got familiar with some of the python libraries such as Sklearn.naive_bayes, 
+            Sklearn.feature_extraction.text, Sklearn.metrics and much more.<br><br>
+
+            Another technology that I had never used before in python is called Sklearn.naive_bayes. This is a library for making a 
+            naïve baye model and training your naïve baye model.<br><br>
+
+        	Before I had started to code anything for this project, I already had a good understanding on how the python programming language and how it operates and
+        	I also had a good idea on how to use Jupyter Notebooks. These technologies are a must when working with data science and machine learning.
+            </p>
+        </div>
+    </section>  
+</body>
+</html>
