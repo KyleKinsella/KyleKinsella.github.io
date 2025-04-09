@@ -155,28 +155,20 @@
       color: var(--accent);
     }
 
-    footer {
-      text-align: center;
-      padding: 2rem 1rem;
-      font-size: 0.9rem;
-      color: #777;
-    }
-
+    
     @media (max-width: 600px) {
-      header h1 {
-        font-size: 2.2rem;
-      }
+  .logo {
+    position: static;
+    text-align: center;
+    margin: 1rem auto;
+  }
 
-      .tech img {
-        width: 60px;
-        height: 60px;
-      }
+  .logo img {
+    width: 120px;
+    height: auto;
+  }
+}
 
-      nav.main-nav {
-        flex-direction: column;
-        gap: 10px;
-      }
-    }
   </style>
 </head>
 
@@ -260,6 +252,7 @@
     <div class="theTeam">
       <img src="imageofme.jpg" alt="Kyle Kinsella" />
     </div>
+    <h3>Kyle Kinsella: Developer</h3> <br>
     <h3>Supervisor: Joseph Kehoe</h3>
   </section>
 
@@ -270,10 +263,6 @@
     <h4>GitHub: <a href="https://github.com/KyleKinsella?tab=repositories" target="_blank"><i class="fa fa-github"></i></a></h4>
     <h4>LinkedIn: <a href="https://www.linkedin.com/in/kyle-kinsella-52614b291/" target="_blank"><i class="fa fa-linkedin-square"></i></a></h4>
   </section>
-
-  <footer>
-    &copy; 2025 Kyle Connect. All rights reserved.
-  </footer>
 
 </body>
 </html>
