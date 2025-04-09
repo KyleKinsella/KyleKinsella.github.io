@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kyle Connect</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+  <style>
+    :root {
+      --primary: #1a73e8;
+      --accent: #ffb400;
+      --bg: #f4f7fa;
+      --text: #222;
+      --font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font);
+      background-color: var(--bg);
+      color: var(--text);
+    }
+
+    header {
+      text-align: center;
+      padding: 3rem 1rem 1rem;
+    }
+
+    header h1 {
+      font-size: 3.2rem;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.3rem;
+      color: #555;
+    }
+
+    /* .logo img {
+      display: block;
+      margin: 1.5rem auto;
+      width: 120px;
+      border-radius: 14px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    } */
+
+    .logo {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 999;
+    }
+
+    .logo img {
+        width: 200px;
+        height: 170px;
+        /* border-radius: 14px; */
+        /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); */
+    }
+
+    nav.main-nav {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      background-color: var(--primary);
+      padding: 1rem;
+      border-radius: 12px;
+      margin: 2rem auto;
+      max-width: 900px;
+      flex-wrap: wrap;
+    }
+
+    nav.main-nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+    }
+
+    nav.main-nav a:hover {
+      color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    section {
+      padding: 2.5rem 1rem;
+      max-width: 1000px;
+      margin: auto;
+      text-align: center;
+    }
+
+    section h2 {
+      font-size: 2.2rem;
+      color: var(--primary);
+      margin-bottom: 1.5rem;
+    }
+
+    .tech {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .tech img {
+      width: 180px;
+      height: 90px;
+      object-fit: contain;
+      border-radius: 12px;
+      background: #fff;
+      padding: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .tech img:hover {
+      transform: scale(1.1);
+    }
+
+    .theTeam img {
+      width: 200px;
+      border-radius: 50%;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+      margin-bottom: 1rem;
+      transition: transform 0.3s;
+    }
+
+    .theTeam img:hover {
+      transform: scale(1.05);
+    }
+
+    .contact-info h3,
+    .contact-info h4 {
+      margin: 1rem 0;
+      font-size: 1.2rem;
+    }
+
+    .contact-info i {
+      margin-left: 10px;
+      font-size: 30px;
+      color: var(--primary);
+      transition: color 0.3s;
+    }
+
+    .contact-info a:hover i {
+      color: var(--accent);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      color: #777;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+
+      .tech img {
+        width: 60px;
+        height: 60px;
+      }
+
+      nav.main-nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Kyle Connect</h1>
+    <p>Let's get you up and running with Kyle Connect!</p>
+    <div class="logo">
+      <img src="logo.png" alt="Kyle Connect Logo"/>
+    </div>
+  </header>
+
+  <nav class="main-nav">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#technologies">Technologies</a>
+    <a href="#demo">Demo</a>
+    <a href="#documents">Documents</a>
+    <a href="#team">The Team</a>
+    <a href="#contact">Contact Me</a>
+  </nav>
+
+    <section id="about">
+        <h2>About</h2>
+        <!-- <p>Kyle Connect is a communication platform that allows anyone to connect, from anywhere in the entire world. Want to make friends online, create group conversation, message your friends to see what they are up to and so much more. </p> -->
+        <p>Kyle Connect is a global communication platform that makes it easy for anyone to connect, no matter 
+            where they are in the world. Whether you're looking to make new friends, start group conversations
+            or message your friends to see what they’re up to, Kyle Connect has you covered and there's even more waiting for you to discover!</p>
+    </section>
+
+  <section id="technologies">
+    <h2>Technologies</h2>
+    <div class="tech">
+      <img src="html.png" alt="HTML" />
+      <img src="css.png" alt="CSS" />
+      <img src="docker.png" alt="Docker" />
+      <img src="go.png" alt="Go" />
+      <img src="mysql.jpg" alt="MySQL" />
+    </div>
+  </section>
+
+    <section id="demo">
+        <h2>Demonstration of Kyle Connect</h2>
+
+        <iframe width="560" height="315" 
+            src="https://www.youtube.com/embed/3-8gb5nZ1EE" 
+            frameborder="0" 
+            allowfullscreen>
+        </iframe>
+        
+    </section>
+
+  <section id="documents">
+    <h2>Documents</h2>
+    <p>All of my project documents for Kyle Connect can be found here.</p> <br>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
+            <div style="background: white; border-radius: 12px; padding: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1); max-width: 250px;">
+                <h3>Functional Specification</h3>
+                <!-- <p>Summary of key project elements and timeline.</p> -->
+                <a href="final docs/Kyle Kinsella - Kyle Connect Final Functional Specification document.pdf" target="_blank" style="color: #1a73e8; font-weight: bold;">View: Functional Specification</a>
+            </div>
+            
+            <div style="background: white; border-radius: 12px; padding: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1); max-width: 250px;">
+                <h3>Research Poster</h3>
+                <!-- <p>System components and interactions illustrated.</p> -->
+                <a href="final docs/Kyle Kinsella - Kyle Connect Final Research Poster.png" target="_blank" style="color: #1a73e8; font-weight: bold;">View: Research Poster</a>
+            </div>
+
+            <div style="background: white; border-radius: 12px; padding: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1); max-width: 250px;">
+                <h3>Design Specification</h3>
+                <!-- <p>System components and interactions illustrated.</p> -->
+                <a href="final docs/Kyle Connect Final Design document-2-1.pdf" target="_blank" style="color: #1a73e8; font-weight: bold;">View: Design Specification</a>
+            </div>
+        </div>
+    </section>
+
+  <section id="team">
+    <h2>The Team</h2>
+    <div class="theTeam">
+      <img src="imageofme.jpg" alt="Kyle Kinsella" />
+    </div>
+    <h3>Supervisor: Joseph Kehoe</h3>
+  </section>
+
+  <section id="contact" class="contact-info">
+    <h2>Contact Me</h2>
+    <a href="#"><h4><i class="fa fa-phone"></i></a>    083-462-0451</h4>
+    <a href="#"><h4><i class="fa fa-envelope"></i></a>  kylekinsella10@gmail.com</h4>
+    <h4>GitHub: <a href="https://github.com/KyleKinsella?tab=repositories" target="_blank"><i class="fa fa-github"></i></a></h4>
+    <h4>LinkedIn: <a href="https://www.linkedin.com/in/kyle-kinsella-52614b291/" target="_blank"><i class="fa fa-linkedin-square"></i></a></h4>
+  </section>
+
+  <footer>
+    &copy; 2025 Kyle Connect. All rights reserved.
+  </footer>
+
+</body>
+</html>
