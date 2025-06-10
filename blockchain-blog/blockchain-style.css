@@ -85,6 +85,10 @@ i {
     font-size: 25px;
 }
 
+.menu {
+    display: none;
+}
+
 @media (max-width: 600px) {
   img {
     width: 270px;
