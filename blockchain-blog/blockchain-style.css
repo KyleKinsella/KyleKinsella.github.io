@@ -86,10 +86,22 @@ img {
     color: #213547;
     background-color: #ffffff;
   }
+
   a:hover {
     color: #747bff;
   }
+  
   button {
     background-color: #f9f9f9;
+  }
+
+  img {
+    display: inline-block;
+    width: 200px;
+    height: 150px;
+    max-width: 420px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    text-align: center;
   }
 }
