@@ -43,6 +43,9 @@ nav ul li {
 nav ul li a {
     color: #fff;
     text-decoration: none;
+    margin: 5px;
+    padding: 5px;
+    display: inline-block;
 }
 
 .container {
@@ -130,6 +133,7 @@ nav {
     /* align-items: center; Centers the items vertically if needed */
     gap: 20px; /* Adds space between the items */
     background-color:   transparent;
+    color: red;
 }
 
 
