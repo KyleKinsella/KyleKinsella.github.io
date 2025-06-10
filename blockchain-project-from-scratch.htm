@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BlockChain From Scratch</title>
+    <title>BlockChain From Scratch Blog</title>
     <link rel="stylesheet" href="blockchain-blog/blockchain-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 <!-- 
@@ -23,34 +24,80 @@
     <header>
         <h1>Building a Blockchain from the Ground Up</h1>
         <p class="details"> <strong>Kyle Kinsella</strong> <br /> June 8, 2025</p>
-        
+
+        <i class="fa-solid fa-bars" onclick="toggle()"></i>
+
+        <div id="menu">
+            <h1>Below are all of the topics that I have developed for my project, click on a button and you will be brought to the corresponding page. </h1>
+            <nav>
+                <a class="home" href="">Home</a>
+                <a class="block" href="">Blocks</a>
+                <a class="trans" href="">Transactions</a>
+                <a class="sim" href="">Simulation</a>
+
+                <a class="pow" href="">Proof of Work</a>
+                <a class="pos" href="">Proof of Stake</a>
+                <a class="kp" href="">Key-Pairs</a>
+
+                <a class="address" href="">Addresses</a>
+                <a class="contact" href="">Contact</a>
+            </nav>
+        </div>
+
+        <script>
+            function toggle() {
+                const menu = document.getElementById("menu")
+                if (menu.style.display === 'none' || menu.style.display === '') {
+                    menu.style.display = 'block';
+                } else {
+                    menu.style.display = 'none';
+                }
+            }
+        </script>
+
         <hr>
 
-         <h2>Why am I doing this?</h2>
-            <p>The goal of this project is to gain a deeper understanding on how a blockchain works under the hood.</p>
+        <h2>Why am I doing this?</h2>
+        <p>The goal of this project is to gain a deeper understanding on how a blockchain works under the hood.</p>
 
-            <p></p>
+        <!-- TODO: -->
+        <p></p> 
 
-            <h2>Technologies</h2>
-            <p>I have chosen to build my user-interface with <strong>React</strong>, I chose React because it's a widely used framework in modern software development and I want to strengthen my skills with React by applying it to this project.</p>
+        <h2>Technologies</h2>
+        <p>I have chosen to build this project with the following tech stack: </p>
 
-            <p>I have developed some of the core features that a blockchain has, such as: <strong>Blocks, Proof of Work (POW) and Proof of Stake algorithms, Transactions, Public & Private Key-Pairs and Addresses.</strong></p>
-            <p>I am currently working on the <strong>user-interface</strong> to enchance the user experience for end users. Once the UI is more polished I will be developing my own <strong>Decentralized Autonomous Organization (DAO)</strong>.
-            My DAO will be taking most of the core inspiration from <strong>Nouns DAO:</strong> <a href="https://nouns.wtf/"><button>nouns.wtf</button></a></p>
-            <p>If you wish to view my source code for this project, click here: <a href="https://github.com/KyleKinsella/BlockChain-Project-From-Scratch"><button>Source Code</button></a></p>
+        <h3>Frontend</h3>
+        <ul>
+            <li>React</li>
+        </ul>
+        <p>I chose <strong>React</strong> because it's a widely used framework in modern software development and I want to strengthen my skills with React by applying it to this project.</p>
 
-            <img class="card-img" src="blockchain-blog/blockchain.jpg" alt="blockchain Image" />
-            <img class="card-img" src="blockchain-blog/react.png" alt="React Framework" />
-            <img class="card-img" src="blockchain-blog/dao.webp" alt="DAO Image" />
+        <h3>Backend</h3>
+        <ul>
+            <li>Go (Golang)</li>
+            <li>Might use Python later in the project</li>
+        </ul>
+        <p>I have chose to develop my backend in <strong>Go</strong> because Go contains concurrent features, such as: <strong>Go-Routines, Wait-Groups, Mutex Locks and Channels</strong>. Another  reason to why I chose to 
+        build my backend in Go is because Go is a fun programming language to write software in.</p>
 
-            <br /> 
+        <h2>What have I made so far?</h2>
+        <p>So far, I have developed most of the core features that a blockchain has, such as: <strong>Blocks, Proof of Work (POW) and Proof of Stake algorithms, Transactions, Public & Private Key-Pairs and Addresses.</strong></p>
+        <p>I am currently working on the <strong>User-Interface</strong> to enhance the user experience for end users. Once the UI is more polished I will be developing my own <strong>Decentralized Autonomous Organization (DAO)</strong>.
+        My DAO will be taking most of the core inspiration from <strong>Nouns DAO:</strong> <a href="https://nouns.wtf/"><button>nouns.wtf</button></a></p>
+        <p>If you wish to view my source code for this project, click here: <a href="https://github.com/KyleKinsella/BlockChain-Project-From-Scratch"><button>Source Code</button></a></p>
 
-            <h1>References</h1>            
-            <ol>
-                <li><a href="https://stock.adobe.com/ie/search?k=blockchain">Blockchain Image</a></li> <br />
-                <li><a href="https://harsh05.medium.com/mastering-react-a-comprehensive-guide-for-frontend-developers-ccd5b63c2cad">React Image</a></li> <br />
-                <li><a href="https://www.disruptionbanking.com/2022/10/13/how-to-choose-the-right-blockchain-for-your-dao/">DAO Image</a></li>
-            </ol>
+        <img class="card-img" src="blockchain-blog/blockchain.jpg" alt="blockchain Image" />
+        <img class="card-img" src="blockchain-blog/react.png" alt="React Framework" />
+        <img class="card-img" src="blockchain-blog/dao.webp" alt="DAO Image" />
+
+        <br /> 
+
+        <h1>References</h1>            
+        <ol>
+            <li><a href="https://stock.adobe.com/ie/search?k=blockchain">Blockchain Image</a></li> <br />
+            <li><a href="https://harsh05.medium.com/mastering-react-a-comprehensive-guide-for-frontend-developers-ccd5b63c2cad">React Image</a></li> <br />
+            <li><a href="https://www.disruptionbanking.com/2022/10/13/how-to-choose-the-right-blockchain-for-your-dao/">DAO Image</a></li>
+        </ol>
     </header>
     
 
