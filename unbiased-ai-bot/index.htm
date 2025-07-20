@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Unbiased AI Bot</title>
+    <style>
+        /* Reset some default */
+        body, h1, h2, h4, p, ul, ol {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background: #f9f9f9;
+            color: #333;
+            padding: 0 20px 40px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* Navbar */
+        nav {
+            background-color: #007acc;
+            color: white;
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        nav .logo {
+            font-weight: 700;
+            font-size: 1.25rem;
+            letter-spacing: 1px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 18px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 6px 8px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #005fa3;
+        }
+
+        /* Headings */
+        h1 {
+            font-size: 2.2rem;
+            margin-top: 40px;
+            margin-bottom: 15px;
+            color: #007acc;
+        }
+
+        h2 {
+            font-size: 1.6rem;
+            margin-top: 35px;
+            margin-bottom: 10px;
+            color: #005fa3;
+        }
+
+        h4 {
+            font-size: 1.1rem;
+            margin-top: 20px;
+            margin-bottom: 15px;
+            color: #444;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 15px;
+            font-size: 1rem;
+        }
+
+        ul, ol {
+            margin-left: 20px;
+            margin-bottom: 25px;
+        }
+
+        ul li, ol li {
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #007acc;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        strong {
+            color: #222;
+        }
+
+        /* Emojis larger */
+        h1 > .emoji, h2 > .emoji, h4 > .emoji {
+            font-size: 1.3rem;
+            margin-left: 6px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">Unbiased AI Bot</div>
+        <ul>
+            <li><a href="#project">Project</a></li>
+            <li><a href="#why">Why</a></li>
+            <li><a href="#goals">Goals</a></li>
+            <li><a href="#plans">Plans</a></li>
+            <li><a href="#help">Help</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="project">
+        <h1>The Project 🚀🧩</h1>
+        <p>I am exploring whether it's possible to build an AI Chat-Bot that gives balanced, transparent answers without the worry for political or ideological slant.</p>
+    </section>
+
+    <section id="why">
+        <h1>Why am I doing this❓</h1>
+        <p>The main reason to why I am thinking on creating a project is for the following reasons, see below:</p>
+        <h4><strong>All Large Language Model's (LLM'S):</strong></h4>
+        <ul>
+            <li>Lack Transparency.</li>
+            <li>Are trained on Biased Data.</li>
+        </ul>
+        <p>Another reason I’m working on this project is because of how difficult it is for new computer science and software development graduates to get a real opportunity. Most companies expect 2–5 years of experience for roles labeled as “entry-level” which makes it nearly impossible for someone just starting out.
+        <br> <br>
+        On top of that, the job application process is frustrating. You’re often required to create an account, go through five or six tedious steps just to upload your CV, and then wait days or even weeks to receive a generic rejection email: “We are not going to continue with your application.” Or worse, you get completely ghosted.
+        <br> <br>
+       <strong>And if you do make it past that?</strong> <br> You're typically expected to go through multiple interviews, solve coding challenges (often unrelated to the actual job), complete system design exercises, and more. Even then, there’s no guarantee you’ll get the offer only a chance. That system feels broken to me, and it’s one of the things that motivated me to build something of my own.</p>
+    </section>
+
+    <section id="goals">
+        <h2>I want to create a system to ensure the following, see below:</h2>
+        <ul>
+            <li>A system that shows more than one perspective.</li>
+            <li>Is unbaised.</li>
+            <li>Allow my users to rate how fair the answer was.</li>
+        </ul>
+    </section>
+
+    <section id="plans">
+        <h1>What i'm thinking on doing 💭</h1>
+        <h4>I am in the very early stages of this project but this is what I am thinking on creating (at the moment).</h4>
+        <ol>
+            <li>Use OpenAi's API to send questions and get answers.</li>
+            <li>Build my own backend logic to ensure balance.</li>
+            <li>Allow users to flag / analyze baises in the result.</li>
+            <li>Create an unbaised better dataset from the user feedback.</li>
+            <li>Lastly: Test and fine tune my model.</li>
+        </ol>
+    </section>
+
+    <section id="help">
+        <h1>I need your help 🤝🚨</h1>
+        <h4>Now, this is the biggest part of this project, I <strong>cannot</strong> do this on my own.</h4>
+        <ul>
+            <li>Would you <i>use</i> a bot like this?</li>
+            <li>Do you care about AI Bias?</li>
+            <li>Would you test this out for me when I have the first version ready?</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h1>Contact Me</h1>
+        <p>Want to help or just chat about it? <a href="mailto:kylekinsella10@gmail.com">Email me</a> or connect on <a href="https://www.linkedin.com/in/kyle-kinsella-52614b291/">LinkedIn</a>.</p>
+    </section>
+</body>
+</html>
