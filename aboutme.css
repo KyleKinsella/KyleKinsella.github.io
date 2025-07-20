@@ -1,6 +1,6 @@
 h1 {
     text-align: center;
-    background-color: #3A7CA5;
+    background-color: #3C91E6;
     padding: 20px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -41,7 +41,7 @@ nav a {
 
 button {
     font-size: 20px; 
-    background-color: crimson;
+    background: linear-gradient(90deg, #3a7ca5 0%, #65aedd 100%);
     border: black;
     padding: 10px;
     border-radius: 25px;
