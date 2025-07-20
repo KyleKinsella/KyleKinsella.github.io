@@ -9,8 +9,6 @@
     <link rel="stylesheet" href="all.css">
 </head>
 <body>
-    
-
     <header>
         <div class="container">
             <h1>Data Science & Machine Learning Projects</h1>
@@ -23,16 +21,147 @@
         </div>
     </header>
 
-     <!-- <h2>Welcome, on this page I will be showing all of my Data Science and Machine Learning projects that I have developed during my final 
-                year in college at South East Technological University Carlow.
-            </h2> -->
+    <style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
 
-        <!-- <br><br> -->
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        background: #f4f4f4;
+        color: #333;
+    }
 
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 1rem;
+    }
+
+    header {
+        background: #333;
+        color: #fff;
+        padding: 1rem 0;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        background: #555;
+        border-radius: 5px;
+        transition: background 0.3s;
+    }
+
+    nav ul li a:hover {
+        background: #007BFF;
+    }
+
+    .project-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        margin-top: 1rem;
+    }
+
+    .project {
+        flex: 1 1 calc(33.333% - 1.5rem);
+        background: #fff;
+        padding: 1rem;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    section h2 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        text-align: center;
+        color: #222;
+    }
+
+    .project h3 {
+        font-size: 1.2rem;
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
+        color: #444;
+    }
+
+    .project p {
+        margin-bottom: 0.8rem;
+        font-size: 0.95rem;
+    }
+
+    .project a {
+        color: #007BFF;
+        text-decoration: underline;
+        word-break: break-word;
+    }
+
+    .project a:hover {
+        text-decoration: none;
+        color: #0056b3;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        background: #007BFF;
+        color: #fff;
+        border-radius: 5px;
+        text-decoration: none;
+        margin-top: 1rem;
+    }
+
+    .btn:hover {
+        background: #0056b3;
+    }
+
+    @media (max-width: 1024px) {
+        .project {
+            flex: 1 1 calc(50% - 1rem);
+        }
+    }
+
+    @media (max-width: 768px) {
+        .project {
+            flex: 1 1 100%;
+        }
+
+        header h1 {
+            font-size: 1.5rem;
+        }
+
+        nav ul {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        nav ul li a {
+            width: 100%;
+            text-align: center;
+        }
+    }
+    </style>
 
     <section id="projectsSemester1">
         <div class="container">
-          
             <h3>Below are my Data Science and Machine Learning projects, showcasing the skills and knowledge I 
                 gained while exploring these fields.
             </h3>   
@@ -85,7 +214,7 @@
                 </div>
 
                 <div class="project"> 
-                    <h3>Summary of Linear Regression, Decision Tree and Random Forest Projects</h3> <br>
+                    <h3>Summary of Linear Regression, Decision Tree and Random Forest Projects</h3>
                     
                     <h3>Comprehensive Overview of All Three Projects</h3>
                     <p>Here are the overviews of all three of my projects, including data sources and other relevant details: <a href="allThreeProjectsSummarizedOverView.html">Summary of All Three Projects</a></p>
@@ -99,178 +228,115 @@
         </div>
     </section>
 
-    <!-- <section id="projects">
-            <div class="container">
-                <h2>Data Science & Machine Learning 1 Summary</h2>
-                <div class="project-grid">
-                    <div class="project"> 
-                        <h3>Summary of Linear Regression, Decision Tree and Random Forest Projects</h3> <br>
-                        
-                        <h3>Comprehensive Overview of All Three Projects</h3>
-                        <p>Here are the overviews of all three of my projects, including data sources and other relevant details: <a href="allThreeProjectsSummarizedOverView.html">Summary of All Three Projects</a></p>
-
-                        <h3>Knowledge Acquired</h3>
-                        <p>Here is a link detailing the lessons I learned from each of these projects: <a href="allThreeProjectsSummarizedLearnings.html">Lessons Learned Across the Three Projects</a></p>
-                        
-                        <h3>Source Code</h3>
-                        <p>Here is a link to my GitHub repository showcasing the source code for all the projects I have developed: <a href="https://github.com/KyleKinsella/Data-Science-Machine-Learning-Code/tree/main">Full Implementation of My Code</a></p><br>
-                    </div>
-            </div>
-        </section> -->
-
-
-        <!-- this is the second semester part of my data science and machine learning portfolio -->
-
-        <br> 
+    <br> 
         
-        <section id="projectsSemester2">
-            <div class="container">
+    <section id="projectsSemester2">
+        <div class="container">
 
-                <h2 class="sem2">Data Science & Machine Learning Semester 2 Projects</h2>
-                <div class="project-grid">
-                    <div class="project">
-                        <h3>Naïve Bayes</h3>
-                        <p>During this project, I explored Naïve Bayes. Naïve Bayes is a supervised machine learning model.
-                            Naïve Bayes is a generative learning algorithm, this means the model looks for the inputs of a given class 
-                            or category (<a href="https://www.google.com/search?client=firefox-b-d&q=naive+bayes">Naïve Bayes</a>).
-                            
-                            There are three types of Naïve Bayes (See below). 
-                            <a href="https://keylabs.ai/blog/naive-bayes-classifiers-types-and-use-cases/">Types of Naïve Bayes</a>.<br></p>
-                            
-                        <ul>
-                            <li>Gaussian - works on continuous data.</li>
-                            <li>Multinomial - works on discrete data.</li>
-                            <li>Bernoulli - works on binary/boolean data.</li>
-                        </ul>
-                            
-                        <h3>Project Overview</h3>
-                        <p>Here I have my project overview with data sources etc: <a href="naivebayesOverView.htm">Project Overview</a>.</p>
-    
-                        <!-- <h3>What I learned</h3> -->
-                        <!-- <p>Click on this link to see what I learned during this project: <a href="linearRegressionLearnings.html">What I learned</a></p> -->
+            <h2 class="sem2">Data Science & Machine Learning Semester 2 Projects</h2>
+            <div class="project-grid">
+                <div class="project">
+                    <h3>Naïve Bayes</h3>
+                    <p>During this project, I explored Naïve Bayes. Naïve Bayes is a supervised machine learning model.
+                        Naïve Bayes is a generative learning algorithm, this means the model looks for the inputs of a given class 
+                        or category (<a href="https://www.google.com/search?client=firefox-b-d&q=naive+bayes">Naïve Bayes</a>).
                         
-                        <h3>My Source Code</h3>
-                        <p>Here is a link to my GitHub: <a href="https://github.com/KyleKinsella/Data-Science-Machine-Learning-Code/tree/main/Semester2MLProjects/Naive%20Bayes">Naïve Bayes</a>.</p><br>
-                    </div>
-    
-                    <div class="project">
-                        <h3>Support Vector Machines</h3>
-                        <p>During this project, I explored Support Vector Machines. Support Vector Machines fall under both supervised learning and discriminative classification. 
-                            Support Vector Machines work very good in N-dimensional space. <br></p>
+                        There are three types of Naïve Bayes (See below). 
+                        <a href="https://keylabs.ai/blog/naive-bayes-classifiers-types-and-use-cases/">Types of Naïve Bayes</a>.<br></p>
                         
-                        <h3>Project Overview</h3>
-                        <p>Here I have my project overview with data sources etc: <a href="svmOverView.htm">Project Overview</a>.</p>
-    
-                        <!-- <h3>What I learned</h3>
-                        <p>Click on this link to see what I learned during this project: <a href="decisionTreeLearnings.html">What I learned</a></p> -->
+                    <ul>
+                        <li>Gaussian - works on continuous data.</li>
+                        <li>Multinomial - works on discrete data.</li>
+                        <li>Bernoulli - works on binary/boolean data.</li>
+                    </ul>
                         
-                        <h3>My Source Code</h3>
-                        <p>Here is a link to my GitHub: <a href="https://github.com/KyleKinsella/Data-Science-Machine-Learning-Code/tree/main/Semester2MLProjects/Support%20vector%20machines">Support Vector Machines</a>.</p><br>
-                    </div>
-    
-                     <div class="project">
-                        <h3>K Nearest Neighbour</h3>
-                        <p>During this project, I explored K Nearest Neighbour. K Nearest Neighbour is a 
-                        supervised learning classifier (<a href="https://www.google.com/search?client=firefox-b-d&q=knn">K Nearest Neighbour</a>). 
-                        K Nearest Neighbour works by grouping data points that are
-                        close in area, this is done mathematical using the Euclidean distance formula.
-                        
-                        <a href="https://botpenguin.com/glossary/euclidean-distance">Euclidean Distance Formula</a>.<br></p>
+                    <h3>Project Overview</h3>
+                    <p>Here I have my project overview with data sources etc: <a href="naivebayesOverView.htm">Project Overview</a>.</p>
 
+                    <h3>My Source Code</h3>
+                    <p>Here is a link to my GitHub: <a href="https://github.com/KyleKinsella/Data-Science-Machine-Learning-Code/tree/main/Semester2MLProjects/Naive%20Bayes">Naïve Bayes</a>.</p><br>
+                </div>
 
-                        <h3>Project Overview</h3>
-                        <p>Here I have my project overview with data sources etc: <a href="knnOverView.htm">Project Overview</a>.</p>
-    
-                        <!--<h3>What I learned</h3>
-                        <p>Click on this link to see what I learned during this project: <a href="randomForestLearnings.html">What I learned</a></p>-->
-                        
-                        <h3>My Source Code</h3>
-                        <p>Here is a link to my GitHub: <a href="https://github.com/KyleKinsella/Data-Science-Machine-Learning-Code/tree/main/Semester2MLProjects/K%20Nearest%20Neighbor">K Nearest Neighbour</a>.</p><br>
-                    </div> 
+                <div class="project">
+                    <h3>Support Vector Machines</h3>
+                    <p>During this project, I explored Support Vector Machines. Support Vector Machines fall under both supervised learning and discriminative classification. 
+                        Support Vector Machines work very good in N-dimensional space. <br></p>
+                    
+                    <h3>Project Overview</h3>
+                    <p>Here I have my project overview with data sources etc: <a href="svmOverView.htm">Project Overview</a>.</p>
+
+                    <h3>My Source Code</h3>
+                    <p>Here is a link to my GitHub: <a href="https://github.com/KyleKinsella/Data-Science-Machine-Learning-Code/tree/main/Semester2MLProjects/Support%20vector%20machines">Support Vector Machines</a>.</p><br>
+                </div>
 
                     <div class="project">
-                        <h3>K Means Clustering</h3>
-                        <p>During this project, I explored K Means Clustering. K Means Clustering is an un-supervised machine learning algorithm, it is used for 
-                            clustering groups of data together. In K Means Clustering there is something called a centroid. A centroid is a random plot
-                            in the middle of a cluster, the area where the centroid was will change after each iteration of the 
-                            K Means Clustering model. <a href="https://www.ibm.com/think/topics/k-means-clustering">K Means Clustering</a>.<br></p>
-                        
-                        <h3>Project Overview</h3>
-                        <p>Here I have my project overview with data sources etc: <a href="kmcOverView.htm">Project Overview</a>.</p>
-    
-                        <!-- <h3>What I learned</h3>
-                        <p>Click on this link to see what I learned during this project: <a href="randomForestLearnings.html">What I learned</a></p> -->
-                        
-                        <h3>My Source Code</h3>
-                        <p>Here is a link to my GitHub: <a href="https://github.com/KyleKinsella/Data-Science-Machine-Learning-Code/tree/main/Semester2MLProjects/K%20Means%20Clustering">K Means Clustering</a>.</p><br>
-                    </div> 
-            </div>
-        </section>
+                    <h3>K Nearest Neighbour</h3>
+                    <p>During this project, I explored K Nearest Neighbour. K Nearest Neighbour is a 
+                    supervised learning classifier (<a href="https://www.google.com/search?client=firefox-b-d&q=knn">K Nearest Neighbour</a>). 
+                    K Nearest Neighbour works by grouping data points that are
+                    close in area, this is done mathematical using the Euclidean distance formula.
+                    
+                    <a href="https://botpenguin.com/glossary/euclidean-distance">Euclidean Distance Formula</a>.<br></p>
 
-        <section id="projectsSemester2">
-            <div class="container">
-                <h2>Neural Network Projects</h2>
-                <div class="project-grid">
-                    <div class="project">
-                        <h3>Convolutional Neural Network</h3>
-                        <p>
+                    <h3>Project Overview</h3>
+                    <p>Here I have my project overview with data sources etc: <a href="knnOverView.htm">Project Overview</a>.</p>
 
-                        <h3>Project Overview</h3>
-                        <p>Here I have my project overview with data sources etc: <a href="cnnProjectOverview.htm">Cnn Project Overview</a>.</p>
-    
-                        <!-- <h3>What I learned</h3> -->
-                        <!-- <p>Click on this link to see what I learned during this project: <a href="linearRegressionLearnings.html">What I learned</a></p> -->
-                        
-                        <h3>My Source Code</h3>
-                        <p>Here is a link to my GitHub: <a href="https://github.com/KyleKinsella/Data-Science-Machine-Learning-Code/tree/main/Semester2MLProjects/Neural%20Networks">Convolutional Neural Network</a>.</p>
-                    </div>
-    
-                    <div class="project">
-                        <h3>Recurrent Neural Network</h3> <br>
-                        <!-- <p>During this project, I explored Support Vector Machines. Support Vector Machines fall under both supervised learning and discriminative classification. 
-                            Support Vector Machines work very good in N-dimensional space. <br></p> -->
-                        
-                        <h3>Project Overview</h3>
-                        <p>Here I have my project overview with data sources etc: <a href="rnnProjectOverview.htm">Rnn Project Overview</a>.</p>
-    
-                        <!-- <h3>What I learned</h3>
-                        <p>Click on this link to see what I learned during this project: <a href="decisionTreeLearnings.html">What I learned</a></p> -->
-                        
-                        <h3>My Source Code</h3>
-                        <p>Here is a link to my GitHub: <a href="https://github.com/KyleKinsella/Data-Science-Machine-Learning-Code/tree/main/Semester2MLProjects/Recurrent%20neural%20network">Recurrent neural network</a>.</p><br>
-                    </div>
+                    <h3>My Source Code</h3>
+                    <p>Here is a link to my GitHub: <a href="https://github.com/KyleKinsella/Data-Science-Machine-Learning-Code/tree/main/Semester2MLProjects/K%20Nearest%20Neighbor">K Nearest Neighbour</a>.</p><br>
+                </div> 
 
-                    <div class="project">
-                        <h3>ChatGPT Makes Me A Neural Network</h3><br>
-                        <!-- <p>During this project, I explored Support Vector Machines. Support Vector Machines fall under both supervised learning and discriminative classification. 
-                            Support Vector Machines work very good in N-dimensional space. <br></p> -->
-                        
-                        <!-- <h3>Project Overview</h3>
-                        <p>Here I have my project overview with data sources etc: <a href="rnnProjectOverview.htm">Rnn Project Overview</a>.</p><br>-->
-                        <!-- <h3>What I learned</h3>
-                        <p>Click on this link to see what I learned during this project: <a href="decisionTreeLearnings.html">What I learned</a></p> -->
-                        
-                        <h3>Source Code</h3>
-                        <p>Here is a link to my GitHub: <a href="https://github.com/KyleKinsella/Data-Science-Machine-Learning-Code/tree/main/Semester2MLProjects/ChatGPT%20Makes%20Me%20A%20Neural%20Network">ChatGPTs Code</a>.</p><br>
-                    </div>
+                <div class="project">
+                    <h3>K Means Clustering</h3>
+                    <p>During this project, I explored K Means Clustering. K Means Clustering is an un-supervised machine learning algorithm, it is used for 
+                        clustering groups of data together. In K Means Clustering there is something called a centroid. A centroid is a random plot
+                        in the middle of a cluster, the area where the centroid was will change after each iteration of the 
+                        K Means Clustering model. <a href="https://www.ibm.com/think/topics/k-means-clustering">K Means Clustering</a>.<br></p>
+                    
+                    <h3>Project Overview</h3>
+                    <p>Here I have my project overview with data sources etc: <a href="kmcOverView.htm">Project Overview</a>.</p>
 
-                    <div class="project">
-                        <h3>Presentation</h3>
+                    <h3>My Source Code</h3>
+                    <p>Here is a link to my GitHub: <a href="https://github.com/KyleKinsella/Data-Science-Machine-Learning-Code/tree/main/Semester2MLProjects/K%20Means%20Clustering">K Means Clustering</a>.</p><br>
+                </div> 
+        </div>
+    </section>
 
-                        <a href="final ml presentation.pptx">This is my Data Science & Machine Learning Final Presentation</a>
+    <section id="projectsSemester2">
+        <div class="container">
+            <h2>Neural Network Projects</h2>
+            <div class="project-grid">
+                <div class="project">
+                    <h3>Convolutional Neural Network</h3>
+                    
+                    <h3>Project Overview</h3>
+                    <p>Here I have my project overview with data sources etc: <a href="cnnProjectOverview.htm">Cnn Project Overview</a>.</p>
 
-                        <!-- <p>During this project, I explored Support Vector Machines. Support Vector Machines fall under both supervised learning and discriminative classification. 
-                            Support Vector Machines work very good in N-dimensional space. <br></p> -->
-                        
-                        <!-- <h3>Project Overview</h3>
-                        <p>Here I have my project overview with data sources etc: <a href="rnnProjectOverview.htm">Rnn Project Overview</a>.</p><br>-->
-                        <!-- <h3>What I learned</h3>
-                        <p>Click on this link to see what I learned during this project: <a href="decisionTreeLearnings.html">What I learned</a></p> -->
-                        
-                        <!-- <h3>Source Code</h3> -->
-                        <!-- <p>Here is a link to my GitHub: <a href="https://github.com/KyleKinsella/Data-Science-Machine-Learning-Code/tree/main/Semester2MLProjects/ChatGPT%20Makes%20Me%20A%20Neural%20Network">ChatGPTs Code</a>.</p><br> -->
-                    </div>
-            </div>
-        </section>
+                    <h3>My Source Code</h3>
+                    <p>Here is a link to my GitHub: <a href="https://github.com/KyleKinsella/Data-Science-Machine-Learning-Code/tree/main/Semester2MLProjects/Neural%20Networks">Convolutional Neural Network</a>.</p>
+                </div>
+
+                <div class="project">
+                    <h3>Recurrent Neural Network</h3>
+
+                    <h3>Project Overview</h3>
+                    <p>Here I have my project overview with data sources etc: <a href="rnnProjectOverview.htm">Rnn Project Overview</a>.</p>
+
+                    <h3>My Source Code</h3>
+                    <p>Here is a link to my GitHub: <a href="https://github.com/KyleKinsella/Data-Science-Machine-Learning-Code/tree/main/Semester2MLProjects/Recurrent%20neural%20network">Recurrent neural network</a>.</p><br>
+                </div>
+
+                <div class="project">
+                    <h3>ChatGPT Makes Me A Neural Network</h3>
+
+                    <h3>Source Code</h3>
+                    <p>Here is a link to my GitHub: <a href="https://github.com/KyleKinsella/Data-Science-Machine-Learning-Code/tree/main/Semester2MLProjects/ChatGPT%20Makes%20Me%20A%20Neural%20Network">ChatGPTs Code</a>.</p><br>
+                </div>
+
+                <div class="project">
+                    <h3>Presentation</h3>
+                    <a href="final ml presentation.pptx">This is my Data Science & Machine Learning Final Presentation</a>
+                </div>
+        </div>
+    </section>  
 </body>
 </html>
