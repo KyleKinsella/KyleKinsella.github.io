@@ -14,7 +14,7 @@
     <header>
         <div class="container">
             <h1>I'm <strong><i>Kyle</i></strong>, a Software Developer</h1>
-            <nav>
+            <!-- <nav>
                 <ul>
                     <li><a href="about.htm">About</a></li>
                     <li><a href="#projects">Projects</a></li>
@@ -23,7 +23,20 @@
                     <li><a href="#contactme">Contact</a></li>
                     <li><a href="retail.htm">Work Experience</a></li>
                 </ul>
-            </nav>
+            </nav> -->
+
+            <nav>
+  <button class="menu-toggle" onclick="this.parentElement.classList.toggle('open')">☰</button>
+  <ul>
+    <li><a href="about.htm">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="datascienceandmlProject.htm">Data Science & Machine Learning Projects</a></li>
+    <li><a href="#skills">Programming Skills</a></li>
+    <li><a href="#contactme">Contact</a></li>
+    <li><a href="retail.htm">Work Experience</a></li>
+  </ul>
+</nav>
+
         </div>
     </header>
 
@@ -732,5 +745,72 @@
         <p><strong>Email:</strong> <a href="mailto:kylekinsella10@gmail.com">kylekinsella10@gmail.com</a></p>
         <p>You can find more information about my background and skills here: <a href="about.htm">More About Me</a>.</p>
     </section> 
+
+
+
+
+    <style>
+        /* === Base nav styles === */
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+  gap: 1rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #f0f0f0;
+}
+
+/* === Mobile nav: hamburger toggle === */
+nav .menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    background: #fff;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    border-radius: 8px;
+  }
+
+  nav.open ul {
+    display: flex;
+  }
+
+  nav ul li a {
+    width: 100%;
+    text-align: center;
+    padding: 0.75rem;
+  }
+
+  nav .menu-toggle {
+    display: block;
+  }
+}
+
+    </style>
 </body>
 </html>
