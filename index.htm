@@ -527,108 +527,6 @@
   }
 }
 
-
-/* === Responsive NAVIGATION === */
-nav ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-  padding: 1rem;
-  list-style: none;
-  margin: 0;
-}
-
-nav ul li a {
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-  /* color: black; */
-  font-weight: 600;
-  border-radius: 6px;
-  transition: background 0.3s ease;
-}
-
-/* nav ul li a:hover {
-  background-color: #f0f0f0;
-} */
-
-/* Stack nav on small screens */
-@media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-  }
-
-  nav ul li {
-    width: 100%;
-    text-align: center;
-  }
-
-  nav ul li a {
-    width: 100%;
-    display: block;
-    background-color: transparent;
-    /* box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); */
-  }
-}
-
-/* === Responsive ABOUT section === */
-.about-section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 2rem;
-  padding: 2rem;
-}
-
-@media (max-width: 768px) {
-  .about-section {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .about-text {
-    max-width: 100%;
-    font-size: 1rem;
-  }
-
-  .profile-pic {
-    width: 120px;
-    height: 120px;
-  }
-}
-
-/* === Responsive CONTACT section === */
-@media (max-width: 600px) {
-  #contactme {
-    width: 90%;
-    padding: 1rem;
-    margin: 1rem auto;
-    font-size: 0.95rem;
-  }
-
-  #contactme h2 {
-    font-size: 1.4rem;
-    padding-left: 10px;
-  }
-
-  #contactme p {
-    line-height: 1.6;
-  }
-}
-
-/* === Header title scaling === */
-@media (max-width: 768px) {
-  header .container h1 {
-    font-size: 1.5rem;
-    text-align: center;
-    padding: 1rem;
-  }
-}
-
-
     </style>
 
     <br>
@@ -796,9 +694,9 @@ nav ul li a {
     </section> -->
 
     <section id="skills">
-        <h2>Programming Skills</h2>
-        <div class="table-wrapper">
-        <table class="skills-table">
+         <h2>Programming Skills</h2>
+    <div class="table-wrapper">
+    <table class="skills-table">
         <thead>
         <tr>
             <th>Frontend</th>
@@ -836,6 +734,7 @@ nav ul li a {
         </tbody>
     </table>
     </div>
+
     </section>
    
     <br><br>
