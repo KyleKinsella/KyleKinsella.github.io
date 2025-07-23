@@ -13,11 +13,11 @@
 <body>
     <header>
         <div class="container">
-            <h1>Hello and Welcome</h1>
+            <h1>I'm <strong><i>Kyle</i></strong>, a Software Developer</h1>
             <nav>
                 <ul>
                     <li><a href="about.htm">About</a></li>
-                    <li><a href="#projects">College Projects</a></li>
+                    <li><a href="#projects">Projects</a></li>
                     <li><a href="datascienceandmlProject.htm">Data Science & Machine Learning Projects</a></li>
                     <li><a href="#skills">Programming Skills</a></li>
                     <li><a href="#contactme">Contact</a></li>
@@ -27,106 +27,722 @@
         </div>
     </header>
 
-    <section id="about">
-        <div class="container">
+    <section id="about" class="about-section">
+        <img src="imageofme.jpg" alt="Photo of Kyle" class="profile-pic">
+
+        <div class="about-text">
             <h2>About Me</h2>
             <p> Hello, my name is Kyle and I have completed studying to get my Bachelor's degree in Software Development at South East Technological University (SETU) Carlow. I am going to
-                be graduating later in 2025. I am always eager to learn new things and grow professionally. For more information about me, click on <strong>About</strong> above. </p>
-
-                <img src="imageofme.jpg">
+                be graduating later in 2025. I am always eager to learn new things and grow professionally. For more information about me, click on <strong><i>About</i></strong> above. </p>
         </div>
     </section>
 
-    <section id="projects">
-        <div class="container">
-            <h2>College Projects</h2>
-            <div class="project-grid">
-                <div class="project">
-                    <h3>Random Test Data Generation</h3>
-                    <p>To summarize this project, I developed a Java application that could generate test cases using a library called JUnit.<br></p>
-                    <h3>My Source Code</h3>
-                    
-                    <p>Here is a link to my GitHub: <a href="https://github.com/KyleKinsella/Random-Test-Data-Generation">Random Test Data Generation</a></p><br>
-                </div>
-                <div class="project">
-                    <h3>Kyle Connect</h3>
-                    <p>I developed Kyle Connect as my final year college project. Kyle Connect is a communication-focused website. 
-                        Although it was a work in progress when I first started, the project is now fully completed. <br></p>
-                        
-                        <h3>Kyle Connect Showcase Website</h3>
-                        <a href="kyleconnectshowcase.htm">Kyle Connect</a> <br><br>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+        
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        /* padding: 20px; */
+    }
+    
+    .container {
+        margin: 0 auto;
+        border-radius: 12px;
+        /* box-shadow: 0 10px 30px rgba(0,0,0,0.1); */
+        /* overflow: hidden; */
+    }
+    
+    .header {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 40px 40px 30px;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .header::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        right: -50%;
+        width: 100%;
+        height: 100%;
+        background: rgba(255,255,255,0.1);
+        transform: rotate(45deg);
+    }
+    
+    .header-content {
+        position: relative;
+        z-index: 2;
+    }
+    
+    .name {
+        font-size: 2.5em;
+        font-weight: 700;
+        margin-bottom: 10px;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+    
+    .title {
+        font-size: 1.3em;
+        opacity: 0.95;
+        margin-bottom: 20px;
+        font-weight: 300;
+    }
+    
+    .contact-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+        margin-top: 20px;
+    }
+    
+    .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 0.95em;
+    }
+    
+    .contact-item a {
+        color: white;
+        text-decoration: none;
+        border-bottom: 1px solid rgba(255,255,255,0.3);
+        transition: all 0.3s ease;
+    }
+    
+    .contact-item a:hover {
+        border-bottom-color: white;
+    }
+    
+    .main-content {
+        padding: 40px;
+    }
+    
+    .section {
+        margin-bottom: 40px;
+    }
+    
+    .section-title {
+        font-size: 1.5em;
+        color: #667eea;
+        font-weight: 600;
+        margin-bottom: 20px;
+        padding-bottom: 8px;
+        border-bottom: 3px solid #667eea;
+        position: relative;
+    }
+    
+    .section-title::after {
+        content: '';
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        width: 50px;
+        height: 3px;
+        background: #764ba2;
+    }
+    
+    .summary {
+        font-size: 1.1em;
+        line-height: 1.8;
+        color: #555;
+        background: linear-gradient(135deg, #f8f9ff 0%, #f0f2ff 100%);
+        padding: 25px;
+        border-radius: 10px;
+        border-left: 4px solid #667eea;
+    }
 
-                        <h3>My Source Code</h3>
-                        <p>Here is a link to my GitHub: <a href="https://github.com/KyleKinsella/Kyle-Kinsella-4th-Year-Project---Discord-Clone">Kyle Connect</a></p><br>
-                </div>
+    .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 25px;
+        margin-top: 20px;
+    }
+    
+    .skill-category {
+        padding: 20px;
+        border-radius: 10px;
+        border-top: 3px solid #667eea;
+    }
+    
+    .skill-category h4 {
+        color: #333;
+        margin-bottom: 12px;
+        font-size: 1.1em;
+    }
+    
+    .skill-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    
+    .skill-tag {
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        color: white;
+        padding: 6px 12px;
+        border-radius: 20px;
+        font-size: 0.85em;
+        font-weight: 500;
+    }
+    
+    .education-item, .experience-item {
+        background: #f8f9fa;
+        padding: 25px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        border-left: 4px solid #28a745;
+    }
+    
+    .item-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 15px;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    
+    .item-title {
+        font-size: 1.2em;
+        font-weight: 600;
+        color: #333;
+    }
+    
+    .item-subtitle {
+        color: #667eea;
+        font-weight: 500;
+        margin-top: 4px;
+    }
+    
+    .item-date {
+        background: #667eea;
+        color: white;
+        padding: 6px 12px;
+        border-radius: 15px;
+        font-size: 0.85em;
+        font-weight: 500;
+    }
+    
+    .item-description {
+        color: #555;
+        line-height: 1.7;
+    }
+    
+    .project-item {
+        background: linear-gradient(135deg, #f8f9ff 0%, #f0f2ff 100%);
+        padding: 25px;
+        border-radius: 10px;
+        margin-bottom: 25px;
+        border-left: 4px solid #764ba2;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        padding: 20px;
+        margin: 20px;    
+        margin-left: 60px;
+        max-width: 1000px;
+    }
+    
+    .project-item:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(102, 126, 234, 0.15);
+    }
+
+    .project-title {
+        font-size: 1.3em;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 8px;
+    }
+    
+    .project-tech {
+        color: #667eea;
+        font-weight: 500;
+        margin-bottom: 15px;
+        font-style: italic;
+    }
+    
+    .project-achievements {
+        list-style: none;
+        margin-top: 15px;
+    }
+
+    .project-achievements li {
+        position: relative;
+        padding-left: 20px;
+        margin-bottom: 8px;
+        color: #555;
+    }
+    
+    .project-achievements li::before {
+        content: '▶';
+        position: absolute;
+        left: 0;
+        color: #667eea;
+        font-size: 0.8em;
+    }
+    
+    .achievements-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        margin-top: 20px;
+    }
+    
+    .achievement-card {
+        background: linear-gradient(135deg, #28a745, #20c997);
+        color: white;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+    }
+    
+    .achievement-number {
+        font-size: 2em;
+        font-weight: 700;
+        margin-bottom: 5px;
+    }
+        
+    .achievement-text {
+        font-size: 0.9em;
+        opacity: 0.95;
+    }
+        
+    @media (max-width: 768px) {
+        body {
+            padding: 10px;
+        }
+        
+        .header, .main-content {
+            padding: 25px;
+        }
+        
+        .name {
+            font-size: 2em;
+        }
+        
+        .contact-grid {
+            grid-template-columns: 1fr;
+        }
+        
+        .item-header {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+        
+    @media print {
+        body {
+            background: white;
+            padding: 0;
+        }
+        
+        .container {
+            box-shadow: none;
+            border-radius: 0;
+        }
+        
+        .project-item:hover {
+            transform: none;
+            box-shadow: none;
+        }
+    }
+
+    .about-section {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        padding: 2rem;
+        flex-wrap: wrap; /* ensures it adjusts on small screens */
+    }
+
+    .profile-pic {
+        width: 150px;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 50%; /* makes it circular */
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* optional polish */
+    }
+
+    .about-text {
+        max-width: 600px;
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    #projects, #text, summary {
+        margin-left: 50px;
+    }
+
+    .note {
+        margin-left: 60px;
+    }
+ 
+    ul {
+        list-style-type: disc;
+        margin-left: 20px;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f5f5f5;
+      margin: 2rem;
+    }
+
+    .skills-section {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+      padding: 2rem;
+      margin: 0.5rem;
+      max-width: 400px;
+    }
+
+    .skills-section h3 {
+      border-left: 5px solid #007acc;
+      padding-left: 10px;
+      margin-top: 1rem;
+      color: #333;
+    }
+
+    #skills h3 {
+        border-left: 5px solid #007acc;
+        padding-left: 10px;
+        margin-top: 1rem;
+        color: #333;
+    }
+
+    ul {
+      list-style-type: disc;
+      padding-left: 2rem;
+      margin-top: 0.5rem;
+    }
+
+    li {
+      margin: 0.4rem 0;
+      color: #555;
+    }
+
+    #contactme {
+        background-color: #ffffff;
+        max-width: 600px;
+        margin: 1rem;
+        padding: 2rem 2.5rem;
+        border-radius: 12px;
+        box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: #333;
+    }
+
+    #contactme h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: #007acc;
+        border-left: 5px solid #007acc;
+        padding-left: 12px;
+    }
+
+    #contactme p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        margin-bottom: 1rem;
+    }
+
+    #contactme a {
+        color: #007acc;
+        text-decoration: none;
+        font-weight: 600;
+        transition: color 0.3s ease;
+    }
+
+    #contactme a:hover, #contactme a:focus {
+        color: #005fa3;
+        text-decoration: underline;
+    }
+
+
+    /*  */
+
+
+    /* Wrapper adds horizontal scroll on small screens */
+.table-wrapper {
+  overflow-x: auto;
+  margin-top: 1rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+}
+
+/* Base table styling */
+.skills-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  min-width: 600px; /* ensures scroll on narrow screens */
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Header styles */
+.skills-table th {
+  background: linear-gradient(90deg, #4a90e2, #357ABD);
+  color: white;
+  font-weight: 700;
+  padding: 1rem;
+  text-align: left;
+  letter-spacing: 0.05em;
+  user-select: none;
+  box-shadow: inset 0 -3px 5px rgba(0,0,0,0.15);
+}
+
+/* Cells styling */
+.skills-table td {
+  padding: 1rem;
+  border-top: 1px solid #e0e0e0;
+  color: #333;
+  line-height: 1.6;
+  vertical-align: top;
+  white-space: normal;
+}
+
+/* Hover highlight on row */
+.skills-table tbody tr:hover {
+  background-color: #f0f7ff;
+  transition: background-color 0.3s ease;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .skills-table {
+    font-size: 0.9rem;
+    min-width: 500px;
+  }
+}
+
+    </style>
+
+    <br>
+
+    <h2 id="projects">Projects</h2>
+    <p id="text">Below is a selection of my college and personal projects, including those currently under development or in the research phase.</p>
+    <details>
+    <summary><strong>College Projects</strong></summary>
+        <br>
+
+        <!-- <p>My two college projects were not completed as a team or group, these projects were fully completed as a one man team!</p> -->
+        <p class="note"><strong>Note:</strong> Both of these projects were developed independently, with full responsibility for design, implementation and documentation.</p>
+
+        <section class="section">                
+            <div class="project-item">
+                <h3 class="project-title">Kyle Connect <span>(2024 - 2025)</span></h3>
+                <p class="project-tech">Go • MySQL • HTML • CSS • Docker • Documentation</p>
+                <p class="item-description">
+                    <!-- TODO -->
+                    <!-- <p>I developed Kyle Connect as my final year college project.</p>     -->
+                    <p><strong>What is <i>Kyle Connect?</i></strong> <br>
+                        Kyle Connect is a global communication platform designed to make connecting with others easy and seamless, no matter where you are in the world. <br><br> When I first envisioned this project, I challenged myself by choosing a complex idea, something like Discord. I wasn’t sure if I could pull it off, but through hard work and dedication, I succeeded! <br><br> Below are some of the key features of Kyle Connect and lessons learned from this project.
+                    </p>
+                </p>
+                <ul class="project-achievements">
+                    <li>Wrote formal documents including: Functional Specification, Design Document and Project Report.</li>
+                    <li>Learned a new programming language, Golang and how to use Docker.</li>
+                    <li>Built a system that allows two people to exchange messages, users to create servers (group chats), add friends to their servers and more.</li>
+                    <li>Attended weekly meetings with my project supervisor to show updates on code and documents to ensure constant progression.</li>
+                    <!-- I will have more points (might show my youtube video also) -->
+                </ul>
+
+                <!-- <p>For more information about Kyle Connect, see here: <a href="kyleconnectshowcase.htm">View more details</a></p> -->
+                <p>Learn more about Kyle Connect by <a href="kyleconnectshowcase.htm">viewing the full details</a>.</p>
+
+                <h3>Source Code</h3>
+                <p>Check out my project on GitHub: <a href="https://github.com/KyleKinsella/Kyle-Kinsella-4th-Year-Project---Discord-Clone">Kyle Connect</a>.</p><br>
             </div>
-        </div>
-    </section>
 
-    <section id="projects">
-        <div class="container">
-            <h2>Personal Project</h2>
-            <div class="project-grid">
-                <div class="project">
-                    <h3>BlockChain From Scratch</h3>
-                    <p>I have started a personal blockchain project for my summer break, while awaiting 
-                        graduation from South East Technological University (SETU) Carlow in late 2025. 
-                        The project is currently in its later stages and remains a work in progress. 
-                        
-                        <br> <br>
+            <div class="project-item">
+                <h3 class="project-title">Random Test Data Generation <span>(2023)</span></h3>
+                <p class="project-tech">Java • Unit Testing • Software Engineering • Documentation</p>
+                <p class="item-description">
+                    <!-- TODO -->
+                    <!-- <p>To summarize this project, I developed a Java application that could generate test cases using a library called JUnit.<br></p> -->
+                    <p><strong>What is <i>Random Test Data Generation?</i></strong> <br>
+                        <!-- Random Test Data Generation is a Java Application that generates unit tests. Below are some of the main aspects of my Random Test Data Generation Project: -->
+                       
+                        <!-- <ul>
+                            <li></li>
+                        </ul> -->
+                        Random Test Data Generation is a Java application designed to automatically generate unit tests by producing randomized input data. This helps ensure robust testing coverage and reduces the manual effort required when writing test cases.
+                        Below are some of the key aspects of the Random Test Data Generation project:
+                </p>
+                <ul class="project-achievements">
+                    <!-- <li>Write a function with any amount of parameters.</li> -->
+                    <!-- <li>Right click on your function and click on the Generate tests button.</li> -->
+                    <!-- <li>TODO</li> -->
+                    <!-- <li>TODO</li> -->
 
-                        I am currently working on the <strong>Wallet (User-Interface)</strong> part at the moment.
-                        For more information see the <strong>blog</strong> below!
+                    <li>Wrote formal documents including: Vision Document, Specification Document, Research & Design Document, Project Report and Iteration Reports.</li>
+                    <li>I built this entire project using <strong>Java</strong>.</li>
+                    <li>Built an application to create one or many unit tests.</li>
+                    <li>Attended weekly meetings with my project supervisor to show updates on code and documents to ensure constant progression.</li>
 
-                        <h3>BlockChain From Scratch Blog</h3>
-                        <a href="blockchain-project-from-scratch.htm">Blog</a> <br><br>
+                    <!-- I will have more points (might show my youtube videos also) -->
+                </ul>
 
-                        <h3>My Source Code</h3>
-                        <p>Here is a link to my GitHub: <a href="https://github.com/KyleKinsella/BlockChain-Project-From-Scratch">BlockChain From Scratch</a></p><br>
-                </div>
+                <p>Learn more about this project by having a watch of this YouTube video that I made: <a href="https://www.youtube.com/watch?v=RQti0-McdMs">Go to 6:18</a>.</p>
+
+                <h3>Source Code</h3>    
+                <p>Check out my project on GitHub: <a href="https://github.com/KyleKinsella/Random-Test-Data-Generation">Random Test Data Generation</a>.</p><br>
             </div>
-        </div>
-    </section>
+        </section>
+    </details>
 
-    <section id="projects">
-        <div class="container">
-            <h2>AI Project</h2>
-            <div class="project-grid">
-                <div class="project">
-                    <h3>Unbiased AI Bot</h3> <br>
-                    <h3>Have a read of my Idea!</h3>
-                    <a href="unbiased-ai-bot/index.htm">Unbiased AI Bot</a> <br><br>
-                </div>
-            </div>
-        </div>
-    </section>
+<details>
+  <summary><strong>Personal Projects</strong></summary>
+  <br>
+  <section class="section">                
+    <div class="project-item">
+        <h3 class="project-title"><h3>Blockchain from Scratch <span>(Summer - 2025)</span></h3></h3>
+        <p class="project-tech">Go • JavaScript • React • CSS • Python (In later stages)</p>
+        <p class="item-description">
+            <!-- TODO -->
+            <p>I have started a personal blockchain project for my summer break, while awaiting 
+                graduation from South East Technological University (SETU) Carlow in late 2025. 
+                The project is currently in its later stages and remains a work in progress. 
+            </p>
+
+            <p><strong><i>Why am I doing this?</i></strong> <br>
+                I chose to build this project because I had a <strong><i>Blockchain Technology</i></strong> elective in college and I truly enjoyed it and I wanted to become more familiar with the concepts within a decentralized system.
+                Some of the main features of the blockchain consist of the following:    
+            </p>
+        <ul class="project-achievements">
+            <li>Consensus Algorithms (Proof of Work & Proof of Stake)</li>
+            <li>Public & Private key-pairs</li>
+            <li>Addresses</li>
+            <li>Blocks</li>
+            <li>Transactions</li>
+            <li>Cryptographic Hashing</li>
+            <!-- I will have more points (might show my youtube video also) -->
+        </ul>
+
+        <!-- <p>Have a read of my blog that I have wrote (still work in progress) <a href="blockchain-project-from-scratch.htm">My blog</a>.</p> -->
+        <p>Check out my blog on building a blockchain from scratch (work in progress), <a href="blockchain-project-from-scratch.htm">Read the blog</a>.</p>
+
+        <h3>Source Code</h3>
+        <p>Check out my project on GitHub: <a href="https://github.com/KyleKinsella/BlockChain-Project-From-Scratch">Blockchain from Scratch</a>.</p><br>
+    </div>
+
+    <div class="project-item">
+        <h3 class="project-title"><h3>Unbiased AI Bot <span>(July 20th, 2025)</span></h3></h3>
+        <p class="project-tech">Tech Stack: (Not sure at the moment)</p>
+        <p class="item-description">
+            <!-- I have only thought about this project about 2 or 3 days ago, therefore I don't have much work done on it right now. This project is currently still in the thinking / research phase. Around the end of August or the start of September I will commence this project. As of right now, I am not to sure of what my tech stack will be. -->
+             I began planning this project just a few days ago, so progress is still in the early stages. It is currently in the research and thinking phase. I aim to begin development around late August or early September. At this point, the tech stack has not been finalized.
+        </p>
+        <ul class="project-achievements">
+            <!-- <li>TODO</li>
+            <li>TODO</li>
+            <li>TODO</li>
+            <li>TODO</li> -->
+            <!-- I will have more points (might show my youtube video also) -->
+        </ul>
+
+        <p>Have a read of my Idea: <a href="unbiased-ai-bot/index.htm">Unbiased AI Bot</a>.</p>        
+    </div>
+</details>
+
+    <br><br>
+
+    <!-- <h2>Programming Skills</h2>
+    <section id="skills">
+        <h3>Frontend</h3>
+        <ul class="skills-list">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>React</li>
+        </ul>
+
+        <h3>Backend & Database</h3>
+        <ul class="skills-list">
+            <li>Go</li>
+            <li>Python</li>
+            <li>MySQL</li>
+            <li>Php</li>
+            <li>JavaScript</li>
+            <li>Java</li>
+            <li>C++</li>
+            <li>C</li>
+            <li>Jupyter Notebooks</li>
+        </ul>
+
+        <h3>Low Level</h3>
+        <ul class="skills-list">
+            <li>Assembly Language</li>
+        </ul>
+
+        <h3>Tools</h3>
+        <ul class="skills-list">
+            <li>Git</li>
+            <li>Docker</li>
+        </ul>
+    </section> -->
 
     <section id="skills">
-        <div class="container">
-            <h2>Programming Skills</h2>
-            <ul class="skills-list">
-                <li>Go</li>
-                <li>Python</li>
-                <li>MySQL</li>
-                <li>Php</li>
-                <li>Html</li>
-                <li>Css</li>
-                <li>Assembly Language</li>
-                <li>Javascript</li>
-                <li>Java</li>
-                <li>C++</li>
-                <li>C</li>
-                <li>Git</li>
-                <li>Jupyter Notebooks</li>
-            </ul>
-        </div>
+        <h2>Programming Skills</h2>
+        <div class="table-wrapper">
+        <table class="skills-table">
+        <thead>
+        <tr>
+            <th>Frontend</th>
+            <th>Backend & Database</th>
+            <th>Low-Level</th>
+            <th>Tools</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>
+            HTML<br>
+            CSS<br>
+            React
+            </td>
+            <td>
+            Go<br>
+            Python<br>
+            MySQL<br>
+            PHP<br>
+            JavaScript<br>
+            Java<br>
+            Jupyter Notebooks
+            </td>
+            <td>
+            Assembly Language<br>
+            C<br>
+            C++<br>
+            </td>
+            <td>
+            Git<br>
+            Docker
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    </div>
     </section>
+   
+    <br><br>
 
+    <h2>Contact</h2>
     <section id="contactme">
-        <div class="container">
-            <h2>Contact Me</h2>
-            <p>Email: <strong>kylekinsella10@gmail.com</strong><br>If you have any queries please don't hesitate to contact me. <br>If you wish to see more information about me, click on the <strong>About</strong> at the top of this page.</p>        
-        </div>
-    </section>
+        <p>I'm always open to discussing new projects, collaborations, or answering any questions you may have.</p>
+        <p><strong>Email:</strong> <a href="mailto:kylekinsella10@gmail.com">kylekinsella10@gmail.com</a></p>
+        <p>You can find more information about my background and skills here: <a href="about.htm">More About Me</a>.</p>
+    </section> 
 </body>
 </html>
