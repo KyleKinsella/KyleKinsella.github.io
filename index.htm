@@ -52,23 +52,25 @@
     }
     
     .container {
-        margin: 0 auto;
+        /* margin: 0 auto; */
         /* margin: 10px; */
         /* padding: 10px; */
         border-radius: 12px;
         /* box-shadow: 0 10px 30px rgba(0,0,0,0.1); */
-        /* overflow: hidden; */
+        overflow: visible;
+
         /* background-color: red; */
+        margin: 10px 0 10px 0; /* top, right, bottom, left */
         /* width: 500px; */
     }
     
-    .header {
+    /* .header {
         background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         color: white;
         padding: 40px 40px 30px;
         position: absolute;
         overflow: visible;
-    }
+    } */
     
     .header::before {
         content: '';
@@ -359,14 +361,14 @@
         }
     }
 
-    @media (max-width: 900px) {
+    /* @media (max-width: 768px) {
         .container {
-            width: auto;
+            width: 90%;
             padding: 1rem;
             margin: 0 auto;
             box-sizing: border-box;
         }
-    }
+    } */
 
     .about-section {
         display: flex;
@@ -566,10 +568,7 @@
     <h2 id="projects">Projects</h2>
     <p id="text">Below is a selection of my college and personal projects, including those currently under development or in the research phase.</p>
     <details>
-    <summary><strong>College Projects</strong></summary>
-        <br>
-
-        <!-- <p>My two college projects were not completed as a team or group, these projects were fully completed as a one man team!</p> -->
+    <summary><strong>College Projects</strong></summary> <br>
         <p class="note"><strong>Note:</strong> Both of these projects were developed independently, with full responsibility for design, implementation and documentation.</p>
 
         <section class="section">                
@@ -577,8 +576,6 @@
                 <h3 class="project-title">Kyle Connect <span>(2024 - 2025)</span></h3>
                 <p class="project-tech">Go • MySQL • HTML • CSS • Docker • Documentation</p>
                 <p class="item-description">
-                    <!-- TODO -->
-                    <!-- <p>I developed Kyle Connect as my final year college project.</p>     -->
                     <p><strong>What is <i>Kyle Connect?</i></strong> <br>
                         Kyle Connect is a global communication platform designed to make connecting with others easy and seamless, no matter where you are in the world. <br><br> When I first envisioned this project, I challenged myself by choosing a complex idea, something like Discord. I wasn’t sure if I could pull it off, but through hard work and dedication, I succeeded! <br><br> Below are some of the key features of Kyle Connect and lessons learned from this project.
                     </p>
@@ -588,10 +585,8 @@
                     <li>Learned a new programming language, Golang and how to use Docker.</li>
                     <li>Built a system that allows two people to exchange messages, users to create servers (group chats), add friends to their servers and more.</li>
                     <li>Attended weekly meetings with my project supervisor to show updates on code and documents to ensure constant progression.</li>
-                    <!-- I will have more points (might show my youtube video also) -->
                 </ul>
 
-                <!-- <p>For more information about Kyle Connect, see here: <a href="kyleconnectshowcase.htm">View more details</a></p> -->
                 <p>Learn more about Kyle Connect by <a href="kyleconnectshowcase.htm">viewing the full details</a>.</p>
 
                 <h3>Source Code</h3>
@@ -602,29 +597,15 @@
                 <h3 class="project-title">Random Test Data Generation <span>(2023)</span></h3>
                 <p class="project-tech">Java • Unit Testing • Software Engineering • Documentation</p>
                 <p class="item-description">
-                    <!-- TODO -->
-                    <!-- <p>To summarize this project, I developed a Java application that could generate test cases using a library called JUnit.<br></p> -->
                     <p><strong>What is <i>Random Test Data Generation?</i></strong> <br>
-                        <!-- Random Test Data Generation is a Java Application that generates unit tests. Below are some of the main aspects of my Random Test Data Generation Project: -->
-                       
-                        <!-- <ul>
-                            <li></li>
-                        </ul> -->
                         Random Test Data Generation is a Java application designed to automatically generate unit tests by producing randomized input data. This helps ensure robust testing coverage and reduces the manual effort required when writing test cases.
                         Below are some of the key aspects of the Random Test Data Generation project:
                 </p>
                 <ul class="project-achievements">
-                    <!-- <li>Write a function with any amount of parameters.</li> -->
-                    <!-- <li>Right click on your function and click on the Generate tests button.</li> -->
-                    <!-- <li>TODO</li> -->
-                    <!-- <li>TODO</li> -->
-
                     <li>Wrote formal documents including: Vision Document, Specification Document, Research & Design Document, Project Report and Iteration Reports.</li>
                     <li>I built this entire project using <strong>Java</strong>.</li>
                     <li>Built an application to create one or many unit tests.</li>
                     <li>Attended weekly meetings with my project supervisor to show updates on code and documents to ensure constant progression.</li>
-
-                    <!-- I will have more points (might show my youtube videos also) -->
                 </ul>
 
                 <p>Learn more about this project by having a watch of this YouTube video that I made: <a href="https://www.youtube.com/watch?v=RQti0-McdMs">Go to 6:18</a>.</p>
@@ -638,12 +619,38 @@
 <details>
   <summary><strong>Personal Projects</strong></summary>
   <br>
-  <section class="section">                
+  <section class="section">            
+     <div class="project-item">
+        <h3 class="project-title"><h3>Writing an Interpreter in Go<span> (Book by: <a href="https://interpreterbook.com/">Thorsten Ball</a>)</span></h3></h3>
+        <p class="project-tech">Tech Stack: Go</p>
+        <p class="item-description">
+            <p><strong><i>Project Aim</i></strong> <br>
+                I started this project because I never had the opportunity to take a 
+                <strong><i>Compiler or Interpreter</i></strong> module during college. Many developers believe 
+                that understanding what happens "under the hood" of a computer is essential to becoming 
+                a well-rounded developer. That idea inspired me to take on this project. <br><br>
+
+                Another key reason is simple: <strong>continuous learning</strong>. Although I completed my 
+                BSc (Hons) in Software Development at South East Technological University (SETU), 
+                finishing formal studies doesn’t mean learning should stop! <br><br>
+ 
+                I’m new to the world of interpreters, but here’s what I’ve learned so far 
+                about the main components of an interpreter:
+            </p>
+        <ul class="project-achievements">
+            <li>Lexing ( Source Code -> Tokens -> Abstract Syntax Tree (AST) )</li>
+            <li>Parsing ( Input -> Abstract Syntax Tree (AST) -> which represents the input )</li>
+            <li>and much more (I’ll add to this list as I learn further)</li>
+        </ul>
+
+        <h3>Source Code</h3>
+        <p>Check out the code: <a href="https://github.com/KyleKinsella/Writing-an-interpreter-in-go">Interpreter in Go</a>.</p><br>
+    </div>
+        
     <div class="project-item">
         <h3 class="project-title"><h3>Blockchain from Scratch <span>(Summer - 2025)</span></h3></h3>
         <p class="project-tech">Go • JavaScript • React • CSS • Python (In later stages)</p>
         <p class="item-description">
-            <!-- TODO -->
             <p>I have started a personal blockchain project for my summer break, while awaiting 
                 graduation from South East Technological University (SETU) Carlow in late 2025. 
                 The project is currently in its later stages and remains a work in progress. 
@@ -660,10 +667,8 @@
             <li>Blocks</li>
             <li>Transactions</li>
             <li>Cryptographic Hashing</li>
-            <!-- I will have more points (might show my youtube video also) -->
         </ul>
 
-        <!-- <p>Have a read of my blog that I have wrote (still work in progress) <a href="blockchain-project-from-scratch.htm">My blog</a>.</p> -->
         <p>Check out my blog on building a blockchain from scratch (work in progress), <a href="blockchain-project-from-scratch.htm">Read the blog</a>.</p>
 
         <h3>Source Code</h3>
@@ -674,19 +679,14 @@
         <h3 class="project-title"><h3>Unbiased AI Bot <span>(July 20th, 2025)</span></h3></h3>
         <p class="project-tech">Tech Stack: (Not sure at the moment)</p>
         <p class="item-description">
-            <!-- I have only thought about this project about 2 or 3 days ago, therefore I don't have much work done on it right now. This project is currently still in the thinking / research phase. Around the end of August or the start of September I will commence this project. As of right now, I am not to sure of what my tech stack will be. -->
-             I began planning this project just a few days ago, so progress is still in the early stages. It is currently in the research and thinking phase. I aim to begin development around late August or early September. At this point, the tech stack has not been finalized.
+            I began planning this project just a few days ago, so progress is still in the early stages. It is currently in the research and thinking phase. I aim to begin development around late August or early September. At this point, the tech stack has not been finalized.
         </p>
         <ul class="project-achievements">
-            <!-- <li>TODO</li>
-            <li>TODO</li>
-            <li>TODO</li>
-            <li>TODO</li> -->
-            <!-- I will have more points (might show my youtube video also) -->
+            <!-- <li>TODO</li> -->
         </ul>
 
         <p>Have a read of my Idea: <a href="unbiased-ai-bot/index.htm">Unbiased AI Bot</a>.</p>        
-    </div>
+    </div> 
 </details>
 
     <br><br>
