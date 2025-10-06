@@ -29,7 +29,7 @@
         </div>
     </header> -->
 
-<p>P.S: I'm currently working on trying to make this better for laptops etc. (this is temporary!)</p>
+<p class="laptop-note">P.S: I'm currently working on trying to make this better for laptops etc. (this is temporary!)</p>
 <div class="topnav">
     <a href="#home" class="active">I'm <strong><i>Kyle</i></strong>, a Software Developer</a>
     <div id="myLinks">
@@ -79,6 +79,28 @@
     font-size: 20px;
     color: white;
 } 
+
+/* the below css is not longer term! */
+
+/* Hide by default (mobile first) */
+.laptop-note {
+  display: none;
+  margin: 20px 16px;
+  padding: 12px;
+  background: #f0f0f0;
+  border-left: 4px solid #203a43;
+  border-radius: 4px;
+  color: #333;
+  font-size: 16px;
+  font-style: italic;
+}
+
+/* Show on laptops/desktops */
+@media (min-width: 768px) {
+  .laptop-note {
+    display: block;
+  }
+}
 </style>
 
     <section id="about" class="about-section">
