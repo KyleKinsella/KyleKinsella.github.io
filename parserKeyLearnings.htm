@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parser Key Learnings</title>
+    <link rel="stylesheet" href="all.css">
+</head>
+<body>
+    <!-- <h1>Problems with the <strong><i>Parser</i></strong> (Oct 14th, 2025).</h1>
+    <p>While I was working through the book by <strong>Thorsten Ball</strong>, I worked through the <strong>Lexing</strong> chapter quite easily. But the 
+    next chapter was <strong>Parsing</strong>. Due to this being a new topic for me, I worked through this
+    chapter nice and slowly to try my very best to understand it to the best of my ability. After a few days of working through the parsing
+    chapter, I reached the end of the chapter, this was good, but I said to myself: "I don't have a clue what the parser does!". After reading 93 pages of the parsing chapter and not understand how any of it works, is <strong>really bad!</strong></p>
+
+    <br>
+
+    
+    <p>So, after I was done with the parsing chapter I said: "I'll spend the next few days reading over the parser code to try and understand it a bit more". 
+        This was a <strong>big lie</strong> to myself, because I didn't do this... After not doing anything on the 
+        <strong>parser</strong> for around <strong>2-3 weeks</strong>, I arbitrarily said to myself: 
+        "I'm going to look at that book again!". Before I continue this part of the story, have a read of this: 
+        
+        <br>
+        
+        <h3><strong>Note:</strong></h3> 
+        <p>After I was done with the parsing chapter, I wasn’t going to go onto the next chapter
+        (Evaluation - Evaluating the Abstract Syntax Tree) until I understood the parsing chapter to some 
+        degree. 
+        
+        <br><br>
+        
+        This is kinda obvious because if the next chapter is about evaluating the Abstract Syntax Tree which the parser makes, 
+        and if you don't understand the parser and the Abstract Syntax Tree, and the core of the parser you won't have a clue of the next chapter!
+        This is the exact reason to why I defered looking at the parser...</p>
+    </p>
+
+    Now, back to the part where I said: "I'm going to look at that book again!". I opened up the book and had a look at the next chapter (Evaluation - Evaluating the Abstract Syntax Tree), then I stopped myself, because an 
+    idea came to my head randomly. The idea was, <i>what if I ask ChatGPT for some help?</i> 
+    
+    <br><br>
+    
+    So, I went to 
+    <a href="https://chatgpt.com/">ChatGPT</a>, and I asked him the following question: 
+    <br><br>
+    <i>I'm working through a book from thorsten ball: "writing an interpreter in go", I found the parser quite hard and confusing, should I understand how the parser works before looking at evaluating the abstract syntax tree in the next chapter after the parsing chapter!?</i>
+    <br><br>
+    
+    And he responded with something like this: 
+    <br><br>
+    <i><strong>No,</strong> you don't have to understand everything about the parser before moving on, but you should understand the basics of the parser and what the parser produces.</i>
+
+    <br><br>
+
+    Below is more information that ChatGPT gave to me: (this was not wrote by me, ChatGPT gave me the below information!): <br><br>
+    
+    🧩 The role of the parser <br><br>
+    The parser’s job is to take the tokens produced by the lexer (like LET, IDENT, =, 5, ;) and turn them into a structured Abstract Syntax Tree (AST).
+    You don’t need to internalize all the parsing details (like Pratt parsing or operator precedence) right away — those can be conceptually heavy — but you should understand what kind of output it produces.
+
+    <br><br>
+
+    In other words, know that:
+    <ul>
+        <li>The lexer outputs a stream of tokens.</li>
+        <li>The parser consumes tokens and builds an AST that represents the program structure.</li>
+        <li>The evaluator (in the next chapter) walks that AST to actually execute the program.</li>
+    </ul>
+
+    If you can roughly picture how the parser transforms something like:
+
+    <br><br>
+
+    <code>let x = 5 + 10;</code>
+
+    <br><br>
+
+    into something like:
+
+    <br><br>
+
+    <code>
+        LetStatement( <br>
+            Name = "x", <br>
+            Value = InfixExpression( <br>
+                Left = IntegerLiteral(5), <br>
+                Operator = "+", <br>
+                Right = IntegerLiteral(10) <br>
+            ) <br>
+        ) <br>
+    </code>
+
+    — then you have enough understanding to continue.
+
+    <br><br>
+
+    🧠 Why it’s okay to move on <br><br>
+    The evaluation chapter will make the parser “click” better.
+    When you start interpreting the AST and seeing it produce real results (like 15 in the example above), the structure of the parser and AST nodes will suddenly make much more sense.
+
+    You’ll see how IntegerLiteral, InfixExpression, and LetStatement connect — and that feedback loop will reinforce your understanding of parsing in a much more intuitive way than theory alone.
+
+    <br><br>
+
+    ✅ Suggested approach <br><br>
+
+    Here’s a practical plan:
+
+    <ol>
+        <li>Skim the parser chapter again — don’t get bogged down in details like Pratt parsing rules; just note how expressions and statements are constructed.</li>
+        <li>Move on to the evaluator — follow along with how it walks the AST.</li>
+        <li>Then come back to the parser chapter after you’ve evaluated a few programs — it will feel much clearer.</li>
+    </ol>
+
+    <br>
+
+    After ChatGPT gave me the above information, I really like point one in his suggested approach - look back over the chapter again. 
+    This is something that I didnt even think to do! And after a few minutes of doing some additional thinking, I thought of another idea without ai (a brillant idea) - <strong><i>A playground</i></strong>.
+
+    <h3>A playground?</h3>
+    <p>You are probably thinking, what is a playground, why use a playground, is this not a big childish, etc.
+        My idea of a playground is a basic <code>main.go</code> file that has a main function (<code>func main() { ... }</code>) and possibily can have other 
+        functions to play around with and work with the <code>lexer, parser, and AST</code>. This allows me to call the <code>lexer & parser</code> functions 
+        and see the output of the functions and much more. 
+        
+        <br><br>
+        
+        Another reason the playground is a good idea is because, if you are confused on what to do and you want to continue the book
+        but you are being kept back, a good thing to do is to play around with the code and see the output of the functions, how is the AST constructed, read the code to see if you understand it better than you did the first time!
+
+
+        <h3>Source Code</h3>
+        <p>View the code for the entire Interpreter (so far): <a href="https://github.com/KyleKinsella/Writing-an-interpreter-in-go">Code for whole Interpreter</a>.</p>
+
+        <br>
+
+        <h3>Source Code</h3>
+        <p>View my playground code: <a href="">Playground code</a>.</p>
+    </p>
+
+    <br>
+
+    <h3>My plan to learn the parser</h3>
+    <p>Below is what I'm currently doing to try and understand the parser better, see below:</p> 
+    
+    <ul>
+        <li>Looking back through the <strong>parsing</strong> chapter.</li>
+        <li>Writing bad, messy code, comments etc, in my playground to understand whats going on (not doing this on purpose, mainly doing for <strong>learning</strong> the <strong>parser & lexer</strong>).</li>
+        <li>When I feel like I understand how something works, I look at the code in my editor.</li>
+        <li>Keep repeating this until I have a good enough of an understanding of the parser works.</li>
+    </ul>
+
+    Once I understand the parser better (than I currently do), I will proceed onto the next chapter in the book (Evaluation - Evaluating the Abstract Syntax Tree)!
+
+ -->
+
+
+    <body>
+  <h1>Challenges with the <strong><i>Parser</i></strong> (Oct 14th, 2025)</h1>
+
+  <p>
+    While working through <strong>Thorsten Ball’s</strong> book <em>"Writing an Interpreter in Go"</em>, I found the
+    <strong>Lexing</strong> chapter very approachable. However, when I reached the next chapter - <strong>Parsing</strong>,
+    things became much more challenging. Since this was a completely new topic for me, I took my time, reading carefully and trying
+    my best to understand how everything fit together.
+  </p>
+
+  <p>
+    After a few days, I made it to the end of the parsing chapter, which felt great, but then I realized something:
+    <em>“I don't have a clue what the parser does!”</em> After reading 93 pages and still feeling completely lost,
+    I knew something wasn’t clicking.
+  </p>
+
+  <p>
+    I told myself: “I'll spend the next few days reading over the parser code to try and understand it a bit more.”  
+    That didn’t happen! I ended up taking a <strong>2-3 week</strong> break from the book. Then, I randomly decided to
+    pick it back up. Before I continue this part of the story, have a read of this:
+  </p>
+
+  <h3><strong>Note:</strong></h3>
+  <p>
+    I didn’t want to move on to the next chapter: <em>Evaluation (Evaluating the Abstract Syntax Tree)</em>, until I had at least a basic understanding
+    of the <strong>parser</strong>. That’s because the evaluation chapter depends on what the parser produces: the Abstract Syntax Tree (AST).
+    If I didn’t understand how the AST was built, I’d be completely lost in the evaluation section. That’s why I decided to pause and focus
+    on the parser first.
+  </p>
+
+  <p>
+    Now, back to the part where I said: “I'll spend the next few days reading over the parser code to try and understand it a bit more.”  
+    When I opened it to the evaluation chapter, I stopped because a new idea suddenly came to mind:  
+    <em>What if I ask ChatGPT for help?</em>
+  </p>
+
+  <p>
+    So I did. I asked:
+  </p>
+
+  <blockquote>
+    <em>
+      “I’m working through Thorsten Ball’s <strong>Writing an Interpreter in Go</strong>.  
+      I found the parser quite hard and confusing. Should I understand how the parser works before
+      moving on to the next chapter about evaluating the Abstract Syntax Tree?”
+    </em>
+  </blockquote>
+
+  <p>
+    ChatGPT replied with something along these lines:
+  </p>
+
+  <blockquote>
+    <strong>No,</strong> you don’t need to understand every detail about the parser before moving on,
+    but you should understand the basics, such as: what the parser does and what it produces.
+  </blockquote>
+
+  <p>
+    Below is a summary of the additional context ChatGPT provided:
+  </p>
+
+  <h3>🧩 The Role of the Parser</h3>
+  <p>
+    The parser takes the tokens produced by the lexer (such as <code>LET</code>, <code>IDENT</code>, <code>=</code>,
+    <code>5</code>, <code>;</code>) and transforms them into a structured Abstract Syntax Tree (AST).
+    You don’t need to fully understand the complex details like Pratt parsing or operator precedence right away.
+    What matters is knowing that the parser turns raw tokens into a tree-like structure that represents your program.
+  </p>
+
+  <p>In short:</p>
+  <ul>
+    <li>The lexer outputs a stream of tokens.</li>
+    <li>The parser consumes those tokens and builds the AST.</li>
+    <li>The evaluator (next chapter) walks that AST to execute the program.</li>
+  </ul>
+
+  <p>
+    For example, if your code is:
+  </p>
+
+  <pre><code>let x = 5 + 10;</code></pre>
+
+  <p>
+    The parser might produce something like:
+  </p>
+
+  <pre><code>
+LetStatement(
+  Name = "x",
+  Value = InfixExpression(
+    Left = IntegerLiteral(5),
+    Operator = "+",
+    Right = IntegerLiteral(10)
+  )
+)
+  </code></pre>
+
+  <p>
+    If you can visualize this transformation, you already understand enough to continue.
+  </p>
+
+  <h3>🧠 Why It’s Okay to Move On</h3>
+  <p>
+    The evaluation chapter helps the parser “click.” Once you start executing code by walking the AST and seeing
+    real results — like <code>15</code> in the example above — the structure of <code>IntegerLiteral</code>,
+    <code>InfixExpression</code>, and <code>LetStatement</code> will begin to make sense.
+  </p>
+
+  <p>
+    Understanding the parser becomes easier when you see how those AST nodes interact during evaluation.
+    Learning by seeing the code in action often builds intuition faster than theory alone.
+  </p>
+
+  <h3>✅ Suggested Approach</h3>
+  <ol>
+    <li>Skim the parser chapter again. Don’t get stuck on the implementation details — just note how expressions and statements are built.</li>
+    <li>Move on to the evaluator and follow how it processes the AST.</li>
+    <li>After you’ve evaluated a few programs, revisit the parser chapter — it’ll make much more sense.</li>
+  </ol>
+
+  <p>
+    I really liked point #1: re-reading the chapter, this was something I hadn’t thought to do before.
+    But after reflecting a bit more, I came up with (a brillant idea) on my own - <strong><i>A playground</i></strong>.
+  </p>
+
+  <h3>The Playground</h3>
+  <p>
+    You might be wondering -  what’s a <strong>playground</strong>? My version is a simple <code>main.go</code> file containing a
+    <code>main()</code> function (and possibly others) that let me experiment with the
+    <code>lexer</code>, <code>parser</code>, and <code>AST</code>.
+  </p>
+
+  <p>
+    This little playground allows me to call parser and lexer functions directly, print outputs, and
+    see how the AST is constructed. It’s a hands-on way to bridge the gap between the book’s concepts and my understanding.
+  </p>
+
+  <p>
+    It’s also a great way to move forward when you feel stuck. By experimenting with code and observing how each component
+    behaves, you naturally start to understand the parser’s flow and structure better than by just rereading.
+  </p>
+
+  <h3>Source Code</h3>
+  <p>
+    View the code for the full Interpreter (so far):  
+    <a href="https://github.com/KyleKinsella/Writing-an-interpreter-in-go">Code for whole Interpreter</a>.
+  </p>
+
+  <p>
+    View my playground code:  
+    <a href="#">Playground Code</a>.
+  </p>
+
+  <h3>My Plan to Learn the Parser</h3>
+  <p>
+    Here is what I’m currently doing to deepen my understanding of the parser:
+  </p>
+
+  <ul>
+    <li>Revisiting and skimming the <strong>parsing</strong> chapter regularly.</li>
+    <li>Writing messy, experimental code in my playground, purely for learning and discovery.</li>
+    <li>When I think I’ve understood something, I'm checking the actual parser implementation to confirm.</li>
+    <li>Repeating this process until the parser’s structure and purpose become clear.</li>
+  </ul>
+
+  <p>
+    Once I feel confident with the parser, I’ll move on to the next chapter:
+    <em>Evaluation: Evaluating the Abstract Syntax Tree</em>.
+  </p>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <p>Before I continue this part of the story, I must mention the following, see below:
+        <br>
+        <p>After I was done with the parsing chapter, I wasn’t going to go onto the next chapter
+            (Evaluation - Evaluating the Abstract Syntax Tree) until I undertood the parsing chapter to some 
+            degree. This is kinda obvious because if the next chapter is about evaluating the Abstract Syntax Tree witch the parser makes, 
+            and if you don't understand the parser and the Abstract Syntax Tree, and the core of the parser you won't have a clue of the next chapter!
+            This is the exact reason to why I defered looking at the parser...
+        </p>
+    </p> -->
+
+    <!-- <p>Back to [1]:
+        <br>
+        <p>test</p>
+    </p> -->
+
+    <style>
+    /* Global Styles */
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 2rem;
+        background-color: #f9f9f9;
+        color: #333;
+    }
+
+    /* Headings */
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: #222;
+    }
+
+    h3 {
+        font-size: 1.4rem;
+        margin-top: 2rem;
+        margin-bottom: 0.8rem;
+        color: #444;
+    }
+
+    h3 strong {
+        color: #007acc;
+    }
+
+    /* Paragraphs */
+    p {
+        margin-bottom: 1rem;
+    }
+
+    /* Links */
+    a {
+        color: #007acc;
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+
+    /* Lists */
+    ul, ol {
+        margin-left: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    /* Code */
+    code {
+        background-color: #eee;
+        padding: 0.2rem 0.4rem;
+        border-radius: 4px;
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    /* Block code / pre-style */
+    pre {
+        background-color: #eee;
+        padding: 1rem;
+        border-radius: 5px;
+        overflow-x: auto;
+    }
+
+    /* Special Notes / Emoji highlights */
+    p::before {
+        content: '';
+    }
+
+    strong i {
+        color: blueviolet;
+    }
+
+    /* Optional: Highlight key sections */
+    p strong {
+        color: #222;
+    }
+    </style>
+
+</body>
+</html>
