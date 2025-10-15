@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reflection: Understanding the Parser and Moving Forward</title>
+    <link rel="stylesheet" href="all.css">
+</head>
+<body>
+    <h1>Reflection: Understanding the Parser and Moving Forward</h1>
+    <p><em>October 15, 2025 • By Kyle Kinsella</em></p>
+    <hr>
+
+    <p>
+    Over the past two days (October 14–15), I spent a good amount of time revisiting the <strong>parser</strong> chapter from 
+    Thorsten Ball’s Book: <em>Writing an Interpreter in Go</em>, with a specific focus on:
+    </p>
+
+    <ul>
+    <li><strong>Let Statements</strong></li>
+    <li><strong>Return Statements</strong></li>
+    </ul>
+
+    <p>
+    I revisited the <code>LetStatement</code> and <code>ReturnStatement</code> structures within the Abstract Syntax Tree (AST) to better understand their relationships and implementation details.
+    For example, here’s what the <code>ReturnStatement</code> type looks like:
+    </p>
+
+    <pre><code>
+    type ReturnStatement struct {
+        Token token.Token // the 'return' token
+        ReturnValue Expression
+    }
+    </code></pre>
+
+    <p>
+    This led me to revisit the <code>Node</code> and <code>Expression</code> interfaces:
+    </p>
+
+    <pre><code>
+    type Node interface {
+        TokenLiteral() string
+        String() string
+    }
+
+    type Expression interface {
+        Node
+        expressionNode()
+    }
+    </code></pre>
+
+    <p>
+    I learned that since the <code>ReturnStatement</code> contains an <code>Expression</code> field, it must implement the <strong>Node</strong> interface. 
+    This is done through the following methods:
+    </p>
+
+    <pre><code>
+    func (rs *ReturnStatement) statementNode() {}
+    func (rs *ReturnStatement) TokenLiteral() string { return rs.Token.Literal }
+    </code></pre>
+
+    <p>
+    Understanding this helped clarify how the AST ties together. I then reviewed the unit test for parsing <code>let</code> statements:
+    </p>
+
+    <pre><code>
+    func TestLetStatements(t *testing.T) {
+        tests := []struct {
+            input              string
+            expectedIdentifier string
+            expectedValue      interface{}
+        }{
+            {"let x = 5;", "x", 5},
+            {"let y = true;", "y", true},
+            {"let foobar = y;", "foobar", "y"},
+        }
+
+        for _, tt := range tests {
+            l := lexer.New(tt.input)
+            p := New(l)
+
+            program := p.ParseProgram()
+            checkParseErrors(t, p)
+
+            if len(program.Statements) != 1 {
+                t.Fatalf("program.Statements does not contain 1 statement. got=%d", len(program.Statements))
+            }
+
+            stmt := program.Statements[0]
+            if !testLetStatement(t, stmt, tt.expectedIdentifier) {
+                return
+            }
+
+            val := stmt.(*ast.LetStatement).Value
+            if !testLiteralExpression(t, val, tt.expectedValue) {
+                return
+            }
+        }
+    }
+    </code></pre>
+
+    <p>
+    After experimenting in my parser playground and reading through the tests, I finally began to see how everything connected. 
+    Once I felt more confident, I wondered whether I should continue to the next chapter or spend more time on Pratt parsing.
+    </p>
+
+    <blockquote>
+    <strong>My Question to ChatGPT:</strong>  
+    <em>“I now feel like I understand how the parsing of let and return works. Am I ready to move on to the next chapter, or should I study Pratt parsing first?”</em>
+    </blockquote>
+
+    <blockquote>
+    <strong>ChatGPT’s response:</strong>  
+    <em> <strong>Yes</strong>, you’re absolutely ready to move on to the next chapter (Evaluating the AST). You don’t need to dive into Pratt parsing right now.</em>
+    </blockquote>
+
+    <p>
+    Here’s a summarized version of that advice:
+    </p>
+
+    <h4>🧠 Why I’m Ready</h4>
+    <ul>
+    <li>I now understand how the parser handles <code>let</code> and <code>return</code> statements.</li>
+    <li>I can see how those statements are represented in the AST.</li>
+    <li>I have a clear picture of how the lexer and parser interact.</li>
+    </ul>
+
+    <p>
+    The next chapter: <strong>Evaluating the AST</strong>, will bring these pieces to life, as it walks the AST and executes each node.
+    This will reinforce everything I’ve learned so far.
+    </p>
+
+    <h4>🧩 About Pratt Parsing</h4>
+    <p>
+    Pratt parsing focuses on expressions rather than statements, handling operator precedence and associativity.
+    It’s used for parsing expressions such as:
+    </p>
+
+    <pre><code>
+    5 + 10 * 2
+    a * (b + c)
+    -x
+    x + y + z
+    </code></pre>
+
+    <p>
+    Since I now understand how <code>let</code> and <code>return</code> statements are parsed, it makes sense to move forward and revisit Pratt parsing later. Once I’ve seen how the AST is evaluated in action.
+    </p>
+
+    <h4>✅ My Plan Going Forward</h4>
+    <ol>
+    <li>Continue to the evaluator chapter to understand how the AST executes.</li>
+    <li>Revisit Pratt parsing afterward, it will make far more sense in context.</li>
+    <li>Use my parser playground to visualize expressions and debug the AST as I go.</li>
+    </ol>
+
+    <p>
+    I’m excited to start the next chapter tomorrow (October 16) and continue building on what I’ve learned.
+    </p>
+
+    <h3><strong>Note:</strong></h3>
+    <blockquote>
+    <p>
+        I want to be transparent about my use of AI tools like ChatGPT during this process.
+        These tools have been incredibly helpful in clarifying complex concepts and accelerating my learning.
+        As developers, we should embrace these resources responsibly, using them to deepen our understanding, not replace it.
+        Honesty and integrity in how we learn and work are essential values I aim to uphold.
+    </p>
+    </blockquote>
+
+
+
+    <!-- <h3>So, what now?</h3> -->
+<!-- <p>Today (Oct 15th) and a bit of yesterday I spent a good bit of time reading through the book and focusing on 
+  the following parts of the <strong>parser</strong> <br>
+  <ul>
+    <li>Let Statements</li>
+    <li>Return Statements</li>
+  </ul>
+  I read through what a LetStatement is in the abstract syntax tree and also the ReturnStatement.
+  For example, this what the ReturnStatement looks like: <br><br>
+  
+  ReturnStatement Type:
+  <pre><code>
+    type ReturnStatement struct {
+	    Token token.Token // the 'return' token
+	    ReturnValue Expression
+    }
+  </code></pre>
+
+  Node Type:
+  <pre><code>
+    type Node interface {
+	    TokenLiteral() string
+	    String() string
+    }
+  </code></pre>
+
+  Expression Type:
+  <pre><code>
+    type Expression interface {
+	    Node
+	    expressionNode()
+    }
+  </code></pre>
+
+  <p>I now understand that when we ReturnStatement type that it has an Expression field, so this 
+    means that we need to implement the <strong>Node Interface</strong>. To implement the interface we use the following code: <br>
+    <pre><code>
+      func (rs *ReturnStatement) statementNode() {}
+      func (rs *ReturnStatement) TokenLiteral() string {return rs.Token.Literal}  
+    </code></pre>
+  This was something that I didn’t understand before now. So, now I understand how the AST is working.
+  After this I had a look at our unit test for parsing let statements: <br>
+
+  <pre>
+    <code>
+      func TestLetStatements(t *testing.T) {
+	tests := []struct {
+		input string
+		expectedIdentifier string
+		expectedValue interface{}
+	} {
+		{"let x = 5;", "x", 5},
+		{"let y = true;", "y", true},
+		{"let foobar = y", "foobar", "y"},
+	}
+
+	for _, tt := range tests {
+		l := lexer.New(tt.input)
+		p := New(l)
+
+		program := p.ParseProgram()
+		checkParseErrors(t, p)
+
+		if len(program.Statements) != 1 {
+			t.Fatalf("program.Statements does not contain 1 statements. got=%d", len(program.Statements))
+		}
+
+		stmt := program.Statements[0]
+		if !testLetStatement(t, stmt, tt.expectedIdentifier) {
+			return
+		}
+
+		val := stmt.(*ast.LetStatement).Value
+		if !testLiteralExpression(t, val, tt.expectedValue) {
+			return
+		}
+ 	}
+}
+    </code>
+  </pre>
+  I read this unit test after playing around in my playground, and after a bit of time, I now understand how the test works.
+  After I was done looking at the unit test, I started to look at the <strong>parseLetStatement</strong> <strong>parseReturnStatement</strong> functions.
+  
+  <br><br>
+  
+  Now I currently feel that I understand much better than I used to.
+  So, an idea came to my head: "can I go onto the next chapter?", I wasn’t entirly sure,
+  so I asked ChatGPT the following question: <br>
+
+  <blockquote>
+   <strong>I asked:</strong> I now feel like I now understand how the parsing of let and return works, am I good to go onto the next chapter, or should I now look at pratt parsing?
+  </blockquote>
+
+  <blockquote>
+    <strong>He responded: (something along these lines)</strong> <strong>Yes</strong>, you’re absolutely ready to move on to the next chapter (Evaluation / Evaluating the AST).
+You do not need to dive into Pratt parsing right now.
+  </blockquote>
+
+  Here is the rest of what he said to me (I didn’t write this, ChatGPT did!) <br><br>
+
+  🧠 Why You’re Ready: <br>
+
+You said you now understand:
+
+<ul>
+  <li>How the parser handles <code>let</code> and <code>return</code> statements.</li>
+  <li>How those statements become part of the AST.</li>
+  <li>How the lexer + parser work together.</li>
+</ul>
+
+That’s the core foundation you need before the evaluator chapter. <br><br>
+
+When you start the evaluation section, you’ll:
+
+<ul>
+  <li>Walk the AST your parser produces.</li>
+  <li>See how each node type (like LetStatement and ReturnStatement) is executed.</li>
+  <li>Watch the parser’s work come alive — which reinforces everything you’ve just learned.</li>
+</ul>
+
+This is where the “aha!” moments multiply 💥 <br><br>
+
+
+🧩 About Pratt Parsing: <br>
+
+Pratt parsing is used for expressions, not statements.
+That means it comes into play when parsing things like:
+
+<pre>
+  <code>
+    5 + 10 * 2
+    a * (b + c)
+    -x
+    x + y + z
+  </code>
+</pre>
+
+So even though Pratt parsing is part of the parser, it’s conceptually its own layer — it’s about operator precedence and associativity. <br><br>
+
+If you already grasp: <br>
+
+<ul>
+  <li>That expressions become ast.InfixExpression, ast.PrefixExpression, etc.</li>
+  <li>And you roughly know how parseExpression chooses between prefix/infix parsing functions…</li>
+</ul>
+
+Then it’s totally fine to wait until after the evaluator to study Pratt parsing more deeply. <br><br>
+
+✅ Best Path Forward: <br>
+
+Here’s a good order:
+
+<ol>
+  <li>Move on to the evaluator — understand how the AST executes.</li>
+  <li>Then return to Pratt parsing later — it’ll make way more sense once you’ve seen how the AST is used.</li>
+  <li>Use your playground to print and inspect expressions as ASTs (this will help massively when you revisit Pratt parsing).</li>
+</ol>
+
+So, I'm using this advice because I think it is a very good idea. Next up: <strong>Evaluating the Abstract Syntax Tree</strong> - I'll start this tommorow (Oct 16th).
+
+<br><br>
+
+<blockquote>
+  <p>
+    You can see that I'm being very honest about my usage of using ai (ChatGPT), this is because I don't want 
+  to say: "I didn’t use ai", when in reality I did. But I'm ChatGPT to help me. As a developer we need to be able to work with
+  these tools and use them to our advantage. It's better be <strong>honest & truthful</strong>, than to <strong>lie!</strong>
+  </p>
+
+</blockquote>
+</p>
+</p> -->
+
+<style>
+    /* Global Styles */
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 2rem;
+        background-color: #f9f9f9;
+        color: #333;
+    }
+
+    /* Headings */
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: #222;
+    }
+
+    h3 {
+        font-size: 1.4rem;
+        margin-top: 2rem;
+        margin-bottom: 0.8rem;
+        color: #444;
+    }
+
+    h3 strong {
+        color: #007acc;
+    }
+
+    /* Paragraphs */
+    p {
+        margin-bottom: 1rem;
+    }
+
+    /* Links */
+    a {
+        color: #007acc;
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+
+    /* Lists */
+    ul, ol {
+        margin-left: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    /* Code */
+    code {
+        background-color: #eee;
+        padding: 0.2rem 0.4rem;
+        border-radius: 4px;
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    /* Block code / pre-style */
+    pre {
+        background-color: #eee;
+        padding: 1rem;
+        border-radius: 5px;
+        overflow-x: auto;
+    }
+
+    /* Special Notes / Emoji highlights */
+    p::before {
+        content: '';
+    }
+
+    strong i {
+        color: blueviolet;
+    }
+
+    /* Optional: Highlight key sections */
+    p strong {
+        color: #222;
+    }
+    </style>
+
+</body>
+</html>
