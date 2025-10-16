@@ -654,3 +654,15 @@ li {
     vertical-align: middle;
     box-shadow: 0 0 5px #00c853;
 }
+
+/* ------------------ Responsive Fix for Mobile ------------------ */
+@media (max-width: 768px) {
+    .project-item {
+        margin-left: 10px; /* reduces left margin on small screens */
+        padding-left: 15px;
+    }
+
+    .status-text {
+        font-size: 0.85em; /* slightly smaller for mobile */
+    }
+}
