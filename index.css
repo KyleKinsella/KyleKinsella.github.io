@@ -594,3 +594,63 @@ li {
         min-width: 500px;
     }
 }
+
+/* the below css is for the progress thing for my personal project */
+
+.status-dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #00c853;
+    border-radius: 50%;
+    margin-left: 8px;
+    vertical-align: middle;
+    box-shadow: 0 0 5px #00c853;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(0, 200, 83, 0.6); }
+    70% { box-shadow: 0 0 0 8px rgba(0, 200, 83, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(0, 200, 83, 0); }
+}
+
+.status-text {
+    font-size: 0.9em;
+    color: #00c853;
+    margin-left: 4px;
+    font-weight: 500;
+}
+
+.status-dot-deferred {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: #FFA500;
+  border-radius: 50%;
+  margin-left: 8px;
+  vertical-align: middle;
+  box-shadow: 0 0 5px #FFA500;
+}
+
+.status-dot-na {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #9C27B0;
+    border-radius: 50%;
+    margin-left: 8px;
+    vertical-align: middle;
+    box-shadow: 0 0 5px #9C27B0;
+}
+
+.status-dot-complete {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #00c853;
+    border-radius: 50%;
+    margin-left: 8px;
+    vertical-align: middle;
+    box-shadow: 0 0 5px #00c853;
+}
