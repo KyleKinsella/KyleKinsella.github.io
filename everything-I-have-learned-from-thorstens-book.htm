@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reflections on My Interpreter Journey</title>
+    <link rel="stylesheet" href="parserReflection.css">
+</head>
+<body>
+    <header>
+        <h1>Everything I've Learned</h1>
+        <!-- <h2>Reflecting on: <em>Writing an Interpreter in Go</em></h2> -->
+        <!-- <h2>Diving into a New Area of Computing: an Interpreter!</h2> -->
+        <h2>Diving into a New Area of Computing: <em>My Journey Building an Interpreter!</em></h2>
+    </header>
+   
+    <p><em>October 20th, 2025 • By Kyle Kinsella.</em></p>
+    <hr>
+
+    <div class="acknowledgements">
+        <h3>Acknowledgements</h3>
+        <p>
+            Before diving into what I learned, I’d like to thank <strong>Thorsten Ball</strong> for writing such a brilliant book.
+            When I started reading: <i>Writing an Interpreter in Go</i>, I wasn’t sure what to expect, or whether I’d even enjoy it.
+            But I can confidently say that I absolutely loved it. It’s one of the most rewarding technical books I’ve ever worked through, and it taught me far more than I anticipated.
+        </p>
+    </div>
+
+    <div class="intro">
+        <h3>Introduction</h3>
+        <p>
+            When I began this book, I was completely new to the world of interpreters. I had no idea what they were or how they worked.
+            To my surprise, I found the explanations clear, the structure easy to follow, and even some of the writing genuinely funny at times.
+            By the end, I had developed a solid understanding of interpreters and how they function at a deeper level.
+        </p>
+
+        <p>
+            Another aspect I really appreciated was that this book involved <strong>zero AI assistance</strong>. Every line of code came directly from the book, meaning I wrote it myself and learned by doing, not by copying.
+            While I occasionally used tools like <strong>ChatGPT</strong> to clarify certain topics, the learning process was entirely hands-on. That made the experience feel much more authentic and meaningful.
+        </p>
+    </div>
+
+    <div class="key-learnings">
+        <h3>Key Areas of Learning</h3>
+
+        <p>I gained the most insight from two main areas in the book:</p>
+
+        <ol>
+            <li><strong>The core components of an interpreter:</strong> Lexing, Parsing, and Evaluation.</li>
+            <li><strong>Go-specific concepts:</strong> Things I learned about the Go programming language while building the interpreter.</li>
+        </ol>
+    </div>
+
+    <div class="what-did-I-learn">
+        <h3>What I Learned</h3>
+
+        <ul>
+            <li><strong>Lexing:</strong> is the process of taking raw source code and breaking it down into individual tokens, the smallest meaningful parts of the program.</li>
+            <br>
+            <li><strong>Parsing:</strong> takes those tokens and organizes them into a structured format called an <strong>Abstract Syntax Tree (AST)</strong>, which represents the grammatical structure of the code.</li>
+            <br>
+            <li><strong>Evaluation:</strong> walks through the AST and executes the logic it represents, effectively bringing the program to life.</li>
+        </ul>
+        
+        <p>These three stages form the backbone of how an interpreter works. For a deeper look into how I explored the parser, see: 
+            <a href="parserKeyLearnings.htm">Exploring the Parser</a>.
+        </p>
+
+        <br>
+
+        <h3>Learning Go: Along the Way</h3>
+        <p>
+            As I built the interpreter, I also discovered new things about Go itself.
+            I'd already used Go for my Final Year Project - <a href="https://github.com/KyleKinsella/KyleKinsella-4th-Year-Project---Kyle-Connect">Kyle Connect</a>, and 
+            in a <strong>concurrent development</strong> module where I worked with <strong>goroutines</strong>, <strong>channels</strong>, <strong>waitgroups</strong>, <strong>mutexes</strong>, and more.
+            But this book helped me understand Go on a more conceptual level, especially around <strong>interfaces</strong>, <strong>error handling</strong>, and 
+           <strong>testing</strong>.
+        </p>
+
+        <h3>Interfaces in Go</h3>
+        <p>
+            The first concept introduced in the AST implementation was the Node interface.
+            Although I’d used Go before, I had never really understood how interfaces worked. It was confusing at first, but after watching
+            <a href="https://www.youtube.com/watch?v=SX1gT5A9H-U">this helpful video</a>, things started to click.
+        </p>
+
+        For example, 
+        <pre>
+        <code>
+        type Node interface {
+            TokenLiteral() string
+            String() string
+        }
+
+        type Statement interface {
+            Node
+            statementNode()
+        }
+        </code>
+        </pre>
+
+        Since <code>Statement</code> embeds <code>Node</code>, any type implementing <code>Statement</code> must also implement
+        the methods defined in <code>Node</code>. This was my first real understanding of how Go's interface embeddings works.
+
+        I also learned that Go interfaces are <strong>implicit</strong>.
+        Any type that defines the required methods automatically satisfies an interface. There's no 
+        <code>implements</code> keyword like in other langauges. 
+        
+        <br><br>
+        
+        For example,  
+        <pre>
+        <code>
+        const INTEGER_OBJ = "INTEGER"
+
+        type Object interface {
+            Type() ObjectType
+            Inspect() string
+        }
+
+        type Integer struct {
+            Value int64
+        }
+
+        func (i *Integer) Inspect() string {return fmt.Sprintf("%d", i.Value)}
+        func (i *Integer) Type() ObjectType {return INTEGER_OBJ}
+        </code>
+        </pre>
+
+        <p>Because <code>Integer</code> defines both required methods, it automatically implements the Object interface.
+            I also learned about the <strong>empty interface</strong> (<code>interface{}</code>) which can hold a value of any type. 
+            That concept seemed strange at first, but once I grasped it, it opened up a lot of 
+            flexibility in understanding Go’s type system.
+        </p>
+
+
+        <h3>Variadic Parameters and Error Handling</h3>
+        Later in the book, we added error handling to the evaluator and wrote this function:
+
+        <pre>
+        <code>
+        func newError(format string, a...interface{}) *object.Error {
+            return &object.Error{Message: fmt.Sprintf(format, a...)}
+        }
+        </code>
+        </pre>
+
+        At first, the parameter <code>a...interface{}</code> looked intimidating.
+        After a bit of research (and a question to ChatGPT), I learned that:
+
+        <code>a...interface{}</code> means “a is a variadic parameter that can accept zero or more arguments of any type.”
+
+        <br><br>
+
+        Once I understood that, the function made perfect sense — and I realized there was no need to panic.
+
+        <br><br>
+
+        By this point, I had learned a lot about interfaces and Go’s flexibility as a language.
+
+        <h3>Unit Testing in Go</h3>
+        <p>Throughout the book, Thorsten emphasizes testing, which I really appreciated.
+            Coming from <strong>Java</strong>, I was used to writing tests like this:</p>
+            <pre>
+            <code>
+            public class Calculator {
+                public int add(int a, int b) {
+                    return a + b;
+                }
+            }
+
+            class CalculatorTest {
+                @Test
+                void testAdd() {
+                    Calculator calculator = new Calculator();
+                    int result = calculator.add(2, 3);
+                    assertEquals(5, result, "2 + 3 should equal 5");
+                }
+            }
+            </code>
+            </pre>
+
+            In Go, tests are structured quite differently:
+            <pre>
+            <code>
+            func TestEvalIntegerExpression(t *testing.T) {
+                tests := []struct {
+                    input    string
+                    expected int64
+                }{
+                    {"5", 5},
+                    {"10", 10},
+                    {"-5", -5},
+                    {"5 + 5 + 5 + 5 - 10", 10},
+                }
+
+                for _, tt := range tests {
+                    evaluated := testEval(tt.input)
+                    testIntegerObject(t, evaluated, tt.expected)
+                }
+            }
+            </code>
+            </pre>
+
+            <p>
+                Go doesn’t use an explicit <code>assertEquals</code> method. Instead
+                you use helper functions and the testing package’s built-in methods like
+                <code>t.Errorf</code>. At first, this felt unusual, but I’ve come to appreciate Go’s philosophy of 
+                simplicity and minimal dependencies.
+
+                <br><br>
+
+                That said, I still personally prefer the clarity of an explicit assertEquals, though that’s just a matter of style.
+            </p>
+        </p>
+    </div>
+
+    <h3>Summary</h3>
+    <p>
+        This book taught me so much more than how to build an interpreter.
+        It helped me write cleaner, more idiomatic Go code, understand interfaces deeply, and get comfortable with Go’s testing style.
+        It also reinforced the value of learning by doing, line by line, without shortcuts.
+    </p>
+    
+    <h3>What's next?</h3>
+    <p>
+        My <strong>next goal</strong> is to revisit the parsing chapter and get a deeper understanding of <strong>Pratt parsing</strong>.
+        Now that I’ve finished most of the book, I feel much more confident that I’ll be able to grasp it in full.
+    </p>
+</body>
+</html>
