@@ -14,9 +14,9 @@
 <body>
     <div class="topnav">    
         <nav class="navbar">
-            <span class="logo">I'm <strong><i>Kyle</i></strong>, a Software Developer</span>
+            <span class="logo">I'm <strong><i>Kyle</i></strong>, a <span id="role"></span>.</span>
             <a href="javascript:void(0);" class="icon" onclick="myFunction()"><br>☰</a>
-            <ul id="myLinks">
+            <ul id="myLinks"> 
                 <li><a href="about.htm" target="_blank">About Me</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#skills">Programming Skills</a></li>
@@ -25,6 +25,42 @@
             </ul>
         </nav>
     </div> 
+
+    <script>
+        const arr = [
+        "Software Developer",
+        "Problem Solver",
+        
+        "Software Enginner",
+        "Team Player",        
+        
+        "Frontend Developer",
+        "Strong Communicator",
+
+        "Backend Developer",
+        "Fast Learner",
+
+        "Full Stack Developer",
+        "Lifelong Learner",
+
+        "Hard Worker",
+        "F1 Enthusiast",
+
+        "Creative Thinker",
+        "Music Enthusiast",
+        ];
+
+        let current = 1;
+
+        document.getElementById("role").textContent = arr[0];
+        
+        function showData() {
+            document.getElementById("role").textContent = arr[current];
+            current = (current + 1) % arr.length;
+        }
+
+        setInterval(showData, 5000)
+    </script>
 
     <section id="about" class="about-section">
         <img src="imageofme.jpg" alt="Photo of Kyle" class="profile-pic">
