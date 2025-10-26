@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning about Pratt Parsing</title>
+    <link rel="stylesheet" href="parserReflection.css">
+</head>
+<body>
+    <h1>Exploring Pratt Parsing in More Detail</h1>
+    <p>
+        After completing the Evaluation chapter, I decided to return to 
+        <strong>pratt parsing</strong>. The main reason for coming back is simple, it 
+        initially felt too complex, and I want to strengthen my understanding 
+        now that I’ve seen how the entire interpreter fits together.
+    </p>
+
+    <h3>My Journey Through the Interpreter</h3>
+    <p>Below are the core parts that I found most challenging and some reflections along the way:</p>
+    <ul>
+        <li>I found the parser chapter <strong><u>very hard</u></strong>, mainly because this was a 
+            completely new topic for me.
+        </li>
+        <li>
+            Over time, I began to understand the basics of the parser, such as how to parse 
+            <strong>let</strong> & <strong>return</strong> statements.
+        </li>
+        <li>I then moved on to the next chapter, <strong>Evaluation</strong>, and after a few days of work, I completed it.</li>
+        <li>
+            Now that I’ve finished the evaluation chapter, I’ve decided to revisit 
+            <strong>pratt parsing</strong>, which I skipped earlier because it felt too complex at 
+            the time.
+        </li>
+    </ul>
+
+    <h3>Pratt Parsing</h3>
+    <p>
+        When I came back to Pratt Parsing, I asked myself: “How am I going to understand this?” 
+        My first idea was to just read through <code>parser.go</code>, but that turned out to be 
+        a bad idea. After 5–10 minutes of reading the code, I started to feel frustrated, so I 
+        closed my laptop and decided to take a break.
+    </p>
+
+    <p>
+        The next day, I asked myself again: “How am I going to learn Pratt parsing?” 
+        This time, I decided to stick to what I know: <strong>learning by research</strong>. 
+        I searched <strong>YouTube</strong> for: “Pratt parsing explained” and found two excellent 
+        videos:
+    </p>
+
+    <ul>
+        <li>
+            <a href="https://www.youtube.com/watch?v=2l1Si4gSb9A" target="_blank">Pratt Parsing - Colin James</a>.
+        </li>
+
+        <li>
+            <a href="https://www.youtube.com/watch?v=bxpc9Pp5pZM&t=43s" target="_blank">Parsing Explained - Computerphile</a>.
+        </li>
+    </ul>
+
+    <h3>What I’ve Learned About Pratt Parsing</h3>
+    <ul>
+        <li>Top-down</li>
+        <li>Operator precedence-based (BIDMAS rules)</li>
+        <li>Recursive</li>
+        <li>Tree-structured (produces an AST)</li>
+        <li>Each token has a <strong>“binding power”</strong> -
+            which determines how tightly it binds to expressions on its <strong>left</strong> 
+            & <strong>right</strong>. 
+            This is what makes it flexible and clean for operator precedence.
+        </li>
+    </ul>
+
+    <h3>Moving Forward</h3>
+    <p>
+        After watching these videos and doing some reading, 
+        I’ve decided to continue on to the final chapter of the book.
+    </p>
+    
+    <h3><strong>Why?</strong></h3>
+    <ol>
+        <li>
+            This is my first time building an <strong>interpreter</strong>, and I don’t need to understand 
+            everything perfectly the first time. I now have a solid grasp of: <strong>lexing</strong>, <strong>parsing</strong>, and 
+            <strong>evaluation</strong>, and that’s a great foundation for a <strong>first pass</strong>.
+        </li>
+
+        <br>
+
+        <li>
+            In the final chapter, <strong>Thorsten</strong> explains that we’ll be <strong><u>extending the interpreter</u></strong>. 
+            This means we’ll revisit all parts of the interpreter again, <strong>lexing</strong>, 
+            <strong>parsing</strong>, and <strong>evaluation</strong>, as we add new features and types. 
+            It’s the perfect way to reinforce everything I’ve learned.
+        </li>
+    </ol>
+
+    <h3>Summary</h3>
+    <p>Below are the reasons to why I'm moving forward with the book:</p>
+    <ul>
+        <li>This is my <strong>first interpreter</strong> project, it’s all about learning and building confidence.</li>
+
+        <li>The final chapter revisits and expands on the entire interpreter, 
+            reinforcing every core concept.
+        </li>
+    </ul>
+</body>
+</html>
