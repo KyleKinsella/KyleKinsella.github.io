@@ -415,7 +415,7 @@ body {
 
 .profile-pic {
     width: 150px;
-    height: 180px;
+    height: 250px;
     object-fit: cover;
     border-radius: 50%; /* makes it circular */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* optional polish */
@@ -427,7 +427,7 @@ body {
     line-height: 1.6;
 }
 
-#projects, #text, summary {
+#projects, #text, summary, #education, #experience {
     margin-left: 30px;
 }
 
