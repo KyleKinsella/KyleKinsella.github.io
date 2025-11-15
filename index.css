@@ -670,6 +670,32 @@ li {
     box-shadow: 0 0 5px #1d9bf0;
 }
 
+.status-dot-theReturn {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #6B8E77;
+    border-radius: 50%;
+    margin-left: 8px;
+    vertical-align: middle;
+    box-shadow: 0 0 5px #6B8E77;
+}
+
+.status-text-return {
+    font-size: 0.9em;
+    color: #6B8E77;
+    margin-left: 4px;
+    font-weight: 500;
+}
+
+.started {
+    color: #FF8C42;
+}
+
+.returned {
+    color: #1A3975;
+}
+
 /* ------------------ Responsive Fix for Mobile ------------------ */
 @media (max-width: 768px) {
     .project-item {
