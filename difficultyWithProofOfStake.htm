@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proof of Stake Learnings</title>
+    <link rel="stylesheet" href="parserReflection.css">
+</head>
+<body>
+    <h1>Proof of Stake Algorithm</h1>
+    <p>In this document, I will be outlining the issues that I had with trying to implement my very own Proof of Stake (POS) algorithm.</p>
+
+    <pre>Note: all of this code is wrote in <strong>Go</strong>.</pre>
+
+    <h3>Problem One</h3>
+    <p>The first problem that I encountered was the following:
+
+        I was trying to use a block struct that I have created for my Proof of Work (POW) Algorithm. Below is how my Block looks like:
+    </p>
+
+    <pre><code>
+        type Block struct {
+            Index int
+            Timestamp string 
+            PrevHash interface{}
+            Transactions Transaction
+            <strong><u>ProofOfWork</u></strong> bool 
+            BlockHash string 
+        }
+
+        type Transaction struct {
+            Sender string
+            Receiver string
+            Amount float32
+        }
+    </code></pre>
+
+    <p>The above code is the Syntax for making a block for a POW Blockchain. The problem then arrised when I was coming back to my POS algorithm, because I was trying to
+        have the above syntax for a POS block - this is entirely wrong!
+    </p>
+
+    <p>Below is the code that I previously wrote for the start of my POS algorithm / code:</p>
+
+    <pre><code>
+    type Block struct {
+        Index int
+        Timestamp string 
+        PrevHash interface{}
+        Transactions Transaction
+        ProofOfWork bool 
+        BlockHash string 
+    }
+
+    type Validator struct {
+        block Block
+    }
+
+    func (v *Validator) ValidateBlock(block *Block) bool {
+    }
+    </code></pre>
+
+    <p>After doing some analysis on my code, I realized one crucial problem. A validator has a Block type 
+        as a field. <strong>But:</strong> a Block has a <strong>"ProofOfWork"</strong> field, I am implementing a 
+        <strong>Proof of Stake algorithm</strong>. So I had to abandon this code - simply because it is completly useless!
+    </p>
+
+    <br>
+
+    <hr>
+
+    <h3>Problem Two</h3>
+    <p>The next problem initially did not seem like an issue, but after doing some analysis 
+        and getting some feedback from ChatGPT, there are many issues. See below for more information
+        about the issue:
+    </p>
+
+    <pre>Note: <strong><u>n</u></strong> is denoted for how many times I do something. For example, n = 5, then the we iterate n times.</pre>
+
+    <ul>
+        <li>I have a function called: CreateNPosBlocks. This function is responsible for making n POS Blocks. I was doing this,
+            But, I was also trying to get a validator's address, trying to generate and randomize funds (from a wallet package) and whatever the funds were 
+            do something with those funds. 
+        </li>
+
+        <li>As you can see this is already problematic, because I'm doing all of this in the one function! This work needs to be 
+            seperated into there own distinct functions.
+        </li>
+    </ul>
+
+    <pre>This is where I am currently in my project for my POS algorithm.</pre>
+    
+    <p>I have figured out how I'm going to get my POS algorithm to work, see  
+        here for the details, on how I fixed the issue: <a href="figuredOutThePOSAlgoProblem.htm">Fixed the Problem</a>.</p>
+
+    <!-- <h3>Problem Three</h3> -->
+</body>
+</html>

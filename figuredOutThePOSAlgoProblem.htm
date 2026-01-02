@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Proof of Stake Algorithm</title>
+    <link rel="stylesheet" href="parserReflection.css">
+</head>
+<body>
+    <h1>My Proof of Stake (POS) Algorithm: How Does it Work?</h1>
+
+    <!-- <p>Instead of me doing what I was doing previously for <strong>problem Two</strong>, I 
+        decided to do the following:
+    </p> -->
+
+    <h3>Retrieving a Validator</h3>
+    <p>This is the first and <strong>most important</strong> aspect of this algorithm. We need 
+        to select a validator to validate a block. Below is my way of how I'm going to make my proof of stake 
+        algorithm work, for selecting a validator.
+    </p>
+    <ul>
+        <li><strong><i>Step 1:</i></strong> Manually create a text file and within this file, have a handful of <strong>Validator</strong> addresses and 
+            the amount of <strong>Stake</strong> for each Validator.
+        </li>
+
+        <!-- <li>
+            <strong><i>Step 2:</i></strong> Create a map data structure, mapping an address to an int. 
+            The address will be of type <strong>string</strong> and the Stake will be of type <strong>int</strong>.
+        </li> -->
+
+        <li>
+            <strong><i>Step 3:</i></strong> Use one of my functions that I made earlier in the project, to read the file, that 
+                contains the validators and stake amounts.
+        </li>
+
+        <li>
+            <strong><i>Step 4:</i></strong> Chose a random validator weighted by stake (more stake = higher probability of being chosen)
+            
+            <!-- <strong><i>Step 4:</i></strong> Get a random value out of the file that was read from the last 
+            step.  -->
+        </li>
+
+        <li>
+            <strong><i>Step 5:</i></strong> Whatever validator is selected, they must validate whatever block they are given 
+                or they receive. 
+        </li>
+    </ul>
+</body>
+</html>
