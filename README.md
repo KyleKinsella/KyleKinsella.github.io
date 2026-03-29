@@ -1,13 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Science and Machine Learning </title>
-    <link rel="stylesheet" href="main.css"/>
-</head>
-<body>
-   
 
 
     #👋 Hi, I'm Kyle
@@ -80,5 +70,3 @@
     ##Contact
     - github: https://github.com/KyleKinsella
     - linkedin: https://ie.linkedin.com/in/kyle-kinsella-52614b291
-</body>
-</html>
