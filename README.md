@@ -1,6 +1,6 @@
 
 
-    #👋 Hi, I'm Kyle
+    👋 Hi, I'm Kyle
 
     Welcome to my portfolio - this is where I showcase my best work and the projects that have shaped me as a developer.
 
