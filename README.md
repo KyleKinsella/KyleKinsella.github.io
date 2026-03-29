@@ -69,4 +69,4 @@ Highlights:
 
 ## Contact
 - Github: https://github.com/KyleKinsella
-- linkedin: https://ie.linkedin.com/in/kyle-kinsella-52614b291
+- Linkedin: https://ie.linkedin.com/in/kyle-kinsella-52614b291
