@@ -18,8 +18,8 @@ Over the course of four years, I’ve built a strong foundation across multiple 
 ## Projects
 ### Kyle Connect
 **Details & Source Code:**  
-- Showcase Page: [Kyle Connect Video](https://kylekinsella.github.io/kyleconnectshowcase.htm)  
-  > Note: > video was captured during development. The final project is fully completed.  
+- Showcase Page: [Kyle Connect](https://kylekinsella.github.io/kyleconnectshowcase.htm)  
+  > Note: > the video was captured during development. The project is fully completed.  
 - Source Code: [Kyle Connect CodeBase](https://github.com/KyleKinsella/KyleKinsella-4th-Year-Project---Kyle-Connect)
 
 ### Random Test Data Generation
