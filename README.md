@@ -4,7 +4,7 @@
 
 Welcome to my portfolio - this is where I showcase my best work and the projects that have shaped me as a developer.
 
-##👨‍💻 About Me
+## 👨‍💻 About Me
 I’m a recent Software Development graduate (October 2025) with a Bachelor’s degree.
 Over the course of four years, I’ve built a strong foundation across multiple areas of software engineering, including:
 
@@ -17,8 +17,8 @@ Over the course of four years, I’ve built a strong foundation across multiple 
 - DevOps
 - Data Science & Machine Learning
 
-##Projects
-###Random Test Data Generation
+## Projects
+### Random Test Data Generation
 
 A project focused on improving software testing by generating diverse and unpredictable inputs.
 
@@ -26,7 +26,7 @@ A project focused on improving software testing by generating diverse and unpred
 - Designed to strengthen unit testing and uncover hidden bugs
 - Helped simulate real-world and boundary scenarios effectively
 
-###Kyle Connect
+### Kyle Connect
 
 A real-time communication platform inspired by modern messaging apps.
 
@@ -38,7 +38,7 @@ A real-time communication platform inspired by modern messaging apps.
     - Design Document
     - Project Report
 
-###Decentralized Vault Manager
+### Decentralized Vault Manager
 
 A smart contract system for creating and managing ETH vaults on-chain.
 
@@ -51,7 +51,7 @@ Highlights:
 - On-chain data retrieval (vaults, balances, ownership)
 - Built and tested using Foundry
 
-###Decentralized Task Manager
+### Decentralized Task Manager
 
 A blockchain-based task system with built-in incentives.
 
@@ -62,11 +62,11 @@ Highlights:
 - ETH bounty system for incentivisation
 - Smart contract-based state management
     
-##Goals
+## Goals
 - Secure my first role as a software developer
 - Continue building real-world, production-ready systems
 - Deepen my understanding of backend and distributed systems
 
-##Contact
+## Contact
 - github: https://github.com/KyleKinsella
 - linkedin: https://ie.linkedin.com/in/kyle-kinsella-52614b291
