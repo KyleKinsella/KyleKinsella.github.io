@@ -1,8 +1,8 @@
-# 👋 Hi, I'm Kyle
+# Hi, I'm Kyle 👋
 
 Welcome to my portfolio - this is where I showcase my best work and the projects that have shaped me as a developer.
 
-## 👨‍💻 About Me
+## About Me 👨‍💻
 I’m a recent Software Development graduate (October 2025) with a Bachelor’s (Honours) degree.
 Over the course of four years, I’ve built a strong foundation across multiple areas of software engineering, including:
 
