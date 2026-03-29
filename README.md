@@ -17,19 +17,17 @@ Over the course of four years, I’ve built a strong foundation across multiple 
 
 ## Projects
 
-### Random Test Data Generation
-
-**Details & Source Code:**  
-- Live demo: [Portfolio -> Projects -> College Projects -> Random Test Data Generation](https://kylekinsella.github.io/)  
-- Source code: [Random Test Data Generation CodeBase](https://github.com/KyleKinsella/Random-Test-Data-Generation)
-
 ### Kyle Connect
-
 **Details & Source Code:**  
 - Live demo: [Portfolio -> Projects -> College Projects -> Kyle Connect](https://kylekinsella.github.io/)  
 - Showcase page: [Kyle Connect Video](https://kylekinsella.github.io/kyleconnectshowcase.htm)  
   > Note: > video was captured during development. The final project is fully completed.  
-- Source code: [Kyle Connect CodeBase](https://github.com/KyleKinsella/KyleKinsella-4th-Year-Project---Kyle-Connect)
+- Source Code: [Kyle Connect CodeBase](https://github.com/KyleKinsella/KyleKinsella-4th-Year-Project---Kyle-Connect)
+
+### Random Test Data Generation
+**Details & Source Code:**  
+- Live demo: [Portfolio -> Projects -> College Projects -> Random Test Data Generation](https://kylekinsella.github.io/)  
+- Source Code: [Random Test Data Generation CodeBase](https://github.com/KyleKinsella/Random-Test-Data-Generation)
 
 ## Goals
 - Secure my first role as a software developer
