@@ -68,5 +68,5 @@ Highlights:
 - Deepen my understanding of backend and distributed systems
 
 ## Contact
-- github: https://github.com/KyleKinsella
+- Github: https://github.com/KyleKinsella
 - linkedin: https://ie.linkedin.com/in/kyle-kinsella-52614b291
