@@ -1,5 +1,3 @@
-
-
 # 👋 Hi, I'm Kyle
 
 Welcome to my portfolio - this is where I showcase my best work and the projects that have shaped me as a developer.
@@ -20,10 +18,18 @@ Over the course of four years, I’ve built a strong foundation across multiple 
 ## Projects
 
 ### Random Test Data Generation
-A project focused on improving software testing by generating diverse and unpredictable inputs. For more info see here: https://kylekinsella.github.io/ -> Projects -> Random Test Data Generation. Source Code: https://github.com/KyleKinsella/Random-Test-Data-Generation.
+
+**Details & Source Code:**  
+- Live demo: [Portfolio → Projects → Random Test Data Generation](https://kylekinsella.github.io/)  
+- Source code: [GitHub](https://github.com/KyleKinsella/Random-Test-Data-Generation)
 
 ### Kyle Connect
-A real-time communication platform inspired by modern messaging apps. For more info see here: https://kylekinsella.github.io/ -> Projects -> Kyle Connect & https://kylekinsella.github.io/kyleconnectshowcase.htm. Note the video on that page is not the final output of Kyle Connect, the project was still in development at that time. Source Code: https://github.com/KyleKinsella/KyleKinsella-4th-Year-Project---Kyle-Connect
+
+**Details & Source Code:**  
+- Live demo: [Portfolio → Projects → Kyle Connect](https://kylekinsella.github.io/)  
+- Showcase page: [Kyle Connect Video](https://kylekinsella.github.io/kyleconnectshowcase.htm)  
+  > Note: video shows a work-in-progress version  
+- Source code: [GitHub](https://github.com/KyleKinsella/KyleKinsella-4th-Year-Project---Kyle-Connect)
 
 ## Goals
 - Secure my first role as a software developer
