@@ -7,19 +7,29 @@
     <title>Chess Game & Engine Blog</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="all.css">
-    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-	<h1>Chess Game & Engine: A Full-Stack Application ♟️♞</h1> <br>
-	<h4><strong>• Kyle Kinsella | May 21st, 2026 <br>• In Collaboration with Christopher Byrne</h4>
+	<h1>Chess Game & Engine: A Full-Stack Application ♟️♞ <br> May 21st, 2026</h1> 
 	
-	<br>
+	<!--
+	<nav class="main-nav">
+		<a href="#about">What is this Project</a>
+		<a href="#technologies">Who is building the Project</a>
+		<a href="#demo">Why build Chess</a>
+		<a href="#documents">Project Contents</a>
+		<a href="#team">The Project so far</a>
+		<a href="#contact">Problems & Challanges</a>
+		<a href="#contact">What tech are we using</a>
+		<a href="#contact">Why use Golang</a>
+		<a href="#contact">More Idea's we have</a>
+	</nav>
+	-->
 	
-	<p><strong>/* <br> Note:</strong> this blog will be getting added to each time something is done or updated on the project. <br> <strong>*/</strong></p>
+	<h3 id="note">Note: This blog will be updated as the project progresses.</h3>
 	
 	<br><br>
 		
-	<h2>Introduction</h2>
+	<h3>Introduction</h3>
 	<p>
 		Welcome to our <strong>Chess Game & Engine</strong> blog, its great to have you here! The idea of this project is to explore the design and development of a complete chess application 
 		and to build each part of chess one bit at a time, from <strong>Move Validation, Game State & Engine Evaluation</strong>, this project serves as both a technical challenge and a 
@@ -33,24 +43,25 @@
 	
 	<br>
 		
-	<h2>The Team</h2>
+	<h3>The Team</h3>
 	<p>
-		As we all know we need a person or people to build a project, some people nowadays would just say "<strong>use ai</strong>" but we have a team of two and we are saying <strong><u>NO</u></strong> to that!
+		Every project needs people behind it. While many people today would simply say <strong>“just use AI”</strong> we’ve decided to take a more hands-on approach and build this project ourselves.
 		
 		<ul>
 			<li>Kyle Kinsella</li>
 			<li>Christopher Byrne</li>
 		</ul>
 		
-		The idea of any project is to build something to learn and sharpen your skill set and many more things, not to just "prompt" the ai to "just do it all for you"! That being said we will 
-		occasionally ask <strong>ai</strong> for some help or guidance only if we have done the research ourselves and we are still stuck. 
+		The goal of this project is to learn, improve our skills and better understand how complex systems are built - not to rely entirely on AI to do all of the work for us.
+		<br><br>
+		That being said, we’re not completely against using AI tools. We may occasionally use them for guidance, debugging help or learning support, but only after attempting to research and solve problems ourselves first.
 	</p>
 
 	<br>
 
-	<h2>Why Chess ?</h2>
+	<h3>Why Chess ?</h3>
 	<p>
-		As you might know already, chess is one of those board games that has been developed a lot in the computer science world, see here for more info => <a href="https://github.com/topics/chess" target="_blank">Chess Projects on Github</a>. There are 
+		As you might know already, chess is one of those board games that has been developed a lot in the computer science world, see here for more info <a href="https://github.com/topics/chess" target="_blank">Chess Projects on Github</a>. There are 
 		<strong>7,478</strong>  public repositories matching the topic of <strong>Chess</strong>. 
 		
 		<br><br>
@@ -65,7 +76,7 @@
 	
 	<br>
 
-	<h2>Project Contents</h2>
+	<h3>Project Contents</h3>
 	<p>
 		As the project is still very early doors, there is not too much to show off just yet. But the aim of our chess application is to have all of the core features that chess has, within our 
 		project. Chess contains the following:
@@ -91,7 +102,7 @@
 			<li>What do I do ?</li>
 			<ul>
 				<li><strong>Checkmate:</strong> your king is in danger!</li>
-				<li><strong>Stalemate (Drawing)</strong> draw the game and not lose!</li>
+				<li><strong>Stalemate (Drawing):</strong> draw the game and not lose!</li>
 				<li><strong>Winning <u>or</u> Lossing!</strong></li>
 			</ul>
 			
@@ -106,15 +117,15 @@
 	
 	<br>
 
-	<h2>Project so far (Iterative Development)</h2>
+	<h3>Project So Far (Iterative Development)</h3>
 	<p>
-		As the project is being developed this page will be updated. Below is what the project currently contains:
+		As development continues, this page will be updated with new progress. Below is what the project currently includes:
 	
 		<br><br>
 		
 		This board was printed to my terminal <br><br>
 
-		<h2>Part 1:</h2>
+		<h3>Image 1:</h3>
 		<strong>kylekinsella@fedora:~/Documents/Chess-Game-Engine$ go run main.go</strong> <br><br>
 
 		[rook| horse| bishop| queen| king| bishop| horse| rook|] <br><br>
@@ -134,64 +145,19 @@
 		[rook| horse| bishop| queen| king| bishop| horse| rook|] <br><br>
 		
 		<br><br>
-		
-		<style>
-			a, li, p {
-				font-size: 16px;
-			}
-			
-			h1 {
-			  font-family: Arial, sans-serif;
-			  font-size: 30px;
-			}
-
-			li {
-			  color: black;
-			  text-decoration: none;
-			}
-
-			p {
-			  font-family: Georgia;
-			}
-			
-			img {
-			  float: left;
-			  display: inline-block;
-			  width: 800px;
-			  height: 550px;
-			  margin-right: 20px;
-			  margin-bottom: 20px;
-			  text-align: center;
-			}
-
-			@media (prefers-color-scheme: light) {
-			  :root {
-				color: #213547;
-				background-color: #ffffff;
-			  }
-			  a:hover {
-				color: #747bff;
-			  }
-			  button {
-				background-color: #f9f9f9;
-			  }
-			}		
-		</style>
-		
-		<h2>Part 2:</h2>
-		Now I've put the board on a endpoint as JSON and I can just pull this data down and map over it via React <br><br>
+				
+		<h3>Image 2:</h3>
+		I’ve now exposed the board through an API endpoint as JSON, which I can fetch in React and map over to render the game state dynamically. <br><br>
 	    <img src="chess-imgs/Screenshot From 2026-04-28 19-26-28.png"/>   		
+		<br>
 
-		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
-		<h2>Part 3:</h2>
+		<h3>Image 3:</h3>
 	    Processing the first piece to move: Knight. <br><br>
 		<img src="chess-imgs/Screenshot From 2026-05-10 12-45-39.png" alt="Knight Piece"/>
 		
-		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+		<br>
 		
-		<h2>Explanation of the above image:</h2>
-		
+		<h3>Explanation of the above image:</h3>
 		<ul>
 			<li>the first array shows each row and column that has a knight.</li>
 			<li>the second array does the exact same thing as the first one but, as the knight has moved we need to find all of the knights again (notice that only index 0 and 1 has changed!).</li>
@@ -207,58 +173,76 @@
 			</ul>
 		</ul>
 				
-		<br><br>
+		<br>
 
-		<h2>Part 4:</h2>
+		<h3>Image 4:</h3>
 		Processing the second piece to move: Rook. <br><br>
 		<img src="chess-imgs/Screenshot From 2026-05-10 19-51-48.png" alt="Rook Piece"/>
+		<br>
 		
-		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+		<h3>Image 5 (May 23rd, 2026):</h3>
+		The image below shows the most up-to-date version of the project so far. <br><br>
+		<img src="chess-imgs/Screenshot From 2026-05-23 14-34-38.png" alt="Project Current State"/>
+		<br>
 	</p>
 	
-	<h2>Problems & Challanges</h2>
+	<h3>Problems & Challanges</h3>
 	<p>
-		When you are developing either a personal project or a project for your business, it's safe to say that we always encounter challanges and problems during the project development
-		cycle - because we are human and humans make mistakes! That being said these times are generally rough and very infuriating... but these times make us into stronger developers / engineers 
-		and as humans! So don't get too angry because that won't make the problems and/or challanges go away! We need to face them... 
+		When developing either a personal project or something for a business, it’s inevitable to run into problems and challenges during the development cycle. Mistakes happen because we’re 
+		human and that’s part of the process.
+		
+		These moments can definitely be frustrating, but they’re also where the most growth happens. Working through issues like these helps build stronger developers, engineers and problem-solvers. 
+		Getting stuck is normal - what matters is how you work through it. 
 		
 		<br><br>
 		
-		So, what Problems and Challanges have I faced ? <br><br>
+		So, what problems and challenges have I faced so far? <br><br>
 		
-		<h2><strong>Challange 1:</strong> Making the Chess Board.</h2> 
+		<h3><strong>Challange 1:</strong> Making the Chess Board.</h3> 
 		
-		When I started off this project initially I thought making the chess board was going to very straight foward (I was wrong). I was trying to write the best piece 
-		of code the first time out - a lot of developers say not to do this, they say "get a brute force solution working first, then refactor it to be better code".
+		When I first started this project, I assumed building the chess board would be straightforward - but I quickly realised that wasn’t the case.
+		
+		Initially, I tried to write what I thought was a “perfect” solution from the start. However, as many developers recommend, this isn’t usually the best approach. 
+		It’s often better to build a simple brute-force version first and then refactor it into something more efficient and maintainable.
 		
 		<br><br>
 		
 		<strong>My Brute Force Solution:</strong>
 		<ul>
-			<li>I manually created a <strong>div</strong> with 64 other <strong>divs</strong> within the first div.</li>
-			<li>Then I manually gave each <strong>div</strong> either a <strong>black or white</strong> color.</li>
-			<li>Then I again manually gave each square its own piece.</li>
+			<li>I created a single parent <code>div</code> containing 64 individual <code>div</code> elements.</li>
+			<li>I manually assigned each square a black or white colour.</li>
+			<li>I also manually placed pieces onto each square.</li>
 		</ul>
 		
-		As you can see, this is incredibly bad! <br><br>
+		As you can imagine, this approach was extremely inefficient, repetitive and not scalable at all. <br><br>
 		
-		<strong>My Optimal Solution:</strong>
+		<strong>My Optimal Solution:</strong> <br>
+		
+		I then refactored the system into a more structured and dynamic approach:
+		
+		<br>
+		
 		<ul>
-			<li>Pass in an empty board and populate it.</li>
-			<li>Pass in the pieces that we want to put onto the board.</li>
-			<li>Pass in the rows and cols to make the 8x8 grid.</li>
-			<li>Checking the value of <strong>i</strong>.</li>
+			<li>Start with an empty board</li>
+			<li>Populate it programmatically</li>
+			<li>Pass in the pieces that should be placed on the board</li>
+			<li>Use row and column values to generate the 8×8 grid</li>
+			<li>The logic is based on the row index (i):</li>
 			<ul>
-				<li>If <strong>i</strong> is <strong>0</strong> or <strong>7</strong>, meaning we are going to place the following pieces: rooks, knights, bishops, queens, kings.</li>
-				<li>If <strong>i</strong> is <strong>2</strong>, <strong>3</strong>, <strong>4</strong> or <strong>5</strong>, meaning we are going to place "______". This means that this is a free spot, where the pieces can move too.</li>
-				<li>If <strong>i</strong> is <strong>1</strong> or <strong>6</strong>, meaning we are going to place 8x pawns.</li>
+				<li>If <strong>i</strong> is <strong>0</strong> or <strong>7</strong>, place major pieces (rooks, knights, bishops, queens, kings)</li>
+				<li>If <strong>i</strong> is <strong>2</strong>, <strong>3</strong>, <strong>4</strong> or <strong>5</strong>, leave empty squares where pieces can move</li>
+				<li>If <strong>i</strong> is <strong>1</strong> or <strong>6</strong>, place pawns</li>
 			</ul>
 		</ul>
 		
-		<h4>Note: this is my current function for making the chess board, I might need to refactor it a bit later on, but it works perfectly for now.</h4>
+		<h4>
+			Note: This is my current implementation for generating the chess board. It may need further refactoring in the future, 
+			but for now it works as expected and is significantly better than the original hard-coded version.
+		</h4>
+		
 		<br>
 		
-		<h4>utils.jsx</h4>
+		<h3>utils.jsx</h3>
 		<pre>
 			class Utils {
 				static ROWS = 8;
@@ -278,7 +262,7 @@
 				static letters = "a b c d e f g";
 				static nums = "8 7 6 5 4 3 2 1";
 				
-				static pieces = [this.ROOK, this.KNIGHT, this.BISHOP, this.QUEEN, this.KING, this.BISHOP2, this.KNIGHT2, this.ROOK2, this.PAWN];
+				static pieces = [this.ROOK, this.KNIGHT, this.BISHOP, this.QUEEN, this.KING, this.BISHOP2, this.KNIGHT2, this.ROOK2];
 				static board = [[], [], [], [], [], [], [], []];
 			}
 
@@ -287,7 +271,7 @@
 		
 		<br>
 		
-		<h4>board.jsx</h4>
+		<h3>Board.jsx</h3>
 		<pre>
 			export function initGameBoard(board, pieces, rows, cols) {
 				for (var i = 0; i < rows; i++) {
@@ -302,12 +286,7 @@
 						}
                 
 						if (i === 1 || i === 6) {                
-							for (var pawn = 0; pawn < Utils.pieces.length; pawn++) {
-								 if (pieces[pawn] === Utils.PAWN) {
-									 board[i][j] = Utils.pieces[pawn] + " ";
-									 //~ board[i][j] = Utils.freeSpace + " ";
-								 }
-							}
+							board[i][j] = Utils.PAWN + " ";
 						}
 				}
 			}	   
@@ -315,56 +294,128 @@
 	} 
 		</pre>
 		
-		As you can now see, this code is much better than having 64 hard-coded divs... <br><br>
+		As you can see, this approach is much cleaner and more scalable than hard-coding 64 individual divs. <br><br>
 		
-		<h2><strong>Challange 2:</strong> Moving the Pieces (Current Issue).</h2> 
-		At the moment I am trying to compute the legal moves for a given piece, depending where said piece is on the board. This is not too hard to do,
-		as I am able to move any piece programmatically. Before I get into the detail of this challange, I currently only have 3 pieces (Rooks, Knights & Bishops). 
-		
-		<br><br>
-		
-		So their is a handful of problems/challanges... My <strong>Knights</strong> actually work very good (like very good) but their is one small 
-		issue, say I move my knight from his initial location on the starting chess board to a new location (this is perfect), then my rook moves over to
-		where the knight was (still perfect), "issue incoming" - where the knight has been moved to - my system is saying that my knight can move back to where 
-		he was when the board was created, but this is wrong, because the rook is now in that location. 
+		<h3><strong>Challange 2:</strong> Moving the Pieces (Current Issue).</h3> 
+		At the moment, I’m working on generating the legal moves for a given piece based on its position on the board. The basic movement logic isn’t too difficult and I’m already able to move pieces programmatically. 
 		
 		<br><br>
 		
-		<strong>This is the smallest issue as of right now.</strong>
-				
-		<br><br><br>
+		For now, the project only includes three piece types:
+		<br>
 		
-		My <strong>Bishops</strong> I thought they were working perfectly also, but after a good bit of analysis and debugging my bishops work but in a kinda weird way... <br><br>
-		For example: <br> If I move my bishop diagonally, I am able to compute his legal moves depending on where he has been moved to, but lets say I move a pawn forward, that means my bishop
-		can go to that free spot because it is a diagonal move but this doesnt work (very odd...), BUT if I remove all of the pawns off the board, my bishop will be able to move to that free spot, but if 
-		their are pawns on the board, he will only go forward NOT forward and backwards...
+		<ul>
+			<li>Knights</li>
+			<li>Rooks</li>
+			<li>Bishops</li>
+		</ul>
+		
+		<br>
+		
+		However, there are still several issues and challenges that need to be solved around move validation and board state handling.
+
+		<br><br>
+		
+		<h3>Knight Pieces</h3>		
+		The knight movement is actually working very well overall, which is a good sign. However, there is still one small issue that needs to be fixed. 
+		<br><br>
+		
+		<strong>For example:</strong> if I move a knight from its starting position to a new square, everything behaves correctly at first. Then, if a rook moves into the knight’s original starting square, 
+		the system still incorrectly shows that the knight can move back to that square.
 		
 		<br><br>
 		
-		I don't understand why this is happening but I will fix this soon enough, this must be fixed because their is always pawns (more often than not) on the chess board!
+		This is not correct, since that square is now occupied by the rook and should no longer be a valid move for the knight.
+		<br><br>
+		
+		<strong>This is currently the smallest issue compared to the other pieces, but it still indicates that there may be a problem with how board state updates or move validation is being handled after pieces are moved.</strong>
+		
+		<br><br>
+		
+		<h3>Rook Pieces</h3>
+		At first, I thought my rook movement logic was working perfectly. However, after spending quite a bit of time debugging and testing different board states, I discovered that the rook logic actually has several problems.
+		<br><br>
+		
+		<strong>For example:</strong> if I move my rook to the right (to the square where the knight originally was), the rook appears to have only one legal move available. Because of this, I initially 
+		assumed the rook system was functioning correctly. 
+		
+		<br><br>
+		
+		What makes this even stranger is that if I remove all of the pawns from the board, the rook logic starts behaving a bit better. Even then, there is still one square on the right side that the rook 
+		refuses to move to for some reason.
+		
+		<br><br>
+		
+		This is one of those bugs that seems simple at first, but becomes much more confusing the deeper I debug it.
 	
-		<br><br><br>
+		<br><br>
 		
-		My <strong>Rooks</strong> I thought they were working perfectly but after a good bit of analysis and debugging my rooks do not work very good at all... <br><br>
-		For example: <br> If I move my rook to the right (where the knight was) there is exactly one legal move for the rook (this is why I thought my rook was working), BUT if I move
-		my bishop to one of his legal spots, my rook now has two legal moves (one left and one right), but my system is saying that there is only one legal move (the move to the left)... But this is wrong! 
+		<h3>Bishop Pieces</h3>
+		Just like the rooks, I originally thought my bishop movement logic was working correctly. However, after more testing and debugging, I discovered that the bishops behave in a very strange and inconsistent way. 
 		
 		<br><br>
 		
-		But yet again, if I remove all of the pawns off the board, my rook works a bit better but there is one position that my rook won't move to and that spot is to the right... again very odd why this is happening!
-	
+		<strong>For example:</strong> if I move a bishop diagonally, the game is usually able to calculate its legal moves correctly based on its current position. However, problems start appearing once pawns are involved.
 		<br><br>
 		
-		/* <br>
-		So, as mentioned above I am currently trying to fix these bugs / problems in the project... this also means that I cannot processed forward until these problems are fixed... <br>
-		*/ 
-	</p>
+		Let’s say I move a pawn forward, creating an open diagonal square for the bishop to move into. In theory, the bishop should now be able to move to that newly available square - but for some reason, it cannot.
+		<br><br>	
+		
+		What makes this even more confusing is that if I completely remove all pawns from the board, the bishop suddenly starts working much better and can move into those squares correctly. However, when pawns are present, 
+		the bishop seems to only move in certain diagonal directions instead of both forward and backward diagonals.	
+		<br><br>			
+		
+		This definitely needs to be fixed because, in a real chess game, pawns are almost always present on the board.
+		
+		<h3 id="note2">As mentioned above, I’m currently working on fixing these issues in the project, which means progress is paused until they’re resolved.</h3>
+		
+		<br><br>
+		
+		<!--
+		<h3><strong>Challange 3:</strong> Everything is on the frontend! (Later Concern)</h3> 
+		Currently the whole project is running all on the frontend, meaning that we just need a browser to run our chess game (once the project is in production). But this is the exact problem.
+		As of right now all of the codebase logic is written in <strong>JavaScript</strong>.
+		
+		<br><br>
+		
+		And this is fine for now, but once we get working on the <strong>chess engine</strong>, our engine is going to need to know about how the game plays! So, in simple terms, right now our engine is blank, completely blank
+		no work done on him at all so far. But our game logic is in the works and mostly working (with some bugs here and there). 
+		
+		<br><br>
+		
+		But our engine is going to be wrote in <strong>Go</strong>, so we need a way to send the board from the 
+		frontend (<strong>JavaScript</strong>) to the backend (<strong>Go</strong>) and from there our engine can process the board. Once our engine is done making their move they will need to send either the whole board back to the frontend or just send some data/information
+		to the frontend.
+		-->
+		
+		<h3><strong>Challenge 3:</strong> Everything Currently Runs on the Frontend.</h3>
+		
+		At the moment, the entire project runs on the frontend. This means the chess game can run directly in the browser once the project is deployed, which is great for accessibility and simplicity. However, this also creates a major challenge moving forward.
+		<br><br>
+		
+		Right now, all of the game logic is written in JavaScript and while that works for the current state of the project, the future chess engine will be written in Go. The engine will need access to the current game state so it can calculate and generate moves.
+		<br><br>
+		
+		At the moment, the engine itself is still completely undeveloped, while the main game logic is already mostly functional aside from a few bugs. Because the frontend and engine will be written in different languages, we need a reliable way for them to communicate with each other.
+		<br><br>
+		
+		The plan is for the frontend (JavaScript) to send the current board state to the backend (Go). The engine can then process the position, calculate its move and return either:
+		<br>
+		
+		<ul>
+			<li>the updated board state</li>
+			<li><strong>or</strong></li>
+			<li>the move data needed by the frontend to update the board.</li>
+		</ul>
+
+		This will likely require building an API or communication layer between the frontend and backend systems.
+		</p>
 		
 	<br>
 
-	<h2>Technology Stack</h2>
+	<h3>Technology Stack</h3>
 	<p>
-		Now this is where things get intresting... Below is the tech stack for our chess game & engine:
+		This is where the project starts to get more interesting. Below is the current technology stack being used for both the chess game and the engine.
 		
 		<h2>Frontend</h2>
 		<ul>
@@ -376,9 +427,9 @@
 		
 		<h2>Backend</h2>
 		<ul>
-			<li>Go (for engine)</li>
-			<li>JavaScript (for game logic & rendering)</li>
-			<li>Python (later on in the project... ML)</li>
+			<li><strong>Go:</strong> planned for the chess engine</li>
+			<li><strong>JavaScript:</strong> currently handling game logic and rendering</li>
+			<li><strong>Python:</strong> planned for future machine learning features</li>
 		</ul>
 		
 		<h2>Version Control</h2>
@@ -397,18 +448,18 @@
 	
 	<br>
 
-	<h2>Why Go ?</h2>
+	<h3>Why Go ?</h3>
 	<p>
-		I chose to use Go for this project mainly because I really enjoy coding in Go and Go code is very easy to read and understand.
-		But another reason I chose Go is for the concurreny aspect of Go.
-		We all know the basics of chess and one of the most important things is raw speed for chess and Go's concurrency model is very good, so that is 
-		another reason to why I chose Go.
-	
+		I chose Go for this project for a few different reasons. First, I genuinely enjoy writing Go code and one of its biggest strengths is how clean and readable the language is. It makes maintaining and understanding large parts of the codebase much easier.
 		<br><br>
+
+		Another major reason is performance and concurrency. In chess programming, speed is extremely important. A chess engine constantly evaluates positions, generates moves and searches through large numbers of possible game states. Go’s built-in concurrency model makes it a strong choice for handling these kinds of tasks efficiently.
+		<br><br>
+
+		For example, a chess board can be represented as a 2D array consisting of rows and columns, meaning many operations require nested loops like this:
 		
-		<h2>For example:</h2>
-		Chess is a 2d array with Rows and Cols so for a lot of the project i'm going to be iterating twice like this: <br><br>
-		
+		<br>
+			
 		<pre>
 			for i := 0; i < ROWS; i++ { 
 				for j := 0; j < COLS; j++ {	
@@ -417,60 +468,258 @@
 			} 
 		</pre>
 		
-		So, if I do this <strong>sequentially</strong> this will be quite slow, but if I use Go's builtin Concurrency features, such as: <strong>Goroutines, Channels, Waitgroups, etc</strong>, 
-		I will be able to process the chess game much faster!
+		Running this sequentially works, but it can become slow as the engine grows more complex. With Go, I can take advantage of concurrency features such as Goroutines, Channels and WaitGroups to process calculations in parallel and improve overall performance.
+		<br><br>
+
+		This is one of the main reasons Go felt like the right choice for building the chess engine.
 	</p>
 	
 	<br>
 
-	<h2>Random Idea's</h2>
+	<h3>Random Idea's</h3>
 	<p>
-		Have a database either, <strong>MySql, NoSql or possibly Redis</strong>, if I don't use a database, I might use <strong>local-storage</strong>. 
-		But as the project is early doors, this won't happen for a while.
+		One idea for the future is adding a database layer to the project. Possible options include:
+		<br>
+		
+		<ul>
+			<li>MySQL</li>
+			<li>NoSQL</li>
+			<li>Redis</li>
+		</ul>
+		
+		Another simpler alternative would be using local storage for saving game data and user preferences.
+		<br><br>
+		
+		Since the project is still in its early stages, this is something that will likely be explored later in development.
 	</p>
 	
 	<br>
 
-	<h2>Get your Engine Running!</h2>
+	<h3>Get your Engine Running!</h3>
 	
-	<h3>Our Own Engine</h3> <br>
+	<h2>Building Our Own Engine</h2> 
 	<p>
-		This part of the project is most likely going to the most challanging portion of the project. <br><br> Why ? <br> Chris and I are going to build our very own chess
-		engine from scratch together. This might be a very good or bad idea but either way we are going to commit to it! As of right now the engine is not currently in development, 
-		but once we get going on our engine, we will need to do research on how to make our very own and first chess engine / AI. I've watched a few <strong>YouTube Videos on Chess Engines</strong> 
-		and I have heard of some of the things that they use to make their engines, see below (still to be researched):
+		This will most likely be the most challenging part of the entire project. 
+		
+		<br><br> 
+		
+		<strong><i>Why ? </i></strong>
+		
+		<br> 
+		Chris and I are planning to build our very own chess engine completely from scratch. Whether this turns out to be a brilliant idea or a terrible one, we’re committed to seeing it through.
+		<br><br>
+
+		At the moment, development on the engine has not officially started yet. However, once work begins, we’ll need to spend a significant amount of time researching how chess engines and AI systems are built.
+		<br><br>
+
+		So far, I’ve watched several videos and done some early reading on chess engine development. Some of the concepts and algorithms we’ll likely explore include:		
+		<br>
 		
 		<ul>
 			<li>Mini-Max Algorithm</li>
 			<li>Alpha-Beta Pruning</li>
-			<li>and much more...</li>
+			<li>And much more...</li>
 		</ul>  
 	</p>
 	
 	<br>
 	
-	<h2>Idea's for the Engine</h2>
-
-	<h3>Idea 1 (Our Own Engine... Then a ML Engine):</h3>		
-	<ul>
+	<h3>Idea's for the Engine</h3>
+	
+	<ol>
 		<li>
-			<p>
-				We are going to create our very own chess engine from scratch, once we have created our own chess engine, we are also going to create another engine, 
-				but this time we are going to use <strong>Machine Learning (ML)</strong> such as: <strong>Neural Networks, Recurrent Neural Networks, etc.</strong> And we can then compare our engine to the ML engine 
-				and see which engine is better and why it is better !?		
-			</p>
+			<strong><i>Our Own Engine, then a ML Engine:</i></strong> <br>
+				Our first goal is to build a traditional chess engine from scratch using classic algorithms and search techniques.
+				
+				<br><br>
+				
+				Once we have a working engine, we then want to experiment with a second version powered by Machine Learning (ML). This could involve technologies such as:
+				<br>
+				
+				<ul>
+					<li>Neural Networks</li>
+					<li>Recurrent Neural Networks</li>
+					<li>Reinforcement Learning</li>
+					<li>Self-play training</li>
+				</ul>
+				
+				<br>
+				
+				The interesting part will be comparing the two engines to see:
+				<br>
+				
+				<ul>
+					<li>Which performs better</li>
+					<li>How they approach decision-making differently</li>
+					<li>And what advantages/disadvantages each system has</li>
+				</ul>
 		</li>
-	</ul>
 		
-	<h3>Idea 2 (Engine vs Engine):</h3>
-	<ul>
+		<br>
+		
 		<li>
-			<p>
-				Once we have created our very own chess engine, there is a website that we can submit our engine to and our engine will play 
-				against other peoples engines.
-			</p>
+			<strong><i>Engine vs Engine:</i></strong> <br>
+				Once our engine reaches a stable state, we would also like to submit it to online chess engine testing platforms where it can compete against engines created by other developers.
+				
+				<br><br>
+				
+				This would give us a great way to:
+				<br>
+				
+				<ul>
+					<li>Benchmark performance</li>
+					<li>Identify weaknesses</li>
+					<li>And continuously improve the engine over time</li>
+				</ul>
 		</li>
-	</ul>
-		    			
+	</ol>
+	
+			<style>
+			a, li, p {
+				font-size: 16px;
+			}
+			
+			h1 {
+			  font-family: Arial, sans-serif;
+			  font-size: 30px;
+			}
+
+			li {
+			  color: black;
+			  text-decoration: none;
+			}
+
+			p {
+			  font-family: Georgia;
+			}
+			
+			img {
+			  display: block;
+			  max-width: 100%;
+			  height: auto;
+
+			  margin: 2rem auto;
+
+			  border-radius: 14px;
+			  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+
+			  transition: transform 0.3s ease,
+						  box-shadow 0.3s ease;
+			}
+
+			img:hover {
+			  transform: scale(1.02);
+			  box-shadow: 0 10px 24px rgba(0,0,0,0.2);
+			}
+
+			@media (prefers-color-scheme: light) {
+			  :root {
+				color: #213547;
+				background-color: #ffffff;
+			  }
+			  a:hover {
+				color: #747bff;
+			  }
+			  button {
+				background-color: #f9f9f9;
+			  }
+			}		
+			
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.7;
+        color: #333;
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 2rem;
+        background-color: #f9f9f9;
+      }
+
+      h3 {
+        color: #2c3e50;
+        border-left: 5px solid #3498db;
+        padding-left: 10px;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        font-size: 1.6rem;
+      }
+
+      p {
+        margin-bottom: 1rem;
+        font-size: 1rem;
+        color: #444;
+      }
+
+      ul {
+        margin-bottom: 1rem;
+        padding-left: 2rem;
+      }
+
+      ul li {
+        margin-bottom: 0.5rem;
+      }
+
+      ul li ul {
+        padding-left: 1.5rem;
+        margin-top: 0.5rem;
+      }
+
+      strong {
+        color: #2c3e50;
+      }
+
+      a {
+        color: #3498db;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ddd;
+        margin: 2rem 0;
+      }
+
+      /* DAO Functionality nested list */
+      li > ul > li {
+        list-style-type: circle;
+      }
+
+     h1 {
+       text-align: center;
+     }    
+    nav.main-nav {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      background-color: var(--primary);
+      padding: 1rem;
+      border-radius: 12px;
+      margin: 2rem auto;
+      max-width: 900px;
+      flex-wrap: wrap;
+    }
+
+    nav.main-nav a {
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+    }
+	
+	strong i {
+		/*color: blueviolet;*/
+		font-size: 20px;
+	}   
+		
+	@media (max-width: 768px) {
+		#note, #note2 {
+			max-width: 400px;
+		}
+	}
+		</style>
 </body>
 </html>
