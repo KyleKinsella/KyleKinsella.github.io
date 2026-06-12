@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chess Game & Engine Learnings - so far...</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="all.css">
+</head>
+<body>
+	<h1>Chess Project Learnings♟️♞ </h1> 
+	
+	<h3>Work in Progress...</h3>
+	
+	<br>
+	
+	<h3>Learning 1: Git Commands</h3>
+	<p>
+		As I have been building my chess game (engine later on), I have been using <strong>Git</strong> to keep track of my work.
+		I have used Git before, but I only know a few commands, see below list:
+		
+		<ul>
+			<li>git status</li>
+			<li>git diff</li>
+			<li>git add .</li>
+			<li>git commit -m "..."</li>
+			<li>git commit --amend</li>
+			<li>git push</li>
+		</ul>
+		
+		But this is where things make a turn. I am working on this project with a friend from college and when he is working on the project, he has created is own branch for his work. 
+		But I was doing my work and pushing to the <strong>main branch</strong>. But he said you should make your own branch and not push to main.
+		
+		<br><br>
+		
+		So, <strong>yesterday (June 11th, 2026)</strong>, I was working away on the project and I had just implemented <strong>team colors</strong>, a very important part of chess (and a lot of work)!
+		Then I said to myself, I should push this to git, but this time I didnt push to main, I created my own branch, this is the main part of this story / learning.
+		
+		<br><br>
+		
+		<strong>I have never created my own branch before!</strong> 
+		
+		<br><br>
+		
+		Part of me was like, "just push to main to be safe", because I didnt want to lose my work, that I spent the whole day working on.
+		But, I didnt! I just did it and what happened, happened.
+		
+		So, I went off and did some research and this is what I did and what I learned, see below:
+		
+		<ul>
+			<li>git stash</li>
+			<li>git checkout -b Kyles_Work (I needed to create a new branch)</li>
+			<li>git stash pop</li>
+			<li>git push --set-upstream origin Kyles_Work</li>
+		</ul>
+		
+		I also learned about these Git commands:
+		
+		<ul>
+			<li>git branch - shows the branch your currently on.</li>
+			<li>git stash list - shows all of the stashes that you have done.</li>
+		</ul>
+		
+		<br>
+		Doing these commands was quite nerve wrecking because I had never used these commands before. But now that I've done it once I will be more confident doing this going forward.
+	</p>
+	
+	<br>
+	
+	<h3>More Learnings to come...</h3>
+	
+	<br>
+	
+	<h3>References</h3>
+	
+	<ul>
+		<li><a target="_blank" href="https://medium.com/@akryelias/mastering-git-switch-branches-without-losing-your-progress-2e58d28cb375">Medium - mastering-git-switch-branches-without-losing-your-progress (Very helpful) !</a></li>
+		<li><a target="_blank" href="https://www.geeksforgeeks.org/git/how-to-create-a-new-branch-in-git/">GeeksForGeeks - how-to-create-a-new-branch-in-git</a></li>
+		<li><a target="_blank" href="https://www.geeksforgeeks.org/git/how-to-create-a-new-branch-in-git-and-push-the-code/">GeeksForGeeks (again) - how-to-create-a-new-branch-in-git-and-push-the-code</a></li>
+	</ul>
+	
+	<style>
+		<style>
+			a, li, p {
+				font-size: 16px;
+			}
+			
+			h1 {
+			  font-family: Arial, sans-serif;
+			  font-size: 30px;
+			}
+
+			li {
+			  color: black;
+			  text-decoration: none;
+			}
+
+			p {
+			  font-family: Georgia;
+			}
+			
+			img {
+			  display: block;
+			  max-width: 100%;
+			  height: auto;
+
+			  margin: 2rem auto;
+
+			  border-radius: 14px;
+			  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+
+			  transition: transform 0.3s ease,
+						  box-shadow 0.3s ease;
+			}
+
+			img:hover {
+			  transform: scale(1.02);
+			  box-shadow: 0 10px 24px rgba(0,0,0,0.2);
+			}
+
+			@media (prefers-color-scheme: light) {
+			  :root {
+				color: #213547;
+				background-color: #ffffff;
+			  }
+			  a:hover {
+				color: #747bff;
+			  }
+			  button {
+				background-color: #f9f9f9;
+			  }
+			}		
+			
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.7;
+        color: #333;
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 2rem;
+        background-color: #f9f9f9;
+      }
+
+      h3 {
+        color: #2c3e50;
+        border-left: 5px solid #3498db;
+        padding-left: 10px;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        font-size: 1.6rem;
+      }
+
+      p {
+        margin-bottom: 1rem;
+        font-size: 1rem;
+        color: #444;
+      }
+
+      ul {
+        margin-bottom: 1rem;
+        padding-left: 2rem;
+      }
+
+      ul li {
+        margin-bottom: 0.5rem;
+      }
+
+      ul li ul {
+        padding-left: 1.5rem;
+        margin-top: 0.5rem;
+      }
+
+      strong {
+        color: #2c3e50;
+      }
+
+      a {
+        color: #3498db;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ddd;
+        margin: 2rem 0;
+      }
+
+      /* DAO Functionality nested list */
+      li > ul > li {
+        list-style-type: circle;
+      }
+
+     h1 {
+       text-align: center;
+     }    
+    nav.main-nav {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      background-color: var(--primary);
+      padding: 1rem;
+      border-radius: 12px;
+      margin: 2rem auto;
+      max-width: 900px;
+      flex-wrap: wrap;
+    }
+
+    nav.main-nav a {
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+    }
+	
+	strong i {
+		/*color: blueviolet;*/
+		font-size: 20px;
+	}   
+		
+	@media (max-width: 768px) {
+		#note, #note2 {
+			max-width: 400px;
+		}
+	}
+	</style>
+</body>
+</html>
