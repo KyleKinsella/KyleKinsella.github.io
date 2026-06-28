@@ -398,7 +398,7 @@
 		to the frontend.
 		-->
 		
-		<h3><strong>Challenge 3:</strong> Everything Currently Runs on the Frontend.</h3>
+		<h3><strong>Challenge 3:</strong> Everything Currently Runs on the Frontend - <i>Future Problem</i></h3>
 		
 		At the moment, the entire project runs on the frontend. This means the chess game can run directly in the browser once the project is deployed, which is great for accessibility and simplicity. However, this also creates a major challenge moving forward.
 		<br><br>
@@ -419,8 +419,53 @@
 		</ul>
 
 		This will likely require building an API or communication layer between the frontend and backend systems.
-		</p>
 		
+		<br><br>
+		<h3>Challange 4 - June 28th, 2026: <br> Moving a piece and then Re-Computing that pieces Legal Moves.</h3>
+		
+		<h4><strong>Note:</strong> This sounds like a very simple fix, but this challenge is incredibly difficult!</h4>
+		
+		At the start of this project I was moving any of the pieces to a random null (free spot) on the board, this was for <strong>testing purposes only</strong>. Once the piece moved it would 
+		then re-compute the new moves based on where their new location is on the board.
+		
+		<h3>For Example, this is for the <strong>White Rook</strong>:</h3>
+		<strong>Note:</strong> The <strong>#####</strong> this means that you can move to any of the spots on the board that contain <strong>#####</strong>, aka it's a legal move for the White Rook. And the <strong>$</strong> is 
+		showing the piece(s) that we can capture. 
+		
+		<br><br>
+		
+		Another thing to mention is that, where the White Rook (top left on board) is located, he cannot do the move he did in <strong>Image 2</strong>, see image 2 for more details. I coded this up
+		to ensure that my code is right and it works! As I mentioned, this was for testing purposes only.
+		
+		<h3>Image 1</h3>
+		<img src="chess-imgs/Screenshot From 2026-06-28 12-45-30.png">
+		
+		<br>
+		
+		<h3>Image 2 (Then I moved the White Rook Again):</h3>
+		<img src="chess-imgs/Screenshot From 2026-06-28 12-45-42.png">
+		
+		<br>
+		So, at this point in the project, I thought <strong>everything is going very good,</strong> this is where things make a big change!
+		
+		<br><br>
+		
+		So moving the rook to a random null (free spot) on the board, is absolutly perfect for testing to see if my code works for my rook piece and all of my other pieces But now I need 
+		to move them to one of their legal moves.
+		
+		But when I did some refactoring to my codebase I got the following output:
+		
+		<br>
+		<img src="chess-imgs/Screenshot From 2026-06-28 13-09-19.png">
+		So, as you can see in the above image, the white rook has moved but for some bizare reason, he does not re-compute the index <strong>[0,0]</strong>.
+		
+		<br><br>
+		In another case where the white rook moves again, he still does not re-compute the index <strong>[0,0]</strong>.
+		<img src="chess-imgs/Screenshot From 2026-06-28 13-09-34.png">
+		
+		<br>
+		<h3>I have been trying for the last few days, to try and fix this problem, but it is not an easy fix!</h3>
+		</p>
 	<br>
 
 	<h3>Technology Stack</h3>
