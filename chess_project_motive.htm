@@ -209,6 +209,10 @@
 		So, what problems and challenges have I faced so far? <br><br>
 		
 		<h3><strong>Challange 1:</strong> Making the Chess Board.</h3> 
+		<span class="status-dot-complete" title="Complete"></span>
+		<span class="status-text" style="color:#00c853;">Complete</span>
+		
+		<br><br>
 		
 		When I first started this project, I assumed building the chess board would be straightforward - but I quickly realised that wasn’t the case.
 		
@@ -306,7 +310,12 @@
 		
 		As you can see, this approach is much cleaner and more scalable than hard-coding 64 individual divs. <br><br>
 		
-		<h3><strong>Challange 2:</strong> Moving the Pieces (Current Issue).</h3> 
+		<h3><strong>Challange 2:</strong> Moving the Pieces.</h3> 
+		<span class="status-dot-complete" title="Complete"></span>
+		<span class="status-text" style="color:#00c853;">Complete</span>
+		
+		<br><br>
+		
 		At the moment, I’m working on generating the legal moves for a given piece based on its position on the board. The basic movement logic isn’t too difficult and I’m already able to move pieces programmatically. 
 		
 		<br><br>
@@ -398,7 +407,11 @@
 		to the frontend.
 		-->
 		
-		<h3><strong>Challenge 3:</strong> Everything Currently Runs on the Frontend - <i>Future Problem</i></h3>
+		<h3><strong>Challenge 3:</strong> Everything Currently Runs on the Frontend.</h3>
+		<span class="status-dot-complete" title="Future Problem"></span>
+		<span class="status-text" style="color:#00c853;">Future Problem</span>
+		
+		<br><br>
 		
 		At the moment, the entire project runs on the frontend. This means the chess game can run directly in the browser once the project is deployed, which is great for accessibility and simplicity. However, this also creates a major challenge moving forward.
 		<br><br>
@@ -422,6 +435,8 @@
 		
 		<br><br>
 		<h3>Challange 4 - June 28th, 2026: <br> Moving a piece and then Re-Computing that pieces Legal Moves.</h3>
+		<span class="status-dot-complete" title="Current Issue"></span>
+		<span class="status-text" style="color:#00c853;">Current Issue</span>
 		
 		<h4><strong>Note:</strong> This sounds like a very simple fix, but this challenge is incredibly difficult!</h4>
 		
@@ -775,6 +790,24 @@
 			max-width: 400px;
 		}
 	}
-		</style>
+
+	.status-text {
+		font-size: 0.9em;
+		color: #00c853;
+		margin-left: 4px;
+		font-weight: 500;
+	}
+	
+	.status-dot-complete {
+		display: inline-block;
+		width: 10px;
+		height: 10px;
+		background-color: #00c853;
+		border-radius: 50%;
+		margin-left: 8px;
+		vertical-align: middle;
+		box-shadow: 0 0 5px #00c853;
+	}
+	</style>
 </body>
 </html>
