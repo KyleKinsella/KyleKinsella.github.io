@@ -196,7 +196,7 @@
 
 	<br><br>
 	
-	<h3>Problems & Challanges</h3>
+	<h3 id="problemsAndChallanges">Problems & Challanges</h3>
 	<p>
 		When developing either a personal project or something for a business, it’s inevitable to run into problems and challenges during the development cycle. Mistakes happen because we’re 
 		human and that’s part of the process.
@@ -435,8 +435,8 @@
 		
 		<br><br>
 		<h3>Challange 4 - June 28th, 2026: <br> Moving a piece and then Re-Computing that pieces Legal Moves.</h3>
-		<span class="status-dot-complete" title="Current Issue"></span>
-		<span class="status-text" style="color:#00c853;">Current Issue</span>
+		<span class="status-dot-complete" title="Complete - A very tricky one to fix do, lol !"></span>
+		<span class="status-text" style="color:#00c853;">Complete</span>
 		
 		<h4><strong>Note:</strong> This sounds like a very simple fix, but this challenge is incredibly difficult!</h4>
 		
@@ -476,11 +476,82 @@
 		
 		<br><br>
 		In another case where the white rook moves again, he still does not re-compute the index <strong>[0,0]</strong>.
+		
+		<h3 id="notRight">Image 3</h3>
 		<img src="chess-imgs/Screenshot From 2026-06-28 13-09-34.png">
 		
 		<br>
 		<h3>I have been trying for the last few days, to try and fix this problem, but it is not an easy fix!</h3>
 		</p>
+	<br>
+	
+	<h3>Solution's & Answer's</h3>
+	<p>
+		For this part of the blog, this will contain the solutions and the answers to these hard & complex problems, for the <strong>problems & challenges</strong> as mentioned above. See here for
+		more information: <a href="#problemsAndChallanges">Problems & Challanges</a>.
+		
+		<h4>Problem & Challange 4: A Quick Recap</h4>
+		
+		The main thing that was very hard to figure out for this problem was, the following: move a piece to one of it's legal moves, once we have moved to a new location on the board, re-compute where that piece can then move to next. 
+		Seems like a simple thing to do <strong>right?</strong>
+		
+		<br><br>
+		
+		<strong>No...</strong> turns out that this was probably one of the hardest things to fix so far in this chess project.
+		
+		<h4>Problem & Challange 4: The Fix Was ?</h4>
+		
+		Remove the following off of the board if it was on the board already: <strong>#####</strong> & <strong>$</strong>.
+		
+		<br><br>
+		What does this really mean - The story behind this bug ?
+		
+		<br><br>
+		So, as I have already mentioned, at the start of this project, I was moving whatever piece I wanted to move/process, to a random null (free spot) on the board, not entirely legal (I know), but
+		this was for testing purposes only, to see if my pieces could compute where they could move to and where they can capture, the other teams pieces.
+		
+		<br><br>
+		
+		When I coded this all up for each of the pieces, everything worked perfectly... Once I knew my code worked for all of the pieces, I said to myself: <strong>I must do this the correct way now</strong>.
+		
+		<br><br>
+		
+		So, instead of moving you to a random null (free spot) on the board, I refactored my code, such that: when you click a piece it shows that pieces legal moves on the board. Then if you click
+		on either <strong>##### - this represents one of your legal moves, that you can move to</strong> <u>or</u> <strong>$ - this represents where you can capture</strong> you are moved to where ever you 
+		have clicked on the board (for the most part). Then the board is updated to have your updated legal moves, but it does not work, see this image for: <a href="#notRight">More Information</a>.
+
+		<br><br>
+		After trying multiple things, to try and resolve this issue, one thing I didn't think of was this:
+		
+		<br><br>
+		
+		When you have click a piece, it shows its legal moves on the board... this means that there is <strong>#####</strong> & <strong>$</strong> on the board, so when you move to your new location,
+		the board state is broken and therefore that is why my White Rook could not compute the index <strong>[0,0]</strong>.
+		
+		<br><br>
+		Here is the code that fixed the issue. 
+		
+		<br>
+		<strong>Note:</strong> Utils.iCanMoveToHere = <stronger>#####</stronger> | Utils.iCanCaptureYou = <strong>$</strong>
+		<br>
+		
+		<strong>Another Note:</strong> I am aware that this code is not performant/fast, but it works for now!
+		<br><br>
+		
+		<pre>
+			function cleanBoard(board) {
+				for (var i = 0; i < board.length; i++) {
+					for (var j = 0; j < board[i].length; j++) {
+						if (board[j][i] === Utils.iCanMoveToHere || board[j][i] === Utils.iCanCaptureYou) {
+							board[j][i] = Utils.NULL;
+						}
+					}
+				}
+				return board;
+			}
+		</pre>
+	</p>
+
 	<br>
 
 	<h3>Technology Stack</h3>
