@@ -641,7 +641,13 @@ li {
     display: inline-block;
     width: 10px;
     height: 10px;
+
+/*
     background-color: #9C27B0;
+*/
+
+	background-color: #6D28D9;
+	
     border-radius: 50%;
     margin-left: 8px;
     vertical-align: middle;
