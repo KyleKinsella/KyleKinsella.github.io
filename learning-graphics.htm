@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Cool Graphics Stuff</title>
+    <title>Learning Graphics Programming</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="template.css">
     <link rel="stylesheet" href="all.css">
     <link rel="stylesheet" href="index.css">
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+	
 <!--
 	<h3>Table of Contents</h3>
 	<ul id=""> 
@@ -23,20 +26,664 @@
 		<li></li>
 	</ul>
 -->
-	
-	<style>
-		h3, p {
-			text-align: center;
-		}
-		
-		video {
-			display: block;
-			margin: 0 auto;
-		}
-	</style>
 
-	<h3>Welcome to my Blog / Story about Me and Graphics Programming!</h3>
-	<p><strong>Note:</strong> This page has only being created so there will be more added as I go (<strong>Work in Progess</strong>).</p>
+	<style>
+		body {
+			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+			line-height: 1.7;
+			color: #333;
+			max-width: 900px;
+			margin: 0 auto;
+			padding: 2rem;
+			background-color: #f9f9f9;
+		}
+
+		  h3 {
+			color: #2c3e50;
+			border-left: 5px solid #3498db;
+			padding-left: 10px;
+			margin-top: 2rem;
+			margin-bottom: 1rem;
+			font-size: 1.6rem;
+		  }
+
+		  p {
+			margin-bottom: 1rem;
+			font-size: 1rem;
+			color: #444;
+		  }
+
+		  ul {
+			margin-bottom: 1rem;
+			padding-left: 2rem;
+		  }
+
+		  ul li {
+			margin-bottom: 0.5rem;
+		  }
+
+		  ul li ul {
+			padding-left: 1.5rem;
+			margin-top: 0.5rem;
+		  }
+
+		  strong {
+			color: #2c3e50;
+		  }
+
+		  a {
+			color: #3498db;
+			text-decoration: none;
+		  }
+
+		  a:hover {
+			text-decoration: underline;
+		  }
+
+		  hr {
+			border: none;
+			border-top: 1px solid #ddd;
+			margin: 2rem 0;
+		  }
+
+		  /* DAO Functionality nested list */
+		  li > ul > li {
+			list-style-type: circle;
+		  }
+
+		  h1 {
+			text-align: center;
+		  }
+		  
+		  hr {
+			border-color: purple;
+		  }
+		</style>
+
+	<h1>Welcome! Here I am talking about how I got into Graphics Programming and much more! I hope you enjoy!</h1>
+<!--
+	<h1>Welcome! Here I am talking about how I got into Graphics Programming and much more.</h1>
+-->
+	<br>
+	<p><strong>Note:</strong> This page is <strong>Work in Progess</strong> there will be more added as I go.</p>
+	<p><strong>Another Note:</strong> This entire page was wrote by Me <strong>not an AI / LLM</strong>.</p>
+	
+	<br>
+	
+	<h3>
+		Kyle Kinsella • 23 • Irish • August 19th, 2026 •
+		<a href="https://www.linkedin.com/in/kyle-kinsella-52614b291/"><i class="fa fa-linkedin-square" style="font-size: 35px;"></i></a> •
+		<a href="https://github.com/KyleKinsella?tab=repositories"><i class="fa fa-github" style="font-size: 35px;"></i></a> •
+		<a href="mailto:kylekinsella10@gmail.com"><i class="fa fa-envelope" style="font-size: 35px;"></i></a> •
+		<a href="Kyle Kinsella CV.pdf" target="_blank" class="resume-button"><i class="fa fa-file-pdf-o" style="font-size: 35px;"></i></a>	
+	</h3>
+	
+	<p>If you would like to reach out to me to dicuss potential opportunities, please feel free to contact me via <strong>Linkedin</strong> or <strong>Email</strong>. 
+	I look forward to hearing from you!</p>
+	
+	<br>
+    
+	<h3>Why Learn Graphics Programming ?</h3>
+	<p>
+<!--
+		The main reason to why I want to learn graphics programming is for two simple reasons:
+-->
+		The main reason to why I want to learn graphics programming is for one simple reason:
+		
+		<ul>
+			<li>I was inspired by a Youtuber called tokyospliff. View his Youtube channel: <a href="https://www.youtube.com/@tokyospliff">tokyospliff Youtube Channel</a>.</li>
+<!--
+			<li>boredom - due to unemployment.</li>
+-->
+		</ul>
+	</p>
+	
+	<br>
+	
+	<h3>What API am I using ?</h3>
+	<p>
+		While I have been watching <strong>tokyospliff</strong> he always keeps referencing <strong>OpenGL</strong>, so I have decided to learn OpenGL. But I am aware of other API's, such as:
+		<ul>
+			<li>SDL</li>
+			<li>Vulkan</li>
+		</ul>
+	</p>
+	
+	<br>
+	
+	<h3>Getting Started</h3>
+	<p>
+	As of today (July 21st, 2026), I have done 3 full days of graphics programming. I started learning graphics programming on July 19th and I am going to continue to try and learn as much as I can. 
+	That being said, I have found it quite hard to get up and running with a simple <strong>Hello World program</strong> for graphics, compared to other computer science topics. 
+	
+	<h4>So, what did I do, to get my first Hello World program working for graphics ?</h4>
+	I am using The Cherno (another Youtuber) to get up and running and get the basics kinda down. View his Youtube channel: <a href="https://www.youtube.com/@TheCherno">TheCherno Youtube Channel</a>.
+	
+	<br><br>
+	
+	The Cherno, has created a playlist specifically for <strong>OpenGL</strong>, see here for more info: <a href="https://www.youtube.com/watch?v=W3gAzLwfIP0&list=PLlrATfBNZ98foTJPJ_Ev03o2oq3-GGOS2">OpenGL Youtube Playlist / Series</a>.
+	</p>
+	
+	<br>
+	
+	<h3>What have I learned so far ?</h3>
+	<p>
+		I have learned some of the terms used in graphics programming, such as:
+		
+		<ul>
+			<li><strong>Vertex Buffer:</strong> an array of your vertexes that you want to send to the GPU.</li>
+			<li><strong>Index Buffer:</strong> an array that contains indexes into our vertex buffer, to reduce duplication of the same vertex values, this keeps our GPU memory happy.</li>
+			<li><strong>Shader: </strong> this is just source code that runs on the GPU. Initially I thought this was for <strong>shadowing</strong> or something, I was wrong.</li>
+			<ul>
+				<li><strong>Vertex Shader: </strong> this shader is responsible for telling our GPU the geometry for where we want to render.</li>
+				<li><strong>Fragment Shader: </strong> this shader, runs once for every pixel.</li>
+			</ul>
+			<li><strong>OpenGL: </strong> an API for talking to our GPU. Initially, I thought this was a piece of software that you needed to download (I was wrong again), but after watching <strong>Welcome to OpenGL</strong> the first video in the OpenGL playlist, I found out that OpenGL, is already on our GPU.</li>
+			<li><strong>Uniforms: </strong> getting data from our CPU (our c++ code), into our shader (our code for the GPU) and use it like a variable. Uniforms are set per draw, you can set up a uniform up before you wish to draw your element, you can use: <strong>glDrawElements(...)</strong> or <strong>glDrawArrays(...)</strong>.</li>
+		</ul>
+	</p>
+	
+	<br>
+	
+	<h3>But how is it on my GPU already ?</h3>
+	<p>
+		The manufacturer, that created my laptop (Intel), when they were designing the GPU, they put the OpenGL specification onto my GPU - via code.
+	</p>
+	
+	<br>
+	
+	<h3>Do I like Graphics Programming ?</h3>
+	<p>
+		As I have only started doing graphics programming recently, I cannot say too much just yet. But from my experience so far, I kinda like it. 
+		For example, yesterday (July 20th, 2026), I was watching one of the videos in the OpenGL playlist and I was coding it all out myself manually, but I was not really enjoying it, at all. 
+		But today I am starting to really enjoy it.
+		
+		<br><br>
+		
+		My biggest complaint about graphics programming, is that - you have to do a lot of configuring and coding, but at the end of it, it does not look like much. 
+		For example, my <strong>main.cpp</strong> file did have 184 lines of code and all we had done is draw a square, that flashes from a kinda pink-ish color, to blue and blue back to the pick-ish color.
+	</p>
+	
+	<br>
+	
+	<h3>Learning by Doing</h3>
+	<p>
+		The best way for me to learn something is to do the following:
+		
+		<ul>
+			<li>Watch the video.</li>
+			<li>Pause it.</li>
+			<li>Write the code out manually, compile the program, make sure it works, if not debug it until it works.</li>
+			<li>Then continue into the video.</li>
+		</ul>
+	</p>
+	
+	<br>
+	
+	<h3>Linux</h3>
+	<p>
+		Most people like to use the Windows but as I am a developer / Engineer and I don't like Windows, I am doing all of this work on Linux, specifically Fedora Linux.
+		
+		<br><br>
+		
+		Why Linux ?
+		Well, Linux is open-source, it is incredebly fast, no spyware, no bloatware, no AI slop pushed in our face, brilliant community and so much more. And I really enjoy using Linux.
+		
+		<br><br>
+		
+		So, this means, I do everything via my terminal, meaning I can do things very fast and efficiently.
+	</p>
+	
+	<br>
+	
+	<h3>An Update - What have I done for the last while ?</h3>
+	<p>
+		On the July 19th 2026, I started an OpenGL series with <strong>The Cherno</strong>. And each day I would do either one, two or three (and sometimes even more than three) vidoes per day 
+		and I simply did this until I finished this series. I have successfully completed the OpenGL series on - July 29th 2026. It took me 9 days to complete the entire OpenGL series.
+	</p>
+	
+	<br>
+	
+	<h3>So, What is Next ?</h3>
+	<p>
+		Before I even started the OpenGL series, I said to myself: <strong>When I am done the OpenGL series, I am going to create my own project for OpenGL, But, 
+		I need to implement mostly everything I learned in the OpenGL series in this project</strong>! So, I need to create a project that contains the following:
+		
+		<ul>
+			<li>Vertex Buffer.</li>
+			<li>Index Buffer.</li>
+			<li>Shaders (Vertex & Fragment).</li>
+			<li>Sending data from the CPU to the GPU (Uniforms).</li>
+			<li>Renderering something on the screen.</li>
+			<li>Textures.</li>
+			<li>Blending - <strong>optional</strong>.</li>
+			<li>Maths, Projection, Model View Projection (MVP) matrices.</li>
+			<li>ImGui - this is also <strong>optional</strong>.</li>
+			<li>Test framework - something we created in the series (this is also <strong>optional</strong>).</li>
+			<li>Batch Renderering - the code 'The Cherno' wrote in these videos is different to the code we did throughout the OpenGL series, so I have not done this, so I might do this OR I 
+				might not do it at all.
+			</li>
+		</ul>
+	</p>
+	
+	<br>
+	
+	<h3>Preparation Time</h3>
+	<p>
+		Since I've completed the OpenGL series, I have been reading over the code-base that we created in the OpenGL series, before I get started on my own OpenGL project. 
+		I have spent the last 3 days reading over the code-base, today is the - August 1st, 2026.
+	</p>
+	
+	<br>
+	
+	<h3>Really Learning</h3>
+	<p>
+		During this week I watched a YouTube video called: <strong>how to render circles</strong> by The Cherno. And in that video we write a fragment shader that renders a circle. 
+		The below code is the code we wrote in that video:
+	</p>
+	
+<pre>
+void mainImage( out vec4 fragColor, in vec2 fragCoord )
+{
+    // Normalized pixel coordinates (from 0 to 1)
+    vec2 uv = fragCoord/iResolution.xy * 2.0 - 1.0;
+    float apsect = iResolution.x / iResolution.y;
+    uv.x *= apsect;
+    
+    fragColor.rg = uv;
+    fragColor.b = 0.0;
+    
+    float thickness = 1.0;
+    float fade = 0.5;
+    thickness += fade;
+    
+    // here we invert our color, the middle is 1 and as we go out if goes closer to 0
+    float distance = 1.0 - length(uv);
+    
+    vec3 col = vec3(smoothstep(0.0, fade, distance));   
+    col *= vec3(smoothstep(thickness + fade, thickness, distance));
+    
+    fragColor.rgb = col;
+    fragColor.rgb *= vec3(0.2, 0.3, 0.8); // blue circle
+}
+</pre>
+
+	<br><br>
+	
+	And this is the cool part, I have converted this example (we did this on ShaderToy: <a href="https://www.shadertoy.com/new">ShaderToy</a>) to mostly work in my very own fragment shader that my code processes. 
+	This has been very rewarding but also incredibly very fun.
+	
+	<br>
+	
+	<h3>Getting Going</h3>
+	<p>
+		I plan to start my project on Monday (August 3rd, 2026), but as this day comes closer I am starting to get nervous. The main reason to why I am getting nervous is for two main reasons:
+		
+		<ul>
+			<li>Rembering the OpenGL API and what Parameters to use.</li>
+			<li>Math - how do I know if I should use a 'vec2', 'vec3', 'mat2' or 'mat4'.</li>
+		</ul>
+		
+		But I guess the best way to get better at anything is it practise. So on Monday, I plan to jump right into it and see how things go.
+	</p>
+	
+	<br>
+	
+	<h3>A bit of a Story</h3>
+	<p>
+		On Monday (August 3rd, 2026), I planned to start my OpenGL project, but I had only started working on my project for about 43 minutes and let's just say the rest of my day did not go good at all, subsequently, 
+		I did not do any more work on the project (I got little to nothing done).
+	</p>
+	
+	<p>
+		So, after this happened I got quite depressed and annoyed, so I said to myself: <strong>I am not going to do this OpenGL project anymore, it's a waste of time</strong>. 
+		And then I did something I should have not done, I watched the first two videos in the Ray Tracing series by <strong>The Cherno</strong>. And in that video, he mentions that he is going to use the 
+		<strong>Vulkan Graphics API</strong>, 
+		for the Ray Tracing series (I have heard how hard Vulkan is from <strong>tokyospliff</strong> and some other content creators), so I said to myself: <strong>I am not going to do that series</strong>.
+	</p>
+	
+	<p>
+		So, the next day (August 4th, 2026), I did not do anything other than play Xbox and chill. But around nine or ten pm I said to myself: "I could just abandon my OpenGL project, because, I did little to nothing on it". 
+		But then I thought, well then what was the point of learning OpenGL, that was a waste of time. But roughly 30 minutes later I thought: I don't want to just forget about OpenGL and Ray Tracing, so I did a small 
+		bit of research - <strong>can you do ray tracing in opengl?</strong> and turns out, you absolutely can. But for some odd reason it is not recommended. 
+		
+		<br><br>
+		
+		So, this actually brightnened up my night, a lot. And I really enjoyed working in C++ again (I did it in college, but it's been a while) and its very fun coding in C++, that is another reason, to why I want 
+		to keep working on this project and future graphics projects.
+	</p>
+	
+	<p>
+		But I did not stop there, I went onto <strong>DuckDuckGo</strong> (the search engine) and I searched for the following: "how to do ray tracing in opengl" and I was shown a handful of github projects 
+		and blogs of how they did Ray Tracing in OpenGL.
+	</p>
+	
+	<p>
+		Then I went to YouTube and searched for the following: "ray tracing opengl c++". And I was shown a few videos, but I scrolled down a few videos and I found a video by the cherno, 
+		called: "how to render circles". And let me tell you something, I couldn't have been any happier.
+	</p>
+	
+	<h3>Why was I so happy ?</h3>
+	<p>
+		Well, I am trying to make a <strong>Bouncy Ball Simulator</strong> and I was trying to figure it out on Monday - how do I represent circles in my vertex buffer ? And well this video is a brilliant resource!
+	</p>
+	
+	<h3>Never Give Up!</h3>
+	<p>
+		In life we have good and bad days, but turns out, the bad days actually can help use grow bigger and stronger. 
+		At the end of the day we are human, we have up's and down's, we make mistakes and we makes good projects and idea's, but all that matters is that we continue forward, always! 
+		For example, I could have just said "I'm not doing this" (I kinda did), but after doing some reflecting, thinking and a small bit of research, turns out my night got much better.
+		And now I am going to work on my OpenGL project for the next while (until it is done) and then I will attack Ray Tracing!
+	</p>
+	
+	<h3>Summary (of the story)</h3>
+	<ol>
+		<li><strong>Monday (August 3rd): </strong> planned to start my project on Monday, things we wrong. Got depressed and very angry, found out that the <strong>Ray Tracing </strong> series is in <strong>Vulkan</strong>.</li>
+		<li><strong>Tuesday (August 4th): </strong> took it easy, did some thinking, reflecting and research and found very useful information.</li>
+		<li><strong>Wednesday (August 5th): </strong> back working on the project and back learning!</li>
+	</ol>
+	
+	<br>
+	
+	<h3>Into the Future</h3>
+	<p>
+		Once I have completed my OpenGL project (I have not even started it yet, heck I don't even have a project idea, yet), I plan to go through <strong>The Cherno's</strong> 
+		series on <strong>Ray Tracing</strong>. 
+		Do one or more videos each day and at the end of that series do my <strong>very own Ray Tracing project</strong>, based on everything I will learn in that series.
+
+		<br><br>
+
+		Once the <strong>Ray Tracing</strong> series and my project is complete, I might or might not do <strong>The Cherno's</strong> game engine series.
+		If I do it, I will do the same process as I am going to do for my OpenGL project and soon enough ray tracing project.
+		If I don't do the game engine series, I am not exactly sure what I will do (as of right now, July 29th, 2026).
+	</p>
+		
+	<hr>	
+	<h2>The Intresting Stuff Now!</h2>
+	<hr>
+	
+	<h3>My OpenGL Project - Part 1 / 3</h3>
+	<p>
+		I did not know what project idea to do for my OpenGL project, so, I asked <strong>ChatGPT</strong> for some ideas and he gave me lots of ideas, but one of the idea's really stuck to me.
+
+		<br><br>
+
+		So, what am I going to build ? 
+
+		<br><br>
+		
+		A <strong>Bouncing Ball Simulator</strong>. I know this seems very easy and even stupid, but I don't want to create anything to complex, I just want to learn OpenGL by doing and 
+		after doing the OpenGL series with The Cherno. This is going to be hard (and scary) but, in return I will learn lots and this is the best way to learn how to build something 
+		from scratch.
+	</p>
+	
+	<br>
+	
+	<h3>Problems & Challanges & Solution's & Answer's</h3>
+	<p>
+		Here I explain what problems I have faced during this OpenGL project and how I fixed these problems.
+		
+		<h3>Problem 1</h3>
+		My first big problem that I faced was sending data from my C++ code (CPU side) to OpenGL (GPU side), this is known as a <strong>uniform variable</strong>. 
+		I was sending 2 or 3 uniform variables, while the window was open, but for some reason I kept getting this error for one of the uniform variables:
+
+		<ul>
+			<li>Warning: uniform 'iResolution' doesn't exist!</li>
+		</ul>
+		
+		<br>
+		When I saw this error I was very confused because I had set-up everything to work perfectly for my uniform variables. 
+		So, I spent roughly around 2-3 hours last night (August 7th, 2026) and around 4 hours today (August 8th, 2026), I eventually found the culprit.
+		I did some research and I found this: <a href="https://wikis.khronos.org/opengl/GLSL_:_common_mistakes">GLSL Common Mistakes</a>.
+		
+		<br><br>
+		
+		I had a read and apparently if you send over a uniform variable to your fragment shader and you use that variable for processing but you don't use that uniform in the output color, 
+		the <strong>GLSL compiler</strong> will optimize it out. When I read this, I was very angry because, I spent 4 hours today and 2-3 hours yesterday and all along my code was right. 
+		
+		<br><br>
+		
+		But because of the error, I was under the impression that I had a problem with how I was sending my uniforms to my GPU, but this was not the problem at all, 
+		it was the <strong>GLSL compiler</strong> optimizing my fragment shader code to remove it because it was not used in the output color (a incredibly stupid design decision, GLSL team).
+		
+		<br><br>
+		
+<!--
+		<strong>See Image 2 to view the project so far</strong>.
+-->
+		
+		<h3>Problem 2</h3>
+		This problem, was very hard for me to fix, it took me 2-3 days to fix this problem. 
+		After I was able to create one circle, I thought it was going to be a walk in the park to get to create multiple circles. 
+		I thought this would be true but turns out it was not. 
+		
+		<br><br>
+		
+		For example: in my Blockchain from Scratch (Simulation) project, see here for more info: <a href="https://github.com/KyleKinsella/BlockChain-Project-From-Scratch">BlockChain from Scratch</a>.
+
+		<br><br>
+
+		I was able to create one block (the Genesis block) and then just loop <strong>N times</strong> to create N other blocks, see here for more info: <a href=" https://github.com/KyleKinsella/BlockChain-Project-From-Scratch/blob/main/Blocks/block.go">Blocks/block.go</a>.
+	
+		<br><br>
+		
+		Because I was able to do this for my blockchain project, I thought this would be easy to do (I was very wrong). After 1-2 days of trying to figure it out on 
+		my own I decided to go to YouTube, to try and see if I could find a helpful video and I found this video: 
+		<a href="https://www.youtube.com/watch?v=L-BA4nJJ8bQ">Very Helpful Video</a>. After watching this video I was able to produce the circle in Image 3 (see below). 
+		But in this video the creator made a function so that we can create as many circles/balls as we want. 
+		
+		<br><br>
+		
+		But when I wrote this function and involked it, I did not get the same result as the video creator did. So, this left me very confused, why am I not getting the same result ? 
+		So, I spent hours try to debug it myself (without AI). 
+		
+		<br><br>
+		
+		But after many hours I said to myself: <strong>I have spent hours at this and I have not found the solution to this problem, 
+		I don't want to use AI because it is a guessing machine but I am soooo confused, I'll use AI even do I don't want to</strong>! 
+		
+		<br><br>
+		
+		So, after wayyy to many prompts I eventually got something that produced a circle/ball, see Image 4 for more details.
+		
+		<br><br>
+		
+		But before I got the output of Image 4, I had a massive problem - my circle/ball was getting cut off, literally. 
+		See image and fragment shader below for more info. But I have learned why this occured. 
+		For example: In my fragment shader, for the variable <strong>redCircle</strong>, the <strong>xCoord</strong> and <strong>yCoord</strong> values are 120.0, 500.0. 
+		
+		<br><br>
+		
+		But in my main.cpp I have defined <strong>SCREEN_WIDTH = 640</strong> and <strong>SCREEN_HEIGHT = 480</strong>, so if my window (aka, quad) is of these values <strong>640 x 480</strong>, 
+		it's very obvious to its going to be cut off.
+		
+		<br><br>
+		
+		<strong>Note:</strong> this also applies to the purple circle also. And in my fragment shader, I have defined a variable called <strong>UV</strong>. 
+		This variable is built-in to OpenGL and the x and y coordinates are your viewport size, so in this case the x = 640 and y = 480, this runs for every fragment / pixel on the screen (aka, window or quad).
+		
+		<h3>Image of Red & Purple Circle's being cut off</h3>
+		<img src="images-and-vids-of-bouncy-ball-project/Screenshot From 2026-08-13 13-16-38.png" alt="" width="" height="">
+		
+		<br><br><br><br><br><br><br><br><br><br><br><br>
+		
+		<h3>Fragment Shader</h3>
+<pre>
+#version 330 core
+
+layout (location = 0) out vec4 color;
+
+#define UV gl_FragCoord.xy
+
+// TODO: add color...
+float createCircle(float lowerEdge, float higherEdge, float xCoord, float yCoord) {
+	return 1.0 - smoothstep(lowerEdge, higherEdge, distance(UV, vec2(xCoord, yCoord)));
+}
+
+void main() {
+	float whiteCircle = createCircle(12.0, 50.0, 245.0, 345.0);
+	float redCircle = createCircle(25.0, 80.0, 120.0, 500.0);
+	float purpleCircle = createCircle(2.0, 5.0, 640.0, 320.0);
+	float pinkCircle = createCircle(20.0, 23.0, 210.0, 80.0);
+		
+	vec3 canvas = vec3(1.0, 1.0, 1.0) * whiteCircle + vec3(1.0, 0.0, 0.0) * redCircle + vec3(0.65, 0.56, 1.0) * purpleCircle + vec3(1.0, 0.55, 0.76) * pinkCircle;
+	color = vec4(canvas, 1.0);
+}
+</pre>
+	
+	<h3>main.cpp</h3>
+<pre>
+#define SCREEN_WIDTH 640
+#define SCREEN_HEIGHT 480
+</pre>
+
+		<br>
+
+		<h3>Problem 3</h3>
+		Today (August 13th, 2026), I spent most of my day trying to figure out how I was going to make <strong>N</strong> circles / balls. I thought, 
+		I had set-up everything perfectly (turns out I did), but <strong>I was trying to be fancy with how I was computing each Ball's fields</strong>. 
+		For example: this is some of the content from my fragment shader, see below. Note: the <strong>...</strong> means there is more code above and below.
+		
+<pre>
+...
+
+#define BALLS 5
+
+struct Ball {
+	float lowerEdge;
+	float higherEdge;
+	float xCoord;
+	float yCoord;
+	vec3 color;
+};
+
+...
+
+void main() {
+	...
+	
+	Ball balls[BALLS];
+	for (int i = 0; i < balls.length(); i++) {
+		balls[i].lowerEdge = 12.0;
+		balls[i].higherEdge = 25.0;
+		balls[i].xCoord = 100.0 + float(i) * 130.0;
+		balls[i].yCoord = 200.0;
+		balls[i].color = vec3(1.0, 0.0, 0.0);
+	}
+	
+	...
+}
+
+
+</pre>
+	
+	I was doing this (in the for loop, for no reason):
+	<br><br>
+	
+<pre>
+balls[i].lowerEdge = i * 500;
+balls[i].higherEdge = i - 5;
+balls[i].xCoord = i + 10;
+balls[i].yCoord = i - 10;
+</pre>
+
+	<br>
+
+	I was trying to be fancy and try and set each of the fields in a cool way, but turns out this was a very stupid thing I did. 
+	So, after spending most of my day trying to figure this out, I asked <strong>ChatGPT</strong> for some help and all he did was give me 
+	<strong>12.0</strong> for lowerEdge, <strong>25.0</strong> for higherEdge, <strong>100.0 + float(i) * 130.0</strong> for xCoord and <strong>200.0</strong> for yCoord (color was not an issue for me). 
+	
+	<br><br>
+	
+	And once I removed the crap I made this worked. But the main thing to remember is that I only went to <strong>AI</strong> after spending hours of trying to do this all on my own.
+
+	Another thing, is that the way I designed the archecticture was perfect, the only problem was the fields I was setting in a fancy and stupid way!
+
+	</p>
+	
+	<br>
+	
+	<h3>Project Contents</h3>
+	<p>
+		<strong>Note:</strong> I will show images of the project as I develop this small project! This will be filled in, once I have completed the project or the project is work in progesss.
+		The project is early doors at the moment there is not much done (to the eye), but what happens on the backend is very important. The project currently has the following:
+		
+		<ul>
+			<li>Vertex Buffer.</li>
+			<li>Index Buffer.</li>
+			<li>Shaders (Vertex & Fragment).</li>
+			<li>My own types called (There will be more to come):</li>
+			<ul>
+				<li><strong>Circle: </strong> this is what a ball is going to consist of, such as: (origin, radius, velocity, color, etc).</li>
+				<li><strong>Shader: </strong> this is my code for reading a shader file, compiling and creating a shader.</li>
+			</ul>
+		</ul>
+	</p>
+	
+	<br>
+	
+	<h3>Project Images</h3>
+	<p>
+		Image 1:
+		<img src="images-and-vids-of-bouncy-ball-project/Screenshot From 2026-08-07 21-31-14.png" alt="" width="" height="">
+		<br><br>
+		<br><br>
+		<br><br>
+		<br><br>
+		<br><br>
+		<br><br>
+		<br><br>
+		<br><br>
+		<br><br>
+		
+		Image 2:
+		<img src="images-and-vids-of-bouncy-ball-project/Screenshot From 2026-08-08 20-23-01.png" alt="" width="" height="">
+		<br><br>
+		<br><br>
+		<br><br>
+		<br><br>
+		<br><br>
+		<br><br>
+		<br><br>
+		<br><br>
+		<br><br>
+		
+		Image 3:
+		<img src="images-and-vids-of-bouncy-ball-project/Screenshot From 2026-08-10 16-19-09.png" alt="" width="" height="">
+		<br><br>
+		<br><br>
+		<br><br>
+		<br><br>
+		<br><br>
+		<br><br>
+		<br><br>
+		<br><br>
+		<br><br>
+		
+		Image 4:
+		<img src="images-and-vids-of-bouncy-ball-project/Screenshot From 2026-08-13 12-37-56.png" alt="" width="" height="">
+		<br><br>
+		<br><br>
+		<br><br>
+		<br><br>
+		<br><br>
+		<br><br>
+		<br><br>
+		<br><br>
+		<br><br>
+		
+		Image 5:
+		<img src="images-and-vids-of-bouncy-ball-project/Screenshot From 2026-08-13 23-35-35.png" alt="" width="" height="">
+		<br><br>
+		<br><br>
+		<br><br>
+		<br><br>
+		<br><br>
+		<br><br>
+		<br><br>
+	</p>
+	
+	<h3>Project Videos</h3>
 	
 	<h3>Video 1: My first time getting a ball to move / bounce:</h3>
 	<video width="850" height="500" controls>
@@ -55,6 +702,28 @@
 	<video width="850" height="500" controls>
 		<source src="project-videos/Screencast From 2026-08-19 13-30-26.mp4" type="video/mp4">
 	</video>
-    
+	
+	<br>
+	
+	<h3>To be Added</h3>
+	This is what I'm actively  working on each day, as of right now (August 19th, 2026).
+	<ul>
+		<li>Uniforms - complete.</li>
+		<li>Textures.</li>
+		<li>Maths, Projection, Model View Projection (MVP) matrices, Physics.</li>
+		<li>An interactive GUI, for play testing the project.</li>
+		<li>An input system, for example: press the 'spacebar' button and your ball goes into the air.</li>
+		<li>Collision checking - has a ball hit our box or the end our of window.</li>
+	</ul>
+	
+	<hr>
+	<h3>Even Futher into the Future</h3>
+	<hr>
+	
+	<h3>Ray Tracing - Part 2 / 3</h3>
+	<p>This part will consist of what I learn from ray tracing and my project that I make for ray tracing.</p>
+	
+	<h3>Game Engine - Part 3 / 3</h3>
+	<p>If I do the game engine, this part will also consist of what I learn from the game engine series by the cherno and the project that I make for the game engine.</p>	
 </body>
 </html>
