@@ -832,6 +832,13 @@ balls[i].yCoord = i - 10;
 	<video width="100%" controls>
 		<source src="project-videos/Screencast From 2026-08-31 23-05-37.mp4" type="video/mp4">
 	</video>
+
+	<br>
+
+	<h3>Video 10: Create a Ball with either a Color or a Texture:</h3>
+	<video width="100%" controls>
+		<source src="project-videos/Screencast From 2026-09-03 23-12-18.mp4" type="video/mp4">
+	</video>
 	
 <!--
 	<h3>More Videos to Come...</h3>
@@ -848,22 +855,33 @@ balls[i].yCoord = i - 10;
 		<li>Uniforms - <strong>Complete</strong>.</li>
 		<li>Textures - <strong>Complete</strong>.</li>
 		<li>Maths, Model View Projection (MVP) Matrices - <strong>Complete</strong>.</li>
-		<li>An interactive GUI, for play testing the project - <strong>In Progress - Updating</strong>.</li>
+		<li>An interactive GUI, for play testing the project - <strong>Complete</strong>.</li>
 		<li>An input system, for example: when you press the <strong>e</strong> button on your keyboard your ball goes into the air and comes down (this will continue to happen if you are pressing the e button) - <strong>Complete</strong>.</li>
 	</ul>
 		
 	<h3>Might be added in the future</h3>
 	<ul>
 		<li>Physics.</li>
-		<li>Collision checking - has a ball hit our box or the end our of window.</li>
+		<li>Collision checking - has a ball hit our box or the end of our window.</li>
+		<li>GUI Stuff:</li>
+		<ul>
+			<li>Create multiple balls via the GUI.</li>
+			<li>But a texture on all N of the created balls.</li>
+			<li>Have different key-bindings for each ball.</li>
+			<li>Have a set of presets to create a ball.</li>
+			<li>Let the user pick what texture the ball goes onto, via the GUI.</li>
+		</ul>
 	</ul>
 	
 	<h3>Next up</h3>
 	<ul>
-		<li><strong>Update my GUI:</strong> such that you can update certain attributes about a ball. For example: update the <strong>x coordinate</strong> from <strong>250</strong> to be <strong>350</strong> and same for the <strong>y coordinate</strong>. And much more.</li>
-		<li><strong>Optimization:</strong> currently I cannot make more than <strong>50 balls</strong> without my GPU screaming at me. I will try to refactor my code such that I can make many more balls.</li>
-		<li><strong>More Abstraction:</strong> currently my <strong>main.cpp</strong> file currently has <strong>238</strong> lines of code. This is way to big for the entry point of this small project, so I want to do more abstraction.</li>
-		<li><strong>Allow my Simulation to work with other Objects:</strong> for my next project I am going to be doing <strong>Ray Tracing</strong> and in that project, I'm going to be developing a space simulation (to some degree), so I want to be able to use this project to help me get up and running for my Ray Tracing project. But instead of creating N Balls, I will be able to create N Stars!</li>
+		<li><strong>Update my GUI:</strong> such that you can update certain attributes about a ball. For example: update the <strong>x coordinate</strong> from <strong>250</strong> to be <strong>350</strong> and same for the <strong>y coordinate</strong>. And much more - <strong>Complete</strong>.</li>
+		<li><strong>Optimization:</strong> currently I cannot make more than <strong>50 balls</strong> without my GPU screaming at me. I will try to refactor my code such that I can make many more balls - <strong>I have did a small bit of an optimization and it works very good with a small number of balls, but its not great for 50 balls or more</strong>.</li>
+		<li><strong>More Abstraction:</strong> currently my <strong>main.cpp</strong> file currently has <strong>238</strong> lines of code. This is way to big for the entry point of this small project, so I want to do more abstraction - <strong>It's much better but its not perfect, I might need to do more abstraction</strong>.</li>
+		<li><strong>Allow my Simulation to work with other Objects:</strong> for my next project I am going to be doing <strong>Ray Tracing</strong> and in that project, I'm going to be developing a space simulation (to some degree), so I want to be able to use this project to help me get up and running for my Ray Tracing project - <strong>Im not sure if I'm going to do this or not</strong>.</li>
+<!--
+		But instead of creating N Balls, I will be able to create N Stars
+-->
 	</ul>
 	
 <!--
