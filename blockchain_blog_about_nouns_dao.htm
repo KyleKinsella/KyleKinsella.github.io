@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TODO</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="template.css">
+    <link rel="stylesheet" href="all.css">
+    <link rel="stylesheet" href="index.css">
+    <script src="script.js"></script>
+</head>
+<body>
+	<style>
+		body {
+			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+			line-height: 1.7;
+			color: #333;
+			max-width: 900px;
+			margin: 0 auto;
+			padding: 2rem;
+			background-color: #f9f9f9;
+		}
+
+		  h3 {
+			color: #2c3e50;
+			border-left: 5px solid #3498db;
+			padding-left: 10px;
+			margin-top: 2rem;
+			margin-bottom: 1rem;
+			font-size: 1.6rem;
+		  }
+
+		  p {
+			margin-bottom: 1rem;
+			font-size: 1rem;
+			color: #444;
+		  }
+
+		  ul {
+			margin-bottom: 1rem;
+			padding-left: 2rem;
+		  }
+
+		  ul li {
+			margin-bottom: 0.5rem;
+		  }
+
+		  ul li ul {
+			padding-left: 1.5rem;
+			margin-top: 0.5rem;
+		  }
+
+		  strong {
+			color: #2c3e50;
+		  }
+
+		  a {
+			color: #3498db;
+			text-decoration: none;
+		  }
+
+		  a:hover {
+			text-decoration: underline;
+		  }
+
+		  hr {
+			border: none;
+			border-top: 1px solid #ddd;
+			margin: 2rem 0;
+		  }
+
+		  /* DAO Functionality nested list */
+		  li > ul > li {
+			list-style-type: circle;
+		  }
+
+		  h1, #date {
+			text-align: center;
+		  }
+		  
+		  hr {
+			border-color: purple;
+		  }
+		  
+<!--
+		  nav {
+    padding: 10px;
+}
+
+@media(max-width:767px) {
+    vedio {
+        width: 100%;
+    }
+}
+-->
+	</style>
+	<h1>Nouns DAO has been Captured!</h1>
+	
+	<p id="date"><strong>Wrote on:</strong> Sep 23, 2026.</p>
+	
+	<br>
+<!--
+	 what has occured.
+-->
+	<p>In this blog, I'm going to outline what happened to <strong>Nouns DAO</strong> and how it got captured.</p>
+	
+<!--
+	<h3>What is Nouns DAO ?</h3>
+-->
+<!--
+	  is and many other things a DAO does
+-->
+<!--
+	<p>Before I get into the details of what happened to nouns DAO, you must know what nouns dao is.</p>
+-->
+
+<!--
+	<br>
+-->
+
+<!--
+	<h3>Story Time</h3>
+-->
+
+<!--
+	I completed my blockchain project on the <strong>14th of April, 2026</strong>. This is important information for later on!
+-->
+
+	<p>Around five months ago, I was working on developing my very own <strong>Blockchain Simulation Project</strong>, entirely from Scratch. And in my blockchain project, I took a lot of inspiration from <a href="https://nouns.wtf/">Nouns DAO</a> for my project. I actually developed my very own DAO in my blockchain project.</p>
+	<p>If you would like to see more information about my blockchain project, click here: <a href="https://kylekinsella.github.io/projectMotivation.htm">Blockchain from Scratch</a>. Each day when I was working on my DAO, I would have Nouns DAO open in another tab and have it beside my DAO for a point of reference.</p>
+	<p>When I completed my blockchain project, I was not really looking at the Nouns DAO page to often, but when I was working on my blockchain project, I was looking at it almost everyday. But a few weeks ago and yesterday (September 22, 2026), I saw that each Noun (an NFT) was held by <strong>Nouns DAO Treasury</strong>. The moment I saw this I did not think too much of it to be honest, but on September 22, 2026 (aka, yesterday) something hit me, that isn't right, that Noun should be with an actual wallet address, not the DAO that created that exact Noun!</p>
+	<p>So, then I started to do some research to why is nobody buying nouns anymore and after a bit of digging I found this article <a href="https://www.bankless.com/read/long-live-nouns-dao">Nouns Is Dead, Long Live Nouns</a>. To sum up the article at a basic level, someone made a proposal to make the minimum bid price to be 2.80 ETH! Before this proposal was proposed the previous bid price was 0.01 and this would go up incrementally each time someone bidded, so the final bid amount could be 0.25 ETH or more. As you can see this is not good at all for anyone, that used to or is now getting into blockchain / nft's.</p>
+	<p>In simple terms a <strong>whale</strong> - a term in the blockchain space, this is know as: <strong>an individual or entity that holds a large enough amount of cryptocurrency to significantly influence market prices with their trades or transfers</strong>. Has a shit-load of cryptocurrency and they want to destroy Nouns DAO, in basic terms.</p>
+	
+<!--
+	<br><br>	
+-->
+
+	<br>
+	
+	<h3>How did this Proposal Get Executed !?</h3>
+	<p>This is where it gets even more intresting and also very odd. If you take a look at the proposal <a href="https://nouns.wtf/vote/955">Set Auction Reserve Price to 2.8 ETH (Proposal 955)</a> you can see that only <strong>10 people</strong> voted for this proposal, <strong>33 people</strong> voted against this proposal and 2 people abstained their vote. So, how did this vote get executed ? I really don't know!</p>
+	<p>But, hold on, I developed my own DAO and voting system for my blockchain project, so I can talk about this (even do I'm not a expert in the area). Below is some of my code from my project, for either allow funds to be taken out of the treasury or not.</p>
+	
+<pre>
+	function doesProposalHaveValidProposedFunds() {
+
+		const treasuryFunds = Number(sumValuesForTreasury(bids));
+
+		for (var i = 0; i < allProposals.length; i++) {
+		
+			const proposedFunds = Number(allProposals[i].FundsToUseOutOfTreasury);
+			
+			for (var j = 0; j < countedVotes.length; j++) {
+				if (countedVotes[j].For > countedVotes[j].Against) {
+
+					{/* edge case - if your proposal exceeds the Treasury amount, stop... */}
+					if (proposedFunds <= treasuryFunds) {
+						alert("🎉 Hooray! The following Proposal has been approved:\n\n" + "Name: " + allProposals[i].Name + "\n" + "Description: " + allProposals[i].Description + "\n" + "Requested Funds: "  + allProposals[i].FundsToUseOutOfTreasury);
+						
+						setBids(prev => {   
+							let remaining = proposedFunds;
+
+							{/* here i decrement the Treasury by x funds */}
+							return prev.map(bid => {
+								if (remaining <= 0) return bid;
+
+								const deduction = Math.min(bid, remaining);
+								remaining -= deduction;
+
+								return bid - deduction;
+							});
+						});
+					} else {
+						alert("Oops! The following Proposal cannot be processed:\n\n" + "Name: " + allProposals[i].Name + "\n" + "Description: " + allProposals[i].Description + "\n" + "Requested Funds: "  + allProposals[i].FundsToUseOutOfTreasury + "\n\nYou proposed: " + proposedFunds + "\nTreasury only has: " + treasuryFunds + "\n\nPlease wait until the treasury has enough funds for this proposal to be processed.");
+						break;
+					}
+				}
+			}
+		}
+	}
+</pre>
+	
+	<br>
+	<p>The main thing to look at here is the following if statement: <strong>if (countedVotes[j].For > countedVotes[j].Against) { ... }</strong>. For example, if 10 people voted for the proposal, 33 people voted against the proposal, this would not take any funds out of the treasury! But if 33 people voted for and 10 people voted against then whatever funds where proposed to take out of the treasury will be taken out and put into that particular project.</p>
+	
+	
+<!--
+	<p>Remember earlier I said something about </p>
+-->
+	
+	
+	<p>If you would like to get into touch with me to talk about what happened to Nouns DAO in more detail, I would love to have a chat!</p>
+</body>
+</html>
